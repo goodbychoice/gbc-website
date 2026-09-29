@@ -14,6 +14,17 @@ export default defineNuxtConfig({
     disallow: [],
   },
 
+  // Private values are available to Nitro only. Set NUXT_* env vars on Vercel.
+  runtimeConfig: {
+    supabaseUrl: '',
+    supabaseSecretKey: '',
+    slackWebhookUrl: '',
+    public: {
+      // Keep the static GitHub Pages form disabled until the Vercel API is ready.
+      contactFormEnabled: false,
+    },
+  },
+
   experimental: {
     prerenderErrorPages: true,
   },
