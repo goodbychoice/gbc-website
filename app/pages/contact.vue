@@ -11,52 +11,31 @@ useSeoMeta({
     "GBCへのご相談・ご依頼はこちらから。Simple Study、フェンリル、華の騎士団、Pandora、取材・協業などのお問い合わせを受け付けます。",
 });
 
-const contactTypes = [
-  "Simple Study",
-  "フェンリル",
-  "華の騎士団",
-  "Pandora",
-  "取材・協業",
-  "その他",
-] as const;
+import { contactCategories } from "#shared/contact";
 
 const formEnabled = useRuntimeConfig().public.contactFormEnabled;
-const name = ref("");
-const email = ref("");
-const category = ref("");
-const message = ref("");
-const consent = ref(false);
-const website = ref(""); // 自動送信対策用の非表示項目
+const form = reactive({
+  name: "",
+  email: "",
+  category: "",
+  message: "",
+  consent: false,
+});
 const sending = ref(false);
 const sent = ref(false);
 const sendError = ref("");
 
 async function submitContact() {
   if (!formEnabled || sending.value) return;
+
   sending.value = true;
   sendError.value = "";
 
   try {
-    await $fetch("/api/contact", {
-      method: "POST",
-      body: {
-        name: name.value,
-        email: email.value,
-        category: category.value,
-        message: message.value,
-        consent: consent.value,
-        website: website.value,
-      },
-    });
+    await $fetch("/api/contact", { method: "POST", body: form });
     sent.value = true;
-    name.value = "";
-    email.value = "";
-    category.value = "";
-    message.value = "";
-    consent.value = false;
   } catch {
-    sendError.value =
-      "送信できませんでした。時間をおいて再度お試しいただくか、メールにてご連絡ください。";
+    sendError.value = "送信できませんでした。時間をおいて再度お試しいただくか、メールにてご連絡ください。";
   } finally {
     sending.value = false;
   }
@@ -138,7 +117,7 @@ async function submitContact() {
               <label for="name" class="block text-[15px] font-semibold">お名前</label>
               <input
                 id="name"
-                v-model="name"
+                v-model="form.name"
                 name="name"
                 type="text"
                 required
@@ -154,7 +133,7 @@ async function submitContact() {
               <label for="email" class="block text-[15px] font-semibold">メールアドレス</label>
               <input
                 id="email"
-                v-model="email"
+                v-model="form.email"
                 name="email"
                 type="email"
                 required
@@ -170,14 +149,14 @@ async function submitContact() {
               <label for="type" class="block text-[15px] font-semibold">お問い合わせ種別</label>
               <select
                 id="type"
-                v-model="category"
+                v-model="form.category"
                 name="category"
                 required
                 :disabled="!formEnabled || sending"
                 class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none focus:border-black disabled:cursor-not-allowed disabled:opacity-55"
               >
                 <option disabled value="">選択してください</option>
-                <option v-for="type in contactTypes" :key="type" :value="type">
+                <option v-for="type in contactCategories" :key="type" :value="type">
                   {{ type }}
                 </option>
               </select>
@@ -187,7 +166,7 @@ async function submitContact() {
               <label for="message" class="block text-[15px] font-semibold">お問い合わせ内容</label>
               <textarea
                 id="message"
-                v-model="message"
+                v-model="form.message"
                 name="message"
                 rows="7"
                 required
@@ -199,22 +178,9 @@ async function submitContact() {
               />
             </div>
 
-            <!-- 自動送信対策用の非表示項目。通常の利用者には表示しない。 -->
-            <div aria-hidden="true" class="absolute -left-[9999px] h-px w-px overflow-hidden">
-              <label for="website">Webサイト</label>
-              <input
-                id="website"
-                v-model="website"
-                name="website"
-                type="text"
-                tabindex="-1"
-                autocomplete="off"
-              />
-            </div>
-
             <label class="flex items-start gap-3 text-[14px] leading-[1.8] text-black/70">
               <input
-                v-model="consent"
+                v-model="form.consent"
                 name="consent"
                 type="checkbox"
                 required
