@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// お問い合わせページの検索結果・SNS共有向け情報を設定する。
 useSeoMeta({
   title: "お問い合わせ | GBC",
   description:
@@ -11,9 +12,12 @@ useSeoMeta({
     "GBCへのご相談・ご依頼はこちらから。Simple Study、フェンリル、華の騎士団、Pandora、取材・協業などのお問い合わせを受け付けます。",
 });
 
+// APIと共通の種別一覧を使用し、選択肢の食い違いを防ぐ。
 import { contactCategories } from "#shared/contact";
 
+// Vercelへの移行・接続確認までは、公開フォームを無効にしておく。
 const formEnabled = useRuntimeConfig().public.contactFormEnabled;
+// 画面に入力された内容を1つのオブジェクトにまとめる。
 const form = reactive({
   name: "",
   email: "",
@@ -21,22 +25,30 @@ const form = reactive({
   message: "",
   consent: false,
 });
+// 送信中・送信完了・エラー表示の状態を管理する。
 const sending = ref(false);
 const sent = ref(false);
 const sendError = ref("");
 
+// 送信ボタンが押されたときに、Nuxt Server APIへ問い合わせを送る。
 async function submitContact() {
+  // 準備中や二重送信の場合は処理しない。
   if (!formEnabled || sending.value) return;
 
+  // 送信開始時にボタンを無効にし、前回のエラー表示を消す。
   sending.value = true;
   sendError.value = "";
 
   try {
+    // API側で入力検証・DB保存・Slack通知を行う。
     await $fetch("/api/contact", { method: "POST", body: form });
+    // 保存成功後は入力欄の代わりに受付完了メッセージを表示する。
     sent.value = true;
   } catch {
+    // エラーの内部情報は出さず、メールでの連絡手段も案内する。
     sendError.value = "送信できませんでした。時間をおいて再度お試しいただくか、メールにてご連絡ください。";
   } finally {
+    // 成功・失敗に関係なく送信中の状態を解除する。
     sending.value = false;
   }
 }
@@ -89,6 +101,7 @@ async function submitContact() {
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
+          <!-- フォームが未公開の場合のみ準備中の案内を表示する。 -->
           <div v-if="!formEnabled" class="border-y border-black/20 py-6">
             <p class="text-[15px] font-semibold text-black/72 sm:text-[16px]">
               フォーム送信機能は現在準備中です。
@@ -98,6 +111,7 @@ async function submitContact() {
             </p>
           </div>
 
+          <!-- 送信成功時は完了メッセージに切り替える。 -->
           <div
             v-if="sent"
             role="status"
@@ -107,6 +121,7 @@ async function submitContact() {
             お問い合わせを受け付けました。内容を確認のうえ、順次ご返信いたします。
           </div>
 
+          <!-- 送信完了前だけ入力フォームを表示する。 -->
           <form
             v-if="!sent"
             class="mt-12 space-y-10"
@@ -178,6 +193,7 @@ async function submitContact() {
               />
             </div>
 
+            <!-- 個人情報の送信前にプライバシーポリシーへの同意を求める。 -->
             <label class="flex items-start gap-3 text-[14px] leading-[1.8] text-black/70">
               <input
                 v-model="form.consent"
@@ -198,10 +214,12 @@ async function submitContact() {
               </span>
             </label>
 
+            <!-- 失敗した場合だけエラーを表示する。 -->
             <p v-if="sendError" role="alert" class="text-[14px] leading-[1.8] text-red-800">
               {{ sendError }}
             </p>
 
+            <!-- 準備中・送信中はボタンを押せないようにする。 -->
             <button
               type="submit"
               :disabled="!formEnabled || sending"
