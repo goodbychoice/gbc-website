@@ -1,95 +1,60 @@
-const categories = [
-  "Simple Study",
-  "フェンリル",
-  "華の騎士団",
-  "Pandora",
-  "取材・協業",
-  "その他",
-] as const;
+import { contactCategories } from "#shared/contact";
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig(event);
+  const { supabaseUrl, supabaseSecretKey, slackWebhookUrl } = useRuntimeConfig(event);
 
-  // サーバー専用の接続情報が設定されていない場合は、データを保存しない。
-  if (!config.supabaseUrl || !config.supabaseSecretKey) {
+  if (!supabaseUrl || !supabaseSecretKey) {
     throw createError({ statusCode: 503, statusMessage: "お問い合わせ機能は準備中です。" });
   }
 
-  if (!getRequestHeader(event, "content-type")?.startsWith("application/json")) {
-    throw createError({ statusCode: 415, statusMessage: "送信形式を確認してください。" });
-  }
+  const body = await readValidatedBody(event, (value) => {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+    if (JSON.stringify(value).length > 12000) return false;
 
-  const raw = await readRawBody(event);
-  if (!raw || raw.length > 12000) {
-    throw createError({ statusCode: 400, statusMessage: "入力内容を確認してください。" });
-  }
+    const input = value as Record<string, unknown>;
+    if (
+      typeof input.name !== "string" ||
+      typeof input.email !== "string" ||
+      typeof input.message !== "string" ||
+      typeof input.category !== "string" ||
+      input.consent !== true
+    ) return false;
 
-  let body: Record<string, unknown>;
+    const name = input.name.trim();
+    const email = input.email.trim();
+    const message = input.message.trim();
+
+    if (
+      !name || name.length > 100 ||
+      email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+      !contactCategories.some((category) => category === input.category) ||
+      message.length < 10 || message.length > 5000
+    ) return false;
+
+    return { name, email, category: input.category, message };
+  });
+
+  // 保存できなかった場合は成功として扱わない。
   try {
-    const parsed: unknown = JSON.parse(raw);
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error();
-    body = parsed as Record<string, unknown>;
-  } catch {
-    throw createError({ statusCode: 400, statusMessage: "入力内容を確認してください。" });
-  }
-
-  // 自動送信対策用の非表示項目。通常の利用者は入力しない。
-  if (body.website) {
-    return { ok: true };
-  }
-
-  const name = typeof body.name === "string" ? body.name.trim() : "";
-  const email = typeof body.email === "string" ? body.email.trim() : "";
-  const category = body.category;
-  const message = typeof body.message === "string" ? body.message.trim() : "";
-
-  if (
-    body.consent !== true ||
-    name.length < 1 || name.length > 100 ||
-    email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
-    !categories.some((value) => value === category) ||
-    message.length < 10 || message.length > 5000
-  ) {
-    throw createError({ statusCode: 400, statusMessage: "入力内容を確認してください。" });
-  }
-
-  const supabaseUrl = config.supabaseUrl.replace(/\/$/, "");
-
-  try {
-    // 秘密鍵はサーバー側からのみ、apikeyヘッダーで送信する。
-    // 対応状況・ID・日時はデータベース側の初期値を利用する。
-    await $fetch(`${supabaseUrl}/rest/v1/contact_messages`, {
+    await $fetch(`${supabaseUrl.replace(/\/$/, "")}/rest/v1/contact_messages`, {
       method: "POST",
-      headers: {
-        apikey: config.supabaseSecretKey,
-        "Content-Type": "application/json",
-        Prefer: "return=minimal",
-      },
-      body: { name, email, category, message },
-      timeout: 8000,
+      headers: { apikey: supabaseSecretKey, Prefer: "return=minimal" },
+      body,
     });
   } catch {
-    // 個人情報や外部サービスのエラー詳細をログ・レスポンスに出さない。
-    console.error("Contact message could not be saved.");
+    console.error("お問い合わせの保存に失敗しました。");
     throw createError({
       statusCode: 503,
       statusMessage: "送信できませんでした。時間をおいて再度お試しください。",
     });
   }
 
-  // 保存後にSlack通知が失敗しても、利用者に再送信させない。
-  if (config.slackWebhookUrl) {
-    try {
-      await $fetch(config.slackWebhookUrl, {
-        method: "POST",
-        body: {
-          text: `GBC公式サイトに新しいお問い合わせが届きました。\n種別：${category}\nSupabaseのcontact_messagesをご確認ください。`,
-        },
-        timeout: 3000,
-      });
-    } catch {
-      console.error("Contact was saved but Slack notification failed.");
-    }
+  // Slackの通知失敗によって、保存済みのお問い合わせを再送させない。
+  if (slackWebhookUrl) {
+    await $fetch(slackWebhookUrl, {
+      method: "POST",
+      body: { text: `新しいお問い合わせが届きました。\n種別：${body.category}\nSupabaseで内容を確認してください。` },
+    }).catch(() => console.error("Slack通知に失敗しました。"));
   }
 
   return { ok: true };
