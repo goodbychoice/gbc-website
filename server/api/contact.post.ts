@@ -15,6 +15,10 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 503, statusMessage: "お問い合わせ機能は準備中です。" });
   }
 
+  if (!getRequestHeader(event, "content-type")?.startsWith("application/json")) {
+    throw createError({ statusCode: 415, statusMessage: "送信形式を確認してください。" });
+  }
+
   const raw = await readRawBody(event);
   if (!raw || raw.length > 12000) {
     throw createError({ statusCode: 400, statusMessage: "入力内容を確認してください。" });
@@ -40,7 +44,7 @@ export default defineEventHandler(async (event) => {
   const message = typeof body.message === "string" ? body.message.trim() : "";
 
   if (
-    !body.consent ||
+    body.consent !== true ||
     name.length < 1 || name.length > 100 ||
     email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
     !categories.some((value) => value === category) ||
