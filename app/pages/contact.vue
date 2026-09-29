@@ -26,7 +26,7 @@ const email = ref("");
 const category = ref("");
 const message = ref("");
 const consent = ref(false);
-const website = ref(""); // Hidden spam honeypot
+const website = ref(""); // 自動送信対策用の非表示項目
 const sending = ref(false);
 const sent = ref(false);
 const sendError = ref("");
@@ -199,7 +199,7 @@ async function submitContact() {
               />
             </div>
 
-            <!-- Hidden honeypot; legitimate users do not fill this field. -->
+            <!-- 自動送信対策用の非表示項目。通常の利用者には表示しない。 -->
             <div aria-hidden="true" class="absolute -left-[9999px] h-px w-px overflow-hidden">
               <label for="website">Webサイト</label>
               <input
