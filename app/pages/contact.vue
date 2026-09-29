@@ -18,7 +18,49 @@ const contactTypes = [
   "Pandora",
   "取材・協業",
   "その他",
-];
+] as const;
+
+const formEnabled = useRuntimeConfig().public.contactFormEnabled;
+const name = ref("");
+const email = ref("");
+const category = ref("");
+const message = ref("");
+const consent = ref(false);
+const website = ref(""); // Hidden spam honeypot
+const sending = ref(false);
+const sent = ref(false);
+const sendError = ref("");
+
+async function submitContact() {
+  if (!formEnabled || sending.value) return;
+  sending.value = true;
+  sendError.value = "";
+
+  try {
+    await $fetch("/api/contact", {
+      method: "POST",
+      body: {
+        name: name.value,
+        email: email.value,
+        category: category.value,
+        message: message.value,
+        consent: consent.value,
+        website: website.value,
+      },
+    });
+    sent.value = true;
+    name.value = "";
+    email.value = "";
+    category.value = "";
+    message.value = "";
+    consent.value = false;
+  } catch {
+    sendError.value =
+      "送信できませんでした。時間をおいて再度お試しいただくか、メールにてご連絡ください。";
+  } finally {
+    sending.value = false;
+  }
+}
 </script>
 
 <template>
@@ -68,81 +110,121 @@ const contactTypes = [
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
-          <div class="border-y border-black/20 py-6">
+          <div v-if="!formEnabled" class="border-y border-black/20 py-6">
             <p class="text-[15px] font-semibold text-black/72 sm:text-[16px]">
               フォーム送信機能は現在準備中です。
             </p>
-            <p class="mt-2 text-[14px] leading-[1.8] text-black/50 sm:text-[15px]">
-              サイト公開時には、このページからそのまま送信できるようにする予定です。現在のお問い合わせは、下記メールアドレスをご利用ください。
+            <p class="mt-2 text-[14px] leading-[1.8] text-black/60 sm:text-[15px]">
+              現在のお問い合わせは、下記メールアドレスをご利用ください。
             </p>
           </div>
 
-          <form class="mt-12 space-y-10" aria-label="お問い合わせフォーム（準備中）">
+          <div
+            v-if="sent"
+            role="status"
+            aria-live="polite"
+            class="border-y border-black/20 py-7 text-[16px] leading-[1.9]"
+          >
+            お問い合わせを受け付けました。内容を確認のうえ、順次ご返信いたします。
+          </div>
+
+          <form
+            v-if="!sent"
+            class="mt-12 space-y-10"
+            :aria-label="formEnabled ? 'お問い合わせフォーム' : 'お問い合わせフォーム（準備中）'"
+            @submit.prevent="submitContact"
+          >
             <div>
-              <label for="name" class="block text-[15px] font-semibold">
-                お名前
-              </label>
+              <label for="name" class="block text-[15px] font-semibold">お名前</label>
               <input
                 id="name"
+                v-model="name"
+                name="name"
                 type="text"
-                disabled
+                required
+                maxlength="100"
+                autocomplete="name"
+                :disabled="!formEnabled || sending"
                 placeholder="山田 太郎"
-                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/28 disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
 
             <div>
-              <label for="email" class="block text-[15px] font-semibold">
-                メールアドレス
-              </label>
+              <label for="email" class="block text-[15px] font-semibold">メールアドレス</label>
               <input
                 id="email"
+                v-model="email"
+                name="email"
                 type="email"
-                disabled
+                required
+                maxlength="254"
+                autocomplete="email"
+                :disabled="!formEnabled || sending"
                 placeholder="example@example.com"
-                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/28 disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
 
             <div>
-              <label for="type" class="block text-[15px] font-semibold">
-                お問い合わせ種別
-              </label>
+              <label for="type" class="block text-[15px] font-semibold">お問い合わせ種別</label>
               <select
                 id="type"
-                disabled
-                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none disabled:cursor-not-allowed disabled:opacity-55"
+                v-model="category"
+                name="category"
+                required
+                :disabled="!formEnabled || sending"
+                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none focus:border-black disabled:cursor-not-allowed disabled:opacity-55"
               >
-                <option>選択してください</option>
-                <option v-for="type in contactTypes" :key="type">
+                <option disabled value="">選択してください</option>
+                <option v-for="type in contactTypes" :key="type" :value="type">
                   {{ type }}
                 </option>
               </select>
             </div>
 
             <div>
-              <label for="message" class="block text-[15px] font-semibold">
-                お問い合わせ内容
-              </label>
+              <label for="message" class="block text-[15px] font-semibold">お問い合わせ内容</label>
               <textarea
                 id="message"
+                v-model="message"
+                name="message"
                 rows="7"
-                disabled
-                placeholder="ご相談・ご依頼内容をご記入ください。"
-                class="mt-3 w-full resize-y border border-black/20 bg-transparent p-4 text-[17px] leading-[1.9] outline-none placeholder:text-black/28 disabled:cursor-not-allowed disabled:opacity-55"
+                required
+                minlength="10"
+                maxlength="5000"
+                :disabled="!formEnabled || sending"
+                placeholder="ご相談・ご依頼内容をご記入ください。（10文字以上）"
+                class="mt-3 w-full resize-y border border-black/20 bg-transparent p-4 text-[17px] leading-[1.9] outline-none placeholder:text-black/35 focus:border-black disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
 
-            <label class="flex items-start gap-3 text-[14px] leading-[1.8] text-black/50">
+            <!-- Hidden honeypot; legitimate users do not fill this field. -->
+            <div aria-hidden="true" class="absolute -left-[9999px] h-px w-px overflow-hidden">
+              <label for="website">Webサイト</label>
               <input
+                id="website"
+                v-model="website"
+                name="website"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <label class="flex items-start gap-3 text-[14px] leading-[1.8] text-black/70">
+              <input
+                v-model="consent"
+                name="consent"
                 type="checkbox"
-                disabled
-                class="mt-1 h-4 w-4 shrink-0 disabled:cursor-not-allowed"
+                required
+                :disabled="!formEnabled || sending"
+                class="mt-1 h-4 w-4 shrink-0 accent-[#111317] disabled:cursor-not-allowed"
               />
               <span>
                 <NuxtLink
                   to="/privacy"
-                  class="border-b border-black/30 text-black/70 transition-colors hover:border-black hover:text-black"
+                  class="border-b border-black/30 text-[#111317] transition-colors hover:border-black"
                 >
                   プライバシーポリシー
                 </NuxtLink>
@@ -150,12 +232,16 @@ const contactTypes = [
               </span>
             </label>
 
+            <p v-if="sendError" role="alert" class="text-[14px] leading-[1.8] text-red-800">
+              {{ sendError }}
+            </p>
+
             <button
-              type="button"
-              disabled
-              class="inline-flex min-w-[180px] cursor-not-allowed items-center justify-center border border-black/20 px-7 py-4 text-[15px] font-semibold text-black/35"
+              type="submit"
+              :disabled="!formEnabled || sending"
+              class="inline-flex min-w-[180px] items-center justify-center border border-[#111317] px-7 py-4 text-[15px] font-semibold transition-colors enabled:hover:bg-[#111317] enabled:hover:text-[#f4f1ea] disabled:cursor-not-allowed disabled:border-black/20 disabled:text-black/35"
             >
-              送信機能は準備中
+              {{ !formEnabled ? "送信機能は準備中" : sending ? "送信中…" : "送信する" }}
             </button>
           </form>
         </div>
@@ -177,7 +263,7 @@ const contactTypes = [
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
           <p class="max-w-[760px] text-[17px] leading-[2] text-black/68 sm:text-[18px]">
-            フォームの準備が完了するまでは、メールにてお問い合わせください。内容を確認のうえ、順次ご返信いたします。
+            メールでのお問い合わせも受け付けています。内容を確認のうえ、順次ご返信いたします。
           </p>
 
           <a
