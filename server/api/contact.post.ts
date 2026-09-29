@@ -10,7 +10,7 @@ const categories = [
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event);
 
-  // This route must never attempt a write before server-side secrets are configured.
+  // サーバー専用の接続情報が設定されていない場合は、データを保存しない。
   if (!config.supabaseUrl || !config.supabaseSecretKey) {
     throw createError({ statusCode: 503, statusMessage: "お問い合わせ機能は準備中です。" });
   }
@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: "入力内容を確認してください。" });
   }
 
-  // A basic honeypot; the real users never see this field.
+  // 自動送信対策用の非表示項目。通常の利用者は入力しない。
   if (body.website) {
     return { ok: true };
   }
@@ -56,8 +56,8 @@ export default defineEventHandler(async (event) => {
   const supabaseUrl = config.supabaseUrl.replace(/\/$/, "");
 
   try {
-    // Secret key is sent only from the server, in the apikey header.
-    // status, id and timestamps use the database's defaults.
+    // 秘密鍵はサーバー側からのみ、apikeyヘッダーで送信する。
+    // 対応状況・ID・日時はデータベース側の初期値を利用する。
     await $fetch(`${supabaseUrl}/rest/v1/contact_messages`, {
       method: "POST",
       headers: {
@@ -69,7 +69,7 @@ export default defineEventHandler(async (event) => {
       timeout: 8000,
     });
   } catch {
-    // Do not log personal information or return provider error details.
+    // 個人情報や外部サービスのエラー詳細をログ・レスポンスに出さない。
     console.error("Contact message could not be saved.");
     throw createError({
       statusCode: 503,
@@ -77,7 +77,7 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  // Once saved, a Slack outage must not result in the user submitting twice.
+  // 保存後にSlack通知が失敗しても、利用者に再送信させない。
   if (config.slackWebhookUrl) {
     try {
       await $fetch(config.slackWebhookUrl, {
