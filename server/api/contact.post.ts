@@ -64,7 +64,7 @@ export default defineEventHandler(async (event) => {
 
   // 保存に失敗した場合は成功として扱わない。
   if (error) {
-    console.error("お問い合わせの保存に失敗しました。", error.message);
+    console.error("お問い合わせの保存に失敗しました。");
     throw createError({
       statusCode: 503,
       statusMessage: "送信できませんでした。時間をおいて再度お試しください。",
