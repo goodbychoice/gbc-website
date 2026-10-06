@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     supabaseSecretKey: '',
     slackWebhookUrl: '',
     public: {
-      // VercelのAPIが利用可能になるまで、GitHub Pages上のフォームは無効のままにする。
+      // SupabaseとSlackの接続確認が完了するまでは、公開フォームを無効にしておく。
       contactFormEnabled: false,
     },
   },
