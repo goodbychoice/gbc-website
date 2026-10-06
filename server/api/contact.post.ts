@@ -1,3 +1,4 @@
+import { createClient } from "@supabase/supabase-js";
 import { contactCategories } from "#shared/contact";
 
 // POST /api/contact：入力確認 → Supabase保存 → Slack通知の順で処理する。
@@ -7,7 +8,10 @@ export default defineEventHandler(async (event) => {
 
   // DBへの接続情報が未設定なら、問い合わせの受付を停止する。
   if (!supabaseUrl || !supabaseSecretKey) {
-    throw createError({ statusCode: 503, statusMessage: "お問い合わせ機能は準備中です。" });
+    throw createError({
+      statusCode: 503,
+      statusMessage: "お問い合わせ機能は準備中です。",
+    });
   }
 
   // Nuxtの機能で送信データを読み込み、DBへ渡してよい内容か検証する。
@@ -33,26 +37,34 @@ export default defineEventHandler(async (event) => {
 
     // メール形式・項目の長さ・SupabaseのEnumと一致する種別を確認する。
     if (
-      !name || name.length > 100 ||
-      email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+      !name ||
+      name.length > 100 ||
+      email.length > 254 ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
       !contactCategories.some((category) => category === input.category) ||
-      message.length < 10 || message.length > 5000
+      message.length < 10 ||
+      message.length > 5000
     ) return false;
 
     // DBに保存する4項目だけを返す（同意チェックは保存しない）。
     return { name, email, category: input.category, message };
   });
 
+  // Supabase公式SDKをサーバー専用のSecret Keyで初期化する。
+  const supabase = createClient(supabaseUrl, supabaseSecretKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false,
+      detectSessionInUrl: false,
+    },
+  });
+
   // Supabaseに保存する。ID・対応状況・日時はDBの初期値を利用する。
-  // 保存できなかった場合は成功として扱わない。
-  try {
-    await $fetch(`${supabaseUrl.replace(/\/$/, "")}/rest/v1/contact_messages`, {
-      method: "POST",
-      headers: { apikey: supabaseSecretKey, Prefer: "return=minimal" },
-      body,
-    });
-  } catch {
-    console.error("お問い合わせの保存に失敗しました。");
+  const { error } = await supabase.from("contact_messages").insert(body);
+
+  // 保存に失敗した場合は成功として扱わない。
+  if (error) {
+    console.error("お問い合わせの保存に失敗しました。", error.message);
     throw createError({
       statusCode: 503,
       statusMessage: "送信できませんでした。時間をおいて再度お試しください。",
@@ -64,7 +76,9 @@ export default defineEventHandler(async (event) => {
   if (slackWebhookUrl) {
     await $fetch(slackWebhookUrl, {
       method: "POST",
-      body: { text: `新しいお問い合わせが届きました。\n種別：${body.category}\nSupabaseで内容を確認してください。` },
+      body: {
+        text: `新しいお問い合わせが届きました。\n種別：${body.category}\nSupabaseで内容を確認してください。`,
+      },
     }).catch(() => console.error("Slack通知に失敗しました。"));
   }
 
