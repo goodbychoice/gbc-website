@@ -15,8 +15,9 @@ useSeoMeta({
 // APIと共通の種別一覧を使用し、選択肢の食い違いを防ぐ。
 import { contactCategories } from "#shared/contact";
 
-// Vercelへの移行・接続確認までは、公開フォームを無効にしておく。
+// 環境変数から公開フォームの有効状態を取得する。
 const formEnabled = useRuntimeConfig().public.contactFormEnabled;
+
 // 画面に入力された内容を1つのオブジェクトにまとめる。
 const form = reactive({
   name: "",
@@ -25,16 +26,18 @@ const form = reactive({
   message: "",
   consent: false,
 });
+
 // 送信中・送信完了・エラー表示の状態を管理する。
 const sending = ref(false);
 const sent = ref(false);
 const sendError = ref("");
+
 // 送信完了後、完了表示を確実に視界へ入れるために参照する。
 const successMessage = ref<HTMLElement | null>(null);
 
 // 送信ボタンが押されたときに、Nuxt Server APIへ問い合わせを送る。
 async function submitContact() {
-  // 準備中や二重送信の場合は処理しない。
+  // フォーム無効時や二重送信時は処理しない。
   if (!formEnabled || sending.value) return;
 
   // 送信開始時にボタンを無効にし、前回のエラー表示を消す。
@@ -44,14 +47,17 @@ async function submitContact() {
   try {
     // API側で入力検証・DB保存・Slack通知を行う。
     await $fetch("/api/contact", { method: "POST", body: form });
+
     // 保存成功後は入力欄の代わりに受付完了メッセージを表示する。
     sent.value = true;
     await nextTick();
+
     // 長いフォームの下部から送信しても、完了表示が埋もれないよう中央へ移動する。
     successMessage.value?.scrollIntoView({ behavior: "smooth", block: "center" });
   } catch {
     // エラーの内部情報は出さず、メールでの連絡手段も案内する。
-    sendError.value = "送信できませんでした。時間をおいて再度お試しいただくか、メールにてご連絡ください。";
+    sendError.value =
+      "送信できませんでした。時間をおいて再度お試しいただくか、メールにてご連絡ください。";
   } finally {
     // 成功・失敗に関係なく送信中の状態を解除する。
     sending.value = false;
@@ -61,12 +67,13 @@ async function submitContact() {
 
 <template>
   <main class="bg-[#f4f1ea] text-[#111317]">
+    <!-- ページタイトルとお問い合わせの概要を表示する。 -->
     <section
       class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
       <div class="mx-auto w-full max-w-[1600px]">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/52 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
         >
           GBCへのご相談・ご依頼
         </p>
@@ -92,6 +99,7 @@ async function submitContact() {
       </div>
     </section>
 
+    <!-- フォームの状態に応じて入力欄・利用不可案内・完了表示を切り替える。 -->
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
@@ -106,13 +114,13 @@ async function submitContact() {
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
-          <!-- フォームが未公開の場合のみ準備中の案内を表示する。 -->
+          <!-- フォームが未公開の場合のみメール利用の案内を表示する。 -->
           <div v-if="!formEnabled" class="border-y border-black/20 py-6">
             <p class="text-[15px] font-semibold text-black/72 sm:text-[16px]">
-              フォーム送信機能は現在準備中です。
+              フォーム送信機能は現在ご利用いただけません。
             </p>
             <p class="mt-2 text-[14px] leading-[1.8] text-black/60 sm:text-[15px]">
-              現在のお問い合わせは、下記メールアドレスをご利用ください。
+              お問い合わせは、下記メールアドレスをご利用ください。
             </p>
           </div>
 
@@ -131,7 +139,9 @@ async function submitContact() {
               >
                 ✓
               </div>
-              <p class="text-[13px] font-semibold tracking-[0.16em] text-black/60 sm:text-[14px]">
+              <p
+                class="text-[13px] font-semibold tracking-[0.16em] text-black/60 sm:text-[14px]"
+              >
                 MESSAGE SENT
               </p>
             </div>
@@ -143,7 +153,9 @@ async function submitContact() {
               受け付けました。
             </p>
 
-            <p class="mt-7 max-w-[560px] text-[17px] leading-[2] text-black/68 sm:text-[18px]">
+            <p
+              class="mt-7 max-w-[560px] text-[17px] leading-[2] text-black/68 sm:text-[18px]"
+            >
               送信ありがとうございます。<br class="hidden sm:block" />
               内容を確認のうえ、順次ご返信いたします。
             </p>
@@ -155,11 +167,14 @@ async function submitContact() {
           <form
             v-if="!sent"
             class="mt-12 space-y-10"
-            :aria-label="formEnabled ? 'お問い合わせフォーム' : 'お問い合わせフォーム（準備中）'"
+            :aria-label="formEnabled ? 'お問い合わせフォーム' : 'お問い合わせフォーム（利用不可）'"
             @submit.prevent="submitContact"
           >
+            <!-- お名前を入力する。 -->
             <div>
-              <label for="name" class="block text-[15px] font-semibold">お名前</label>
+              <label for="name" class="block text-[15px] font-semibold">
+                お名前
+              </label>
               <input
                 id="name"
                 v-model="form.name"
@@ -174,8 +189,11 @@ async function submitContact() {
               />
             </div>
 
+            <!-- 返信先メールアドレスを入力する。 -->
             <div>
-              <label for="email" class="block text-[15px] font-semibold">メールアドレス</label>
+              <label for="email" class="block text-[15px] font-semibold">
+                メールアドレス
+              </label>
               <input
                 id="email"
                 v-model="form.email"
@@ -190,8 +208,11 @@ async function submitContact() {
               />
             </div>
 
+            <!-- お問い合わせ種別を共通定義から選択する。 -->
             <div>
-              <label for="type" class="block text-[15px] font-semibold">お問い合わせ種別</label>
+              <label for="type" class="block text-[15px] font-semibold">
+                お問い合わせ種別
+              </label>
               <select
                 id="type"
                 v-model="form.category"
@@ -201,14 +222,21 @@ async function submitContact() {
                 class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
               >
                 <option disabled value="">選択してください</option>
-                <option v-for="type in contactCategories" :key="type" :value="type">
+                <option
+                  v-for="type in contactCategories"
+                  :key="type"
+                  :value="type"
+                >
                   {{ type }}
                 </option>
               </select>
             </div>
 
+            <!-- ご相談・ご依頼の内容を入力する。 -->
             <div>
-              <label for="message" class="block text-[15px] font-semibold">お問い合わせ内容</label>
+              <label for="message" class="block text-[15px] font-semibold">
+                お問い合わせ内容
+              </label>
               <textarea
                 id="message"
                 v-model="form.message"
@@ -238,7 +266,7 @@ async function submitContact() {
                   to="/privacy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="border-b border-black/30 text-[#111317] transition-colors hover:border-black"
+                  class="border-b border-black/30 text-[#111317] transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                   プライバシーポリシー
                 </NuxtLink>
@@ -246,24 +274,29 @@ async function submitContact() {
               </span>
             </label>
 
-            <!-- 失敗した場合だけエラーを表示する。 -->
-            <p v-if="sendError" role="alert" class="text-[14px] leading-[1.8] text-red-800">
+            <!-- 送信失敗時だけ再試行方法を案内する。 -->
+            <p
+              v-if="sendError"
+              role="alert"
+              class="text-[14px] leading-[1.8] text-red-800"
+            >
               {{ sendError }}
             </p>
 
-            <!-- 準備中・送信中はボタンを押せないようにする。 -->
+            <!-- フォーム無効時・送信中は送信ボタンを操作できないようにする。 -->
             <button
               type="submit"
               :disabled="!formEnabled || sending"
               class="inline-flex min-w-[180px] items-center justify-center border border-[#111317] px-7 py-4 text-[15px] font-semibold transition-colors enabled:hover:bg-[#111317] enabled:hover:text-[#f4f1ea] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:border-black/20 disabled:text-black/35"
             >
-              {{ !formEnabled ? "送信機能は準備中" : sending ? "送信中…" : "送信する" }}
+              {{ !formEnabled ? "送信機能は利用不可" : sending ? "送信中…" : "送信する" }}
             </button>
           </form>
         </div>
       </div>
     </section>
 
+    <!-- フォーム以外の連絡手段としてメールアドレスを案内する。 -->
     <section
       class="px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
@@ -278,13 +311,15 @@ async function submitContact() {
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
-          <p class="max-w-[760px] text-[17px] leading-[2] text-black/68 sm:text-[18px]">
+          <p
+            class="max-w-[760px] text-[17px] leading-[2] text-black/68 sm:text-[18px]"
+          >
             メールでのお問い合わせも受け付けています。内容を確認のうえ、順次ご返信いたします。
           </p>
 
           <a
             href="mailto:info@goodbychoice.co.jp"
-            class="group mt-10 flex items-center justify-between gap-6 border-y border-black/20 py-7 transition-colors hover:text-black/60 sm:py-8"
+            class="group mt-10 flex items-center justify-between gap-6 border-y border-black/20 py-7 transition-colors hover:text-black/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:py-8"
           >
             <span
               class="text-[clamp(1.35rem,2.3vw,2.2rem)] font-semibold tracking-[-0.025em]"
@@ -299,7 +334,9 @@ async function submitContact() {
             </span>
           </a>
 
-          <p class="mt-5 text-[13px] leading-[1.8] text-black/60 sm:text-[14px]">
+          <p
+            class="mt-5 text-[13px] leading-[1.8] text-black/60 sm:text-[14px]"
+          >
             お問い合わせ内容によっては、返信までお時間をいただく場合があります。
           </p>
         </div>

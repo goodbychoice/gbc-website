@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// GBCについてページの検索結果・SNS共有向け情報を設定する。
 useSeoMeta({
   title: "GBCについて | 個人が自由に生きるためのプラットフォーム | GBC",
   description:
@@ -14,12 +15,13 @@ useSeoMeta({
 
 <template>
   <main class="bg-[#f4f1ea] text-[#111317]">
+    <!-- ページタイトルとGBCが目指す社会を最初に伝える。 -->
     <section
       class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
       <div class="mx-auto w-full max-w-[1600px]">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/52 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
         >
           GBCについて
         </p>
@@ -39,6 +41,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- GBCの役割と提供する価値を説明する。 -->
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
@@ -74,6 +77,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- GBCをつくる背景と問題意識を説明する。 -->
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
@@ -105,6 +109,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 支援する一方で本人の意思決定を尊重する考え方を示す。 -->
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
@@ -140,6 +145,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- GBCが最終的に増やしたい状態をメッセージとして締める。 -->
     <section
       class="px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
