@@ -29,6 +29,8 @@ const form = reactive({
 const sending = ref(false);
 const sent = ref(false);
 const sendError = ref("");
+// 送信完了後、完了表示を確実に視界へ入れるために参照する。
+const successMessage = ref<HTMLElement | null>(null);
 
 // 送信ボタンが押されたときに、Nuxt Server APIへ問い合わせを送る。
 async function submitContact() {
@@ -44,6 +46,9 @@ async function submitContact() {
     await $fetch("/api/contact", { method: "POST", body: form });
     // 保存成功後は入力欄の代わりに受付完了メッセージを表示する。
     sent.value = true;
+    await nextTick();
+    // 長いフォームの下部から送信しても、完了表示が埋もれないよう中央へ移動する。
+    successMessage.value?.scrollIntoView({ behavior: "smooth", block: "center" });
   } catch {
     // エラーの内部情報は出さず、メールでの連絡手段も案内する。
     sendError.value = "送信できませんでした。時間をおいて再度お試しいただくか、メールにてご連絡ください。";
@@ -111,14 +116,28 @@ async function submitContact() {
             </p>
           </div>
 
-          <!-- 送信成功時は完了メッセージに切り替える。 -->
+          <!-- 送信成功時は、フォームと明確に異なる完了表示へ切り替える。 -->
           <div
             v-if="sent"
+            ref="successMessage"
             role="status"
             aria-live="polite"
-            class="border-y border-black/20 py-7 text-[16px] leading-[1.9]"
+            class="border border-[#111317] bg-[#111317] px-7 py-9 text-[#f4f1ea] sm:px-10 sm:py-11"
           >
-            お問い合わせを受け付けました。内容を確認のうえ、順次ご返信いたします。
+            <div
+              aria-hidden="true"
+              class="flex h-12 w-12 items-center justify-center rounded-full border border-[#f4f1ea]/45 text-[24px] font-semibold"
+            >
+              ✓
+            </div>
+            <p
+              class="mt-7 text-[clamp(1.7rem,3vw,2.6rem)] font-semibold leading-[1.2] tracking-[-0.035em]"
+            >
+              お問い合わせを受け付けました
+            </p>
+            <p class="mt-4 max-w-[720px] text-[15px] leading-[1.9] text-[#f4f1ea]/72 sm:text-[16px]">
+              送信ありがとうございます。内容を確認のうえ、順次ご返信いたします。
+            </p>
           </div>
 
           <!-- 送信完了前だけ入力フォームを表示する。 -->
@@ -206,6 +225,8 @@ async function submitContact() {
               <span>
                 <NuxtLink
                   to="/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="border-b border-black/30 text-[#111317] transition-colors hover:border-black"
                 >
                   プライバシーポリシー
