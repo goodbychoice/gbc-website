@@ -122,7 +122,7 @@ async function submitContact() {
             ref="successMessage"
             role="status"
             aria-live="polite"
-            class="py-3 sm:py-6"
+            class="max-w-[760px] py-3 sm:py-6"
           >
             <div class="flex items-center gap-4">
               <div
@@ -137,18 +137,18 @@ async function submitContact() {
             </div>
 
             <p
-              class="mt-8 max-w-[820px] text-[clamp(2.3rem,4vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.055em]"
+              class="mt-8 max-w-[700px] text-[clamp(2.3rem,4vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.055em]"
             >
               お問い合わせを<br class="hidden sm:block" />
               受け付けました。
             </p>
 
-            <p class="mt-7 max-w-[620px] text-[16px] leading-[2] text-black/60 sm:text-[17px]">
+            <p class="mt-7 max-w-[560px] text-[17px] leading-[1.95] text-black/64 sm:text-[18px]">
               送信ありがとうございます。<br class="hidden sm:block" />
               内容を確認のうえ、順次ご返信いたします。
             </p>
 
-            <div class="mt-10 h-px w-full bg-black/20" />
+            <div class="mt-10 h-px w-full max-w-[560px] bg-black/20" />
           </div>
 
           <!-- 送信完了前だけ入力フォームを表示する。 -->
