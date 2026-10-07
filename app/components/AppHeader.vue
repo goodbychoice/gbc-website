@@ -53,7 +53,7 @@ function closeMenu() {
         class="flex h-10 w-10 items-center justify-center text-black/70 transition-colors hover:text-black lg:hidden"
         :aria-expanded="isMenuOpen"
         aria-controls="mobile-menu"
-        aria-label="メニューを開く"
+        :aria-label="isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'"
         @click="isMenuOpen = !isMenuOpen"
       >
         <span class="relative block h-4 w-6">
@@ -71,6 +71,8 @@ function closeMenu() {
 
     <div
       id="mobile-menu"
+      :inert="!isMenuOpen"
+      :aria-hidden="!isMenuOpen"
       class="overflow-hidden border-t border-black/10 bg-[#f4f1ea] transition-[max-height,opacity] duration-200 lg:hidden"
       :class="isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'"
     >

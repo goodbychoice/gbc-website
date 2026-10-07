@@ -1,0 +1,23 @@
+/* キーボード操作時のフォーカス位置を、サイト全体で明確にする。 */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/*
+ * 小さい補助テキストで使っている低い不透明度を、読みやすさを損なわない範囲で補正する。
+ * 既存のデザイン階層は維持しつつ、通常サイズ文字のコントラストを確保する。
+ */
+[class~="text-black/42"],
+[class~="text-black/46"],
+[class~="text-black/48"] {
+  color: rgb(0 0 0 / 0.56) !important;
+}
+
+[class~="text-white/42"] {
+  color: rgb(255 255 255 / 0.46) !important;
+}
