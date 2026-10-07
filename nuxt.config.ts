@@ -14,6 +14,17 @@ export default defineNuxtConfig({
     disallow: [],
   },
 
+  // 秘密情報はNitroのサーバー側だけで使用する。VercelではNUXT_*環境変数を設定する。
+  runtimeConfig: {
+    supabaseUrl: '',
+    supabaseSecretKey: '',
+    slackWebhookUrl: '',
+    public: {
+      // SupabaseとSlackの接続確認が完了するまでは、公開フォームを無効にしておく。
+      contactFormEnabled: false,
+    },
+  },
+
   experimental: {
     prerenderErrorPages: true,
   },
