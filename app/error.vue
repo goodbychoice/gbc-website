@@ -26,7 +26,7 @@ function goHome() {
         class="min-h-[calc(100vh-76px)] px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
       >
         <div class="mx-auto w-full max-w-[1600px]">
-          <p class="text-[14px] font-semibold tracking-[0.08em] text-black/42">
+          <p class="text-[14px] font-semibold tracking-[0.08em] text-black/60">
             {{ error.statusCode }}
           </p>
 
