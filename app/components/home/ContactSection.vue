@@ -51,7 +51,7 @@
           </div>
 
           <p
-            class="mt-5 text-[13px] leading-[1.8] text-black/42 sm:text-[14px]"
+            class="mt-5 text-[13px] leading-[1.8] text-black/60 sm:text-[14px]"
           >
             メール：info@goodbychoice.co.jp
           </p>

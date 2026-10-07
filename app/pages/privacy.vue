@@ -159,21 +159,21 @@ useSeoMeta({
               </h2>
               <dl class="mt-6 border-y border-black/20 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
                 <div class="grid gap-1 border-b border-black/15 py-5 sm:grid-cols-[9rem_1fr] sm:gap-6">
-                  <dt class="font-semibold text-black/48">事業者名</dt>
+                  <dt class="font-semibold text-black/60">事業者名</dt>
                   <dd>GBC合同会社</dd>
                 </div>
                 <div class="grid gap-1 border-b border-black/15 py-5 sm:grid-cols-[9rem_1fr] sm:gap-6">
-                  <dt class="font-semibold text-black/48">代表者</dt>
+                  <dt class="font-semibold text-black/60">代表者</dt>
                   <dd>雨宮 澪</dd>
                 </div>
                 <div class="grid gap-1 py-5 sm:grid-cols-[9rem_1fr] sm:gap-6">
-                  <dt class="font-semibold text-black/48">所在地</dt>
+                  <dt class="font-semibold text-black/60">所在地</dt>
                   <dd>〒220-0004 神奈川県横浜市西区北幸2-10-48 むつみビル3階</dd>
                 </div>
               </dl>
             </section>
 
-            <div class="border-t border-black/20 pt-8 text-[14px] leading-[1.9] text-black/45">
+            <div class="border-t border-black/20 pt-8 text-[14px] leading-[1.9] text-black/60">
               <p>制定日：2026年9月22日</p>
             </div>
           </div>
