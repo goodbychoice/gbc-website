@@ -1,8 +1,10 @@
 <script setup lang="ts">
+// トップページで共通利用するタイトルと説明文を定義する。
 const title = "GBC（Good By Choice）｜選んで生きる、個の時代へ。";
 const description =
   "GBCは、会社や組織に依存せず、個人が自分の選択で自由に生きていくためのプラットフォームです。";
 
+// 検索結果とSNS共有向けにトップページ固有のメタ情報を設定する。
 useSeoMeta({
   title,
   description,
@@ -12,6 +14,7 @@ useSeoMeta({
   twitterDescription: description,
 });
 
+// 検索エンジンへ会社情報とWebサイト情報を構造化データとして伝える。
 useHead({
   script: [
     {
@@ -70,11 +73,18 @@ useHead({
 
 <template>
   <main>
+    <!-- GBCのキャッチコピーを最初に伝える。 -->
     <HomeHeroSection />
+
+    <!-- GBCの概要と思想を順番に紹介する。 -->
     <HomeAboutSection />
     <HomeMissionSection />
+
+    <!-- 事業とGBC全体の仕組みを紹介する。 -->
     <HomeProjectsSection />
     <HomeStructureSection />
+
+    <!-- 会社・代表情報とお問い合わせ導線を表示する。 -->
     <HomeProfileCompanySection />
     <HomeContactSection />
   </main>

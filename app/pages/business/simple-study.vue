@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// Simple Studyページの検索結果・SNS共有向け情報を設定する。
 useSeoMeta({
   title: "個人向けIT・プログラミング学習 | Simple Study | GBC",
   description:
@@ -19,7 +20,7 @@ useSeoMeta({
     >
       <div class="mx-auto w-full max-w-[1600px]">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/52 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
         >
           学び
         </p>
@@ -290,7 +291,7 @@ useSeoMeta({
 
           <NuxtLink
             to="/contact"
-            class="group mt-12 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[16px] font-semibold transition-colors hover:border-black"
+            class="group mt-12 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[16px] font-semibold transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             <span>お問い合わせ</span>
             <span
