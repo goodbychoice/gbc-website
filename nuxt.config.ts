@@ -14,6 +14,8 @@ export default defineNuxtConfig({
     },
   },
 
+  css: ['~/assets/css/accessibility.css'],
+
   site: {
     url: 'https://www.goodbychoice.co.jp',
     name: 'GBC（Good By Choice）'
