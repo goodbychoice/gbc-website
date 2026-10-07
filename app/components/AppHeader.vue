@@ -23,8 +23,8 @@ function closeMenu() {
     <div
       class="mx-auto flex h-[76px] w-full max-w-[1600px] items-center justify-between px-5 sm:px-8 lg:px-12 xl:px-16"
     >
-      <a
-        href="/"
+      <NuxtLink
+        to="/"
         class="flex items-center"
         aria-label="GBC トップページ"
       >
@@ -33,20 +33,20 @@ function closeMenu() {
           alt="GBC Good By Choice"
           class="h-9 w-auto sm:h-10"
         />
-      </a>
+      </NuxtLink>
 
       <nav
         aria-label="メインナビゲーション"
         class="hidden items-center gap-8 text-[13px] font-medium tracking-[0.04em] text-black/65 lg:flex"
       >
-        <a
+        <NuxtLink
           v-for="link in navLinks"
           :key="link.href"
-          :href="link.href"
+          :to="link.href"
           class="transition-colors duration-200 hover:text-black"
         >
           {{ link.label }}
-        </a>
+        </NuxtLink>
       </nav>
 
       <button
@@ -75,15 +75,15 @@ function closeMenu() {
       :class="isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'"
     >
       <nav aria-label="モバイルナビゲーション" class="px-5 py-3 sm:px-8">
-        <a
+        <NuxtLink
           v-for="link in navLinks"
           :key="link.href"
-          :href="link.href"
+          :to="link.href"
           class="block border-b border-black/10 py-4 text-[15px] font-medium text-black/70 transition-colors hover:text-black last:border-b-0"
           @click="closeMenu"
         >
           {{ link.label }}
-        </a>
+        </NuxtLink>
       </nav>
     </div>
   </header>
