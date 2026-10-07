@@ -61,18 +61,50 @@ async function submitContact() {
 
 <template>
   <main class="bg-[#f4f1ea] text-[#111317]">
-    <section class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16">
+    <section
+      class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+    >
       <div class="mx-auto w-full max-w-[1600px]">
-        <p class="text-[15px] font-semibold tracking-[0.04em] text-black/52 sm:text-[16px]">GBCへのご相談・ご依頼</p>
-        <h1 class="mt-8 text-[clamp(3.2rem,8vw,8rem)] font-semibold leading-[1.02] tracking-[-0.06em]">お問い合わせ</h1>
-        <p class="mt-10 max-w-[1050px] text-[clamp(2rem,4vw,4.2rem)] font-semibold leading-[1.22] tracking-[-0.045em]">自分の力で始めたい。<br class="hidden sm:block" />そのためにGBCが必要なら。</p>
-        <p class="mt-10 max-w-[820px] text-[18px] leading-[2] text-black/68 sm:text-[19px] md:text-[21px]">サービスについてのご相談、ご依頼、取材・協業などについて、こちらからお問い合わせいただけます。</p>
+        <p
+          class="text-[15px] font-semibold tracking-[0.04em] text-black/52 sm:text-[16px]"
+        >
+          GBCへのご相談・ご依頼
+        </p>
+
+        <h1
+          class="mt-8 text-[clamp(3.2rem,8vw,8rem)] font-semibold leading-[1.02] tracking-[-0.06em]"
+        >
+          お問い合わせ
+        </h1>
+
+        <p
+          class="mt-10 max-w-[1050px] text-[clamp(2rem,4vw,4.2rem)] font-semibold leading-[1.22] tracking-[-0.045em]"
+        >
+          自分の力で始めたい。<br class="hidden sm:block" />
+          そのためにGBCが必要なら。
+        </p>
+
+        <p
+          class="mt-10 max-w-[820px] text-[18px] leading-[2] text-black/68 sm:text-[19px] md:text-[21px]"
+        >
+          サービスについてのご相談、ご依頼、取材・協業などについて、こちらからお問い合わせいただけます。
+        </p>
       </div>
     </section>
 
-    <section class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16">
+    <section
+      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+    >
       <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
-        <div class="col-span-12 md:col-span-4"><h2 class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]">お問い合わせフォーム</h2><div class="mt-5 h-[3px] w-24 bg-[#111317]" /></div>
+        <div class="col-span-12 md:col-span-4">
+          <h2
+            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
+          >
+            お問い合わせフォーム
+          </h2>
+          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+        </div>
+
         <div class="col-span-12 md:col-start-5 md:col-end-12">
           <!-- フォームが未公開の場合のみ準備中の案内を表示する。 -->
           <div v-if="!formEnabled" class="border-y border-black/20 py-6">
@@ -141,12 +173,7 @@ async function submitContact() {
                 class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
-            <p class="mt-8 max-w-[700px] text-[clamp(2.3rem,4vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.055em]">お問い合わせを<br class="hidden sm:block" />受け付けました。</p>
-            <p class="mt-7 max-w-[560px] text-[17px] leading-[2] text-black/68 sm:text-[18px]">送信ありがとうございます。<br class="hidden sm:block" />内容を確認のうえ、順次ご返信いたします。</p>
-            <div class="mt-10 h-px w-full max-w-[560px] bg-black/20" />
-          </div>
 
-          <form v-if="!sent" class="mt-12 space-y-10" :aria-label="formEnabled ? 'お問い合わせフォーム' : 'お問い合わせフォーム（準備中）'" @submit.prevent="submitContact">
             <div>
               <label for="email" class="block text-[15px] font-semibold">メールアドレス</label>
               <input
@@ -162,6 +189,7 @@ async function submitContact() {
                 class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
+
             <div>
               <label for="type" class="block text-[15px] font-semibold">お問い合わせ種別</label>
               <select
@@ -178,6 +206,7 @@ async function submitContact() {
                 </option>
               </select>
             </div>
+
             <div>
               <label for="message" class="block text-[15px] font-semibold">お問い合わせ内容</label>
               <textarea
@@ -235,9 +264,19 @@ async function submitContact() {
       </div>
     </section>
 
-    <section class="px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16">
+    <section
+      class="px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+    >
       <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
-        <div class="col-span-12 md:col-span-4"><h2 class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]">メールでのお問い合わせ</h2><div class="mt-5 h-[3px] w-24 bg-[#111317]" /></div>
+        <div class="col-span-12 md:col-span-4">
+          <h2
+            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
+          >
+            メールでのお問い合わせ
+          </h2>
+          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+        </div>
+
         <div class="col-span-12 md:col-start-5 md:col-end-12">
           <p class="max-w-[760px] text-[17px] leading-[2] text-black/68 sm:text-[18px]">
             メールでのお問い合わせも受け付けています。内容を確認のうえ、順次ご返信いたします。
