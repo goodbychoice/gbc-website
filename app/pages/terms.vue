@@ -126,7 +126,7 @@ useSeoMeta({
               </div>
             </section>
 
-            <div class="border-t border-black/20 pt-8 text-[14px] leading-[1.9] text-black/45">
+            <div class="border-t border-black/20 pt-8 text-[14px] leading-[1.9] text-black/60">
               <p>制定日：2026年9月22日</p>
             </div>
           </div>

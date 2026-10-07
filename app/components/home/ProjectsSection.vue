@@ -37,7 +37,7 @@
           class="grid grid-cols-12 gap-y-8 border-t border-black/20 py-12 md:items-start md:py-16"
         >
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/42">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
               学び
             </p>
             <h3
@@ -79,7 +79,7 @@
           class="grid grid-cols-12 gap-y-8 border-t border-black/20 py-12 md:items-start md:py-16"
         >
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/42">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
               事業支援
             </p>
             <h3
@@ -121,7 +121,7 @@
           class="grid grid-cols-12 gap-y-8 border-y border-black/20 py-12 md:items-start md:py-16"
         >
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/42">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
               クリエイター支援
             </p>
             <h3
@@ -163,7 +163,7 @@
       <div class="mt-28 md:mt-36">
         <div class="grid grid-cols-12 gap-y-10 border-t-[3px] border-[#111317] pt-10 md:gap-y-0 md:pt-12">
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/42">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
               技術・開発
             </p>
             <h3

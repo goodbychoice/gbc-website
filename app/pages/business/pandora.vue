@@ -103,28 +103,28 @@ useSeoMeta({
 
           <div class="mt-12 border-t border-black/20">
             <div class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8">
-              <p class="text-[15px] font-semibold text-black/48">自社サービス</p>
+              <p class="text-[15px] font-semibold text-black/60">自社サービス</p>
               <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
                 GBC自身が提供するサービスを企画し、開発します。
               </p>
             </div>
 
             <div class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8">
-              <p class="text-[15px] font-semibold text-black/48">各事業の仕組み</p>
+              <p class="text-[15px] font-semibold text-black/60">各事業の仕組み</p>
               <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
                 Simple Study、フェンリル、華の騎士団を支えるシステムやツールをつくります。
               </p>
             </div>
 
             <div class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8">
-              <p class="text-[15px] font-semibold text-black/48">新しいプロダクト</p>
+              <p class="text-[15px] font-semibold text-black/60">新しいプロダクト</p>
               <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
                 既存の事業に限らず、新しいサービスやプロダクトそのものを企画し、形にします。
               </p>
             </div>
 
             <div class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8">
-              <p class="text-[15px] font-semibold text-black/48">外部向け開発</p>
+              <p class="text-[15px] font-semibold text-black/60">外部向け開発</p>
               <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
                 必要に応じて、GBC外部の開発や技術支援にも取り組みます。
               </p>

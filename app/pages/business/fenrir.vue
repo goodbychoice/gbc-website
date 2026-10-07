@@ -257,7 +257,7 @@ useSeoMeta({
 
           <div class="mt-12 border-y border-black/20 py-8 sm:py-10">
             <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <p class="text-[15px] font-semibold tracking-[0.04em] text-black/48">
+              <p class="text-[15px] font-semibold tracking-[0.04em] text-black/60">
                 標準利用料
               </p>
               <p class="text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-none tracking-[-0.055em]">
@@ -283,7 +283,7 @@ useSeoMeta({
             </p>
           </div>
 
-          <p class="mt-8 text-[14px] leading-[1.8] text-black/45">
+          <p class="mt-8 text-[14px] leading-[1.8] text-black/60">
             ※料金体系・割合は現在検討中です。正式な内容はサービス開始までに公開します。
           </p>
         </div>

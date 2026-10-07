@@ -131,7 +131,7 @@ async function submitContact() {
               >
                 ✓
               </div>
-              <p class="text-[13px] font-semibold tracking-[0.16em] text-black/48 sm:text-[14px]">
+              <p class="text-[13px] font-semibold tracking-[0.16em] text-black/60 sm:text-[14px]">
                 MESSAGE SENT
               </p>
             </div>
@@ -170,7 +170,7 @@ async function submitContact() {
                 autocomplete="name"
                 :disabled="!formEnabled || sending"
                 placeholder="山田 太郎"
-                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
 
@@ -186,7 +186,7 @@ async function submitContact() {
                 autocomplete="email"
                 :disabled="!formEnabled || sending"
                 placeholder="example@example.com"
-                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
 
@@ -198,7 +198,7 @@ async function submitContact() {
                 name="category"
                 required
                 :disabled="!formEnabled || sending"
-                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none focus:border-black disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
               >
                 <option disabled value="">選択してください</option>
                 <option v-for="type in contactCategories" :key="type" :value="type">
@@ -219,7 +219,7 @@ async function submitContact() {
                 maxlength="5000"
                 :disabled="!formEnabled || sending"
                 placeholder="ご相談・ご依頼内容をご記入ください。（10文字以上）"
-                class="mt-3 w-full resize-y border border-black/20 bg-transparent p-4 text-[17px] leading-[1.9] outline-none placeholder:text-black/35 focus:border-black disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full resize-y border border-black/20 bg-transparent p-4 text-[17px] leading-[1.9] outline-none placeholder:text-black/35 focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
 
@@ -231,7 +231,7 @@ async function submitContact() {
                 type="checkbox"
                 required
                 :disabled="!formEnabled || sending"
-                class="mt-1 h-4 w-4 shrink-0 accent-[#111317] disabled:cursor-not-allowed"
+                class="mt-1 h-4 w-4 shrink-0 accent-[#111317] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed"
               />
               <span>
                 <NuxtLink
@@ -255,7 +255,7 @@ async function submitContact() {
             <button
               type="submit"
               :disabled="!formEnabled || sending"
-              class="inline-flex min-w-[180px] items-center justify-center border border-[#111317] px-7 py-4 text-[15px] font-semibold transition-colors enabled:hover:bg-[#111317] enabled:hover:text-[#f4f1ea] disabled:cursor-not-allowed disabled:border-black/20 disabled:text-black/35"
+              class="inline-flex min-w-[180px] items-center justify-center border border-[#111317] px-7 py-4 text-[15px] font-semibold transition-colors enabled:hover:bg-[#111317] enabled:hover:text-[#f4f1ea] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:border-black/20 disabled:text-black/35"
             >
               {{ !formEnabled ? "送信機能は準備中" : sending ? "送信中…" : "送信する" }}
             </button>
@@ -299,7 +299,7 @@ async function submitContact() {
             </span>
           </a>
 
-          <p class="mt-5 text-[13px] leading-[1.8] text-black/42 sm:text-[14px]">
+          <p class="mt-5 text-[13px] leading-[1.8] text-black/60 sm:text-[14px]">
             お問い合わせ内容によっては、返信までお時間をいただく場合があります。
           </p>
         </div>

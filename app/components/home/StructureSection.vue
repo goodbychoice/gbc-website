@@ -37,7 +37,7 @@
           <div
             class="col-span-12 border-b border-black/20 py-10 md:col-span-4 md:border-b-0 md:border-r md:py-14 md:pr-10"
           >
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/42">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
               学ぶ
             </p>
             <p
@@ -50,7 +50,7 @@
           <div
             class="col-span-12 border-b border-black/20 py-10 md:col-span-4 md:border-b-0 md:border-r md:px-10 md:py-14"
           >
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/42">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
               事業をつくる・続ける
             </p>
             <p
@@ -61,7 +61,7 @@
           </div>
 
           <div class="col-span-12 py-10 md:col-span-4 md:pl-10 md:py-14">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/42">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
               表現する・届ける
             </p>
             <p
@@ -74,7 +74,7 @@
 
         <div class="grid grid-cols-12 gap-y-10 border-b border-black/20 py-12 md:py-16">
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/42">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
               GBCを技術面から支える
             </p>
             <p

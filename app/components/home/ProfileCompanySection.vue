@@ -74,7 +74,7 @@ const companyItems = [
                 class="grid gap-3 border-b border-black/16 py-6 sm:grid-cols-[180px_1fr] sm:gap-8 md:py-7"
               >
                 <dt
-                  class="text-[14px] font-semibold tracking-[0.03em] text-black/46 sm:text-[15px]"
+                  class="text-[14px] font-semibold tracking-[0.03em] text-black/60 sm:text-[15px]"
                 >
                   {{ item.label }}
                 </dt>
@@ -116,7 +116,7 @@ const companyItems = [
                 雨宮 澪
               </p>
               <p
-                class="mt-4 text-[14px] font-semibold tracking-[0.14em] text-black/42 sm:text-[15px]"
+                class="mt-4 text-[14px] font-semibold tracking-[0.14em] text-black/60 sm:text-[15px]"
               >
                 AMEMIYA REI
               </p>
