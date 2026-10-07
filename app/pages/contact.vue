@@ -131,7 +131,7 @@ async function submitContact() {
               >
                 ✓
               </div>
-              <p class="text-[12px] font-semibold tracking-[0.18em] text-black/42 sm:text-[13px]">
+              <p class="text-[13px] font-semibold tracking-[0.16em] text-black/48 sm:text-[14px]">
                 MESSAGE SENT
               </p>
             </div>
@@ -143,7 +143,7 @@ async function submitContact() {
               受け付けました。
             </p>
 
-            <p class="mt-7 max-w-[560px] text-[17px] leading-[1.95] text-black/64 sm:text-[18px]">
+            <p class="mt-7 max-w-[560px] text-[17px] leading-[2] text-black/68 sm:text-[18px]">
               送信ありがとうございます。<br class="hidden sm:block" />
               内容を確認のうえ、順次ご返信いたします。
             </p>
