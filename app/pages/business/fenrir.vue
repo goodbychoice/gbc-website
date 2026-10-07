@@ -160,6 +160,53 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 相談内容を具体的な利用シーンとして示し、自分ごととして判断しやすくする。 -->
+    <section
+      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+    >
+      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+        <div class="col-span-12 md:col-span-4">
+          <h2
+            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
+          >
+            こんなときに相談できます
+          </h2>
+          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+        </div>
+
+        <div class="col-span-12 md:col-start-5 md:col-end-12">
+          <p
+            class="max-w-[940px] text-[clamp(2.1rem,4vw,4.2rem)] font-semibold leading-[1.2] tracking-[-0.045em]"
+          >
+            答えが決まっていなくても、<br class="hidden sm:block" />
+            一緒に整理するところから。
+          </p>
+
+          <div class="mt-12 max-w-[860px] border-t border-black/20">
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              事業を始めたいけれど、何から整理すればいいか分からない。
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              サービスの方向性や見せ方に迷っている。
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              集客や発信をどう進めるか決めきれない。
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              WebやITツールを使いたいけれど、何を選べばいいか分からない。
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              一人で考え続けるのではなく、状況や選択肢を整理する相手がほしい。
+            </p>
+          </div>
+
+          <p class="mt-10 max-w-[820px] text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]">
+            フェンリルでは、答えを代わりに決めるのではなく、今の状況を一緒に整理し、本人が次の一歩を選べる状態をつくります。
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >

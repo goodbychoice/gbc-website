@@ -163,6 +163,53 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 相談内容を具体的な活動シーンとして示し、自分に必要な支援か判断しやすくする。 -->
+    <section
+      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+    >
+      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+        <div class="col-span-12 md:col-span-4">
+          <h2
+            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
+          >
+            こんなときに相談できます
+          </h2>
+          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+        </div>
+
+        <div class="col-span-12 md:col-start-5 md:col-end-12">
+          <p
+            class="max-w-[940px] text-[clamp(2.1rem,4vw,4.2rem)] font-semibold leading-[1.2] tracking-[-0.045em]"
+          >
+            活動の形を決めつけず、<br class="hidden sm:block" />
+            大切にしたいことから考える。
+          </p>
+
+          <div class="mt-12 max-w-[860px] border-t border-black/20">
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              VTuberや配信活動を始めたいけれど、何を準備すればいいか分からない。
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              配信環境や機材、ツール選びに迷っている。
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              SNSや動画で、どう発信していくか整理したい。
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              趣味として続けるのか、収益化を目指すのか迷っている。
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              自分の世界観を守りながら、無理なく活動を続ける方法を考えたい。
+            </p>
+          </div>
+
+          <p class="mt-10 max-w-[820px] text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]">
+            華の騎士団では、活動の形を決めつけるのではなく、本人が大切にしたいことを起点に、続け方や選択肢を一緒に整理します。
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >

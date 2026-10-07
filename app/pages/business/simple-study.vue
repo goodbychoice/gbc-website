@@ -236,6 +236,57 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 学習内容を具体的な成果物につなげ、学んだ先の姿をイメージしやすくする。 -->
+    <section
+      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+    >
+      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+        <div class="col-span-12 md:col-span-4">
+          <h2
+            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
+          >
+            学んだ先につくれるもの
+          </h2>
+          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+        </div>
+
+        <div class="col-span-12 md:col-start-5 md:col-end-12">
+          <p
+            class="max-w-[940px] text-[clamp(2.1rem,4vw,4.2rem)] font-semibold leading-[1.2] tracking-[-0.045em]"
+          >
+            知識を覚えるだけでなく、<br class="hidden sm:block" />
+            自分に必要なものを形にする。
+          </p>
+
+          <p class="mt-12 max-w-[820px] text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]">
+            Simple Studyで目指すのは、学んだ技術を使って、自分の活動に必要なものを自分で形にできる状態です。
+          </p>
+
+          <div class="mt-10 max-w-[860px] border-t border-black/20">
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              日々の作業を効率化する小さなツール
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              自分のアイデアを形にしたWebサービス
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              APIを使って処理をつなぐ自動化の仕組み
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              データを整理・集計・処理するツール
+            </p>
+            <p class="border-b border-black/20 py-5 text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              AIを自分のサービスや業務に取り入れた機能
+            </p>
+          </div>
+
+          <p class="mt-10 max-w-[820px] text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]">
+            つくるものを起点に必要なことを学び、学んだら実際につくる。その繰り返しを通して、技術を「知っているもの」ではなく「使えるもの」にしていきます。
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
