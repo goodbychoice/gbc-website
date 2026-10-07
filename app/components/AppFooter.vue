@@ -18,25 +18,25 @@ const footerLinks = [
       <div
         class="flex flex-col gap-8 border-b border-white/14 pb-8 lg:flex-row lg:items-center lg:justify-between"
       >
-        <a href="/" class="inline-flex w-fit" aria-label="GBC トップページ">
+        <NuxtLink to="/" class="inline-flex w-fit" aria-label="GBC トップページ">
           <img
             src="/images/gbc-logo-dark-theme.svg"
             alt="GBC Good By Choice"
             class="h-8 w-auto sm:h-9"
           />
-        </a>
+        </NuxtLink>
 
         <nav aria-label="フッターナビゲーション">
           <ul
             class="flex flex-wrap gap-x-6 gap-y-3 text-[13px] font-medium text-white/58"
           >
             <li v-for="link in footerLinks" :key="link.href">
-              <a
-                :href="link.href"
+              <NuxtLink
+                :to="link.href"
                 class="transition-colors duration-200 hover:text-white"
               >
                 {{ link.label }}
-              </a>
+              </NuxtLink>
             </li>
           </ul>
         </nav>
