@@ -5,6 +5,8 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap', '@nuxtjs/robots'],
 
+  css: ['~/assets/css/accessibility.css'],
+
   site: {
     url: 'https://www.goodbychoice.co.jp',
     name: 'GBC（Good By Choice）'
