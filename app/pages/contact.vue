@@ -116,28 +116,39 @@ async function submitContact() {
             </p>
           </div>
 
-          <!-- 送信成功時は、フォームと明確に異なる完了表示へ切り替える。 -->
+          <!-- 送信成功時は、余白とタイポグラフィで完了状態を明確に見せる。 -->
           <div
             v-if="sent"
             ref="successMessage"
             role="status"
             aria-live="polite"
-            class="border border-[#111317] bg-[#111317] px-7 py-9 text-[#f4f1ea] sm:px-10 sm:py-11"
+            class="py-3 sm:py-6"
           >
-            <div
-              aria-hidden="true"
-              class="flex h-12 w-12 items-center justify-center rounded-full border border-[#f4f1ea]/45 text-[24px] font-semibold"
-            >
-              ✓
+            <div class="flex items-center gap-4">
+              <div
+                aria-hidden="true"
+                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#111317] text-[22px] font-semibold text-[#f4f1ea]"
+              >
+                ✓
+              </div>
+              <p class="text-[12px] font-semibold tracking-[0.18em] text-black/42 sm:text-[13px]">
+                MESSAGE SENT
+              </p>
             </div>
+
             <p
-              class="mt-7 text-[clamp(1.7rem,3vw,2.6rem)] font-semibold leading-[1.2] tracking-[-0.035em]"
+              class="mt-8 max-w-[820px] text-[clamp(2.3rem,4vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.055em]"
             >
-              お問い合わせを受け付けました
+              お問い合わせを<br class="hidden sm:block" />
+              受け付けました。
             </p>
-            <p class="mt-4 max-w-[720px] text-[15px] leading-[1.9] text-[#f4f1ea]/72 sm:text-[16px]">
-              送信ありがとうございます。内容を確認のうえ、順次ご返信いたします。
+
+            <p class="mt-7 max-w-[620px] text-[16px] leading-[2] text-black/60 sm:text-[17px]">
+              送信ありがとうございます。<br class="hidden sm:block" />
+              内容を確認のうえ、順次ご返信いたします。
             </p>
+
+            <div class="mt-10 h-px w-full bg-black/20" />
           </div>
 
           <!-- 送信完了前だけ入力フォームを表示する。 -->
