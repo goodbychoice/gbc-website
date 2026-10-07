@@ -1,12 +1,12 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "GBCについて｜個人が自由に生きるためのプラットフォーム | GBC",
+  title: "GBCについて | 個人が自由に生きるためのプラットフォーム | GBC",
   description:
     "GBCは、会社や組織に依存せず、個人が自分の選択で自由に生きていくためのプラットフォームです。",
-  ogTitle: "GBCについて｜個人が自由に生きるためのプラットフォーム | GBC",
+  ogTitle: "GBCについて | 個人が自由に生きるためのプラットフォーム | GBC",
   ogDescription:
     "GBCは、会社や組織に依存せず、個人が自分の選択で自由に生きていくためのプラットフォームです。",
-  twitterTitle: "GBCについて｜個人が自由に生きるためのプラットフォーム | GBC",
+  twitterTitle: "GBCについて | 個人が自由に生きるためのプラットフォーム | GBC",
   twitterDescription:
     "GBCは、会社や組織に依存せず、個人が自分の選択で自由に生きていくためのプラットフォームです。",
 });
