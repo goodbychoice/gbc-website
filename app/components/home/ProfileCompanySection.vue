@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// 会社情報の表示項目を1か所にまとめ、テンプレート側では同じ構造で描画する。
 const companyItems = [
   {
     label: "名称",
@@ -37,6 +38,7 @@ const companyItems = [
 
 <template>
   <div>
+    <!-- 会社の基本情報を一覧で表示する。 -->
     <section
       id="company"
       class="scroll-mt-24 border-t-2 border-black/20 bg-[#f4f1ea] px-5 py-28 text-[#111317] sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
@@ -62,7 +64,7 @@ const companyItems = [
             </p>
 
             <p
-              class="mt-5 text-[17px] leading-[1.9] text-black/54 sm:text-[18px]"
+              class="mt-5 text-[17px] leading-[1.9] text-black/60 sm:text-[18px]"
             >
               Good By Choice
             </p>
@@ -85,12 +87,12 @@ const companyItems = [
                 </dd>
               </div>
             </dl>
-
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 代表者のプロフィールとGBC設立の背景を表示する。 -->
     <section
       id="profile"
       class="scroll-mt-24 border-t-2 border-black/20 bg-[#f4f1ea] px-5 py-28 text-[#111317] sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"

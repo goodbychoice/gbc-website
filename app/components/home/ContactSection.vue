@@ -5,6 +5,7 @@
   >
     <div class="mx-auto w-full max-w-[1600px]">
       <div class="grid grid-cols-12 gap-y-12 md:gap-y-0">
+        <!-- セクション見出しを左カラムに表示する。 -->
         <div class="col-span-12 md:col-span-4">
           <div class="max-w-[280px]">
             <h2
@@ -16,6 +17,7 @@
           </div>
         </div>
 
+        <!-- お問い合わせページへの導線と連絡先を右カラムに表示する。 -->
         <div class="col-span-12 md:col-start-5 md:col-end-13">
           <p
             class="max-w-[980px] text-[clamp(2.5rem,5vw,5rem)] font-semibold leading-[1.15] tracking-[-0.045em]"
@@ -27,13 +29,13 @@
           <p
             class="mt-12 max-w-[760px] text-[17px] leading-[2] text-black/68 sm:text-[18px] md:mt-14 md:text-[19px]"
           >
-            ご相談やご依頼については、お問い合わせページからご連絡ください。現在、フォーム送信機能は準備中のため、メールでのお問い合わせも受け付けています。
+            ご相談やご依頼については、お問い合わせフォームまたはメールからご連絡ください。
           </p>
 
           <div class="mt-12 border-t border-black/20 md:mt-14">
             <NuxtLink
               to="/contact"
-              class="group flex items-center justify-between gap-6 border-b border-black/20 py-7 transition-colors hover:text-black/60 sm:py-8"
+              class="group flex items-center justify-between gap-6 border-b border-black/20 py-7 transition-colors hover:text-black/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:py-8"
             >
               <span
                 class="text-[clamp(1.35rem,2.3vw,2.2rem)] font-semibold tracking-[-0.025em]"

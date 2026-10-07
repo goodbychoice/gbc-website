@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
+// モバイルメニューの開閉状態を管理する。
 const isMenuOpen = ref(false);
 
+// ヘッダーに表示するトップページ内のナビゲーションを定義する。
 const navLinks = [
   { href: "/#about", label: "GBCについて" },
   { href: "/#projects", label: "事業" },
@@ -11,6 +13,7 @@ const navLinks = [
   { href: "/#contact", label: "お問い合わせ" },
 ];
 
+// ナビゲーション選択後にモバイルメニューを閉じる。
 function closeMenu() {
   isMenuOpen.value = false;
 }
@@ -23,9 +26,10 @@ function closeMenu() {
     <div
       class="mx-auto flex h-[76px] w-full max-w-[1600px] items-center justify-between px-5 sm:px-8 lg:px-12 xl:px-16"
     >
+      <!-- ロゴからトップページへ戻る。 -->
       <NuxtLink
         to="/"
-        class="flex items-center"
+        class="flex items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
         aria-label="GBC トップページ"
       >
         <img
@@ -35,6 +39,7 @@ function closeMenu() {
         />
       </NuxtLink>
 
+      <!-- PCではページ内リンクを横並びで表示する。 -->
       <nav
         aria-label="メインナビゲーション"
         class="hidden items-center gap-8 text-[13px] font-medium tracking-[0.04em] text-black/65 lg:flex"
@@ -43,14 +48,15 @@ function closeMenu() {
           v-for="link in navLinks"
           :key="link.href"
           :to="link.href"
-          class="transition-colors duration-200 hover:text-black"
+          class="transition-colors duration-200 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
         >
           {{ link.label }}
         </NuxtLink>
       </nav>
 
+      <!-- モバイルではボタンでメニューを開閉する。 -->
       <button
-        class="flex h-10 w-10 items-center justify-center text-black/70 transition-colors hover:text-black lg:hidden"
+        class="flex h-10 w-10 items-center justify-center text-black/70 transition-colors hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black lg:hidden"
         :aria-expanded="isMenuOpen"
         aria-controls="mobile-menu"
         :aria-label="isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'"
@@ -69,6 +75,7 @@ function closeMenu() {
       </button>
     </div>
 
+    <!-- 閉じている間はinertでキーボードフォーカスの対象から外す。 -->
     <div
       id="mobile-menu"
       :inert="!isMenuOpen"
@@ -81,7 +88,7 @@ function closeMenu() {
           v-for="link in navLinks"
           :key="link.href"
           :to="link.href"
-          class="block border-b border-black/10 py-4 text-[15px] font-medium text-black/70 transition-colors hover:text-black last:border-b-0"
+          class="block border-b border-black/10 py-4 text-[15px] font-medium text-black/70 transition-colors hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black last:border-b-0"
           @click="closeMenu"
         >
           {{ link.label }}

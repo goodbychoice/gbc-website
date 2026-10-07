@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// フェンリルページの検索結果・SNS共有向け情報を設定する。
 useSeoMeta({
   title: "個人事業主・フリーランスの事業相談 | フェンリル | GBC",
   description:
@@ -19,7 +20,7 @@ useSeoMeta({
     >
       <div class="mx-auto w-full max-w-[1600px]">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/52 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
         >
           事業支援
         </p>
@@ -256,11 +257,15 @@ useSeoMeta({
           </p>
 
           <div class="mt-12 border-y border-black/20 py-8 sm:py-10">
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div
+              class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"
+            >
               <p class="text-[15px] font-semibold tracking-[0.04em] text-black/60">
                 標準利用料
               </p>
-              <p class="text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-none tracking-[-0.055em]">
+              <p
+                class="text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-none tracking-[-0.055em]"
+              >
                 月間売上の ○%
               </p>
             </div>
@@ -310,7 +315,7 @@ useSeoMeta({
 
           <NuxtLink
             to="/contact"
-            class="group mt-12 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[16px] font-semibold transition-colors hover:border-black"
+            class="group mt-12 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[16px] font-semibold transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             <span>お問い合わせ</span>
             <span

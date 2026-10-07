@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// Pandoraページの検索結果・SNS共有向け情報を設定する。
 useSeoMeta({
   title: "Webサービス・システム開発 | Pandora | GBC",
   description:
@@ -14,12 +15,13 @@ useSeoMeta({
 
 <template>
   <main class="bg-[#f4f1ea] text-[#111317]">
+    <!-- サービス名とPandoraの役割を最初に伝える。 -->
     <section
       class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
       <div class="mx-auto w-full max-w-[1600px]">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/52 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
         >
           技術・開発
         </p>
@@ -45,6 +47,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- Pandoraが担う役割を説明する。 -->
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
@@ -80,6 +83,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- Pandoraで開発する対象を整理して示す。 -->
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
@@ -102,28 +106,36 @@ useSeoMeta({
           </p>
 
           <div class="mt-12 border-t border-black/20">
-            <div class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8">
+            <div
+              class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
+            >
               <p class="text-[15px] font-semibold text-black/60">自社サービス</p>
               <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
                 GBC自身が提供するサービスを企画し、開発します。
               </p>
             </div>
 
-            <div class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8">
+            <div
+              class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
+            >
               <p class="text-[15px] font-semibold text-black/60">各事業の仕組み</p>
               <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
                 Simple Study、フェンリル、華の騎士団を支えるシステムやツールをつくります。
               </p>
             </div>
 
-            <div class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8">
+            <div
+              class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
+            >
               <p class="text-[15px] font-semibold text-black/60">新しいプロダクト</p>
               <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
                 既存の事業に限らず、新しいサービスやプロダクトそのものを企画し、形にします。
               </p>
             </div>
 
-            <div class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8">
+            <div
+              class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
+            >
               <p class="text-[15px] font-semibold text-black/60">外部向け開発</p>
               <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
                 必要に応じて、GBC外部の開発や技術支援にも取り組みます。
@@ -134,6 +146,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 企画から実装まで一貫して考える開発方針を説明する。 -->
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
@@ -169,6 +182,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 外部向け開発の位置づけを説明する。 -->
     <section
       class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
@@ -204,6 +218,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- Pandoraが持つ開発力の意味をメッセージとして締める。 -->
     <section
       class="px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >

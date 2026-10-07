@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// プライバシーポリシーページの検索結果・SNS共有向け情報を設定する。
 useSeoMeta({
   title: "プライバシーポリシー | GBC",
   description:
@@ -14,12 +15,13 @@ useSeoMeta({
 
 <template>
   <main class="bg-[#f4f1ea] text-[#111317]">
+    <!-- ページタイトルとポリシーの概要を表示する。 -->
     <section
       class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
       <div class="mx-auto w-full max-w-[1600px]">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/52 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
         >
           GBC合同会社
         </p>
@@ -38,12 +40,13 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 個人情報の取り扱いに関する各項目を表示する。 -->
     <section
       class="px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
       <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-3">
-          <p class="text-[14px] font-semibold tracking-[0.03em] text-black/44">
+          <p class="text-[14px] font-semibold tracking-[0.03em] text-black/60">
             個人情報の取り扱い
           </p>
         </div>
@@ -51,7 +54,9 @@ useSeoMeta({
         <div class="col-span-12 md:col-start-4 md:col-end-12">
           <div class="space-y-16 md:space-y-20">
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 1. 取得する情報
               </h2>
               <p class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
@@ -60,7 +65,9 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 2. 利用目的
               </h2>
               <div class="mt-6 space-y-4 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
@@ -76,7 +83,9 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 3. 第三者提供
               </h2>
               <p class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
@@ -85,7 +94,9 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 4. 外部サービスへの委託
               </h2>
               <p class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
@@ -94,7 +105,9 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 5. 安全管理
               </h2>
               <p class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
@@ -103,7 +116,9 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 6. 開示・訂正・削除等
               </h2>
               <p class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
@@ -112,7 +127,9 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 7. Cookie・アクセス解析等
               </h2>
               <div class="mt-6 space-y-4 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
@@ -126,7 +143,9 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 8. プライバシーポリシーの変更
               </h2>
               <p class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
@@ -135,17 +154,21 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 9. お問い合わせ窓口
               </h2>
               <div class="mt-6 border-y border-black/20 py-7 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
                 <p class="font-semibold text-[#111317]">GBC合同会社</p>
-                <p class="mt-2">〒220-0004 神奈川県横浜市西区北幸2-10-48 むつみビル3階</p>
+                <p class="mt-2">
+                  〒220-0004 神奈川県横浜市西区北幸2-10-48 むつみビル3階
+                </p>
                 <p>
                   メール：
                   <a
                     href="mailto:info@goodbychoice.co.jp"
-                    class="border-b border-black/30 transition-colors hover:border-black"
+                    class="border-b border-black/30 transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     info@goodbychoice.co.jp
                   </a>
@@ -154,7 +177,9 @@ useSeoMeta({
             </section>
 
             <section>
-              <h2 class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]">
+              <h2
+                class="text-[clamp(1.7rem,2.4vw,2.5rem)] font-semibold tracking-[-0.035em]"
+              >
                 10. 事業者情報
               </h2>
               <dl class="mt-6 border-y border-black/20 text-[16px] leading-[2] text-black/68 sm:text-[17px]">
@@ -168,12 +193,16 @@ useSeoMeta({
                 </div>
                 <div class="grid gap-1 py-5 sm:grid-cols-[9rem_1fr] sm:gap-6">
                   <dt class="font-semibold text-black/60">所在地</dt>
-                  <dd>〒220-0004 神奈川県横浜市西区北幸2-10-48 むつみビル3階</dd>
+                  <dd>
+                    〒220-0004 神奈川県横浜市西区北幸2-10-48 むつみビル3階
+                  </dd>
                 </div>
               </dl>
             </section>
 
-            <div class="border-t border-black/20 pt-8 text-[14px] leading-[1.9] text-black/60">
+            <div
+              class="border-t border-black/20 pt-8 text-[14px] leading-[1.9] text-black/60"
+            >
               <p>制定日：2026年9月22日</p>
             </div>
           </div>

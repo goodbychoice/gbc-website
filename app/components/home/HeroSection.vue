@@ -2,6 +2,7 @@
   <section
     class="relative min-h-[calc(100svh-76px)] overflow-hidden bg-[#f4f1ea] text-[#111317]"
   >
+    <!-- ファーストビュー中央に公式キャッチコピーを表示する。 -->
     <div
       class="mx-auto flex min-h-[calc(100svh-76px)] w-full max-w-[1600px] items-center justify-center px-5 pb-[8vh] pt-8 text-center sm:px-8 sm:pt-10 lg:px-12 lg:pt-12 xl:px-16"
     >
@@ -28,6 +29,7 @@
 </template>
 
 <style scoped>
+/* キャッチコピーを下から順番に表示する。 */
 .hero-word {
   transform: translateY(72%);
   opacity: 0;
@@ -35,14 +37,17 @@
   animation: heroWordReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+/* 1行目を先に表示する。 */
 .hero-word-first {
   animation-delay: 0.28s;
 }
 
+/* 2行目を少し遅らせて表示する。 */
 .hero-word-second {
   animation-delay: 0.95s;
 }
 
+/* 英語キャッチコピーをメインコピーの後に表示する。 */
 .hero-sub {
   opacity: 0;
   transform: translateY(4px);
@@ -50,6 +55,7 @@
   animation: heroSubReveal 1.35s ease-out 2.15s forwards;
 }
 
+/* メインコピーを下から定位置へ移動しながら表示する。 */
 @keyframes heroWordReveal {
   0% {
     transform: translateY(72%);
@@ -66,6 +72,7 @@
   }
 }
 
+/* 英語キャッチコピーを短い移動とフェードで表示する。 */
 @keyframes heroSubReveal {
   0% {
     transform: translateY(4px);
@@ -78,6 +85,7 @@
   }
 }
 
+/* 動きを減らす設定ではアニメーションを無効にして即時表示する。 */
 @media (prefers-reduced-motion: reduce) {
   .hero-word,
   .hero-sub {
