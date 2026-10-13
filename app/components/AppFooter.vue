@@ -15,7 +15,7 @@ const footerLinks = [
 
 <template>
   <footer class="bg-[#07111f] px-5 py-9 text-white sm:px-8 lg:px-12 xl:px-16">
-    <div class="mx-auto w-full max-w-[1600px]">
+    <div class="mx-auto w-full max-w-brand">
       <div
         class="flex flex-col gap-8 border-b border-white/14 pb-8 lg:flex-row lg:items-center lg:justify-between"
       >

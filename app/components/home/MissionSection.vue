@@ -1,9 +1,9 @@
 <template>
   <section
     id="mission"
-    class="scroll-mt-24 border-y-2 border-black/25 bg-[#f4f1ea] px-5 py-28 text-[#111317] sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+    class="scroll-mt-24 border-y-2 border-brand-ink/25 bg-brand-surface px-5 py-28 text-brand-ink sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
   >
-    <div class="mx-auto w-full max-w-[1600px]">
+    <div class="mx-auto w-full max-w-brand">
       <div class="grid grid-cols-12 gap-y-12 md:gap-y-0">
         <div class="col-span-12 md:col-span-4">
           <div class="max-w-[320px]">
@@ -12,7 +12,7 @@
             >
               私たちが目指すもの
             </h2>
-            <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+            <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
           </div>
         </div>
 
@@ -26,7 +26,7 @@
           </p>
 
           <div
-            class="mt-14 max-w-[800px] space-y-8 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:mt-16 md:text-[19px]"
+            class="mt-14 max-w-[800px] space-y-8 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:mt-16 md:text-[19px]"
           >
             <p>
               今の社会では、個人が生み出した価値が、必ずしもその人自身の自由や豊かさにつながるとは限りません。

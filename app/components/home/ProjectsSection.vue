@@ -1,9 +1,9 @@
 <template>
   <section
     id="projects"
-    class="scroll-mt-24 border-t-2 border-black/20 bg-[#f4f1ea] px-5 py-28 text-[#111317] sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+    class="scroll-mt-24 border-t-2 border-brand-ink/20 bg-brand-surface px-5 py-28 text-brand-ink sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
   >
-    <div class="mx-auto w-full max-w-[1600px]">
+    <div class="mx-auto w-full max-w-brand">
       <div class="grid grid-cols-12 gap-y-12 md:gap-y-0">
         <div class="col-span-12 md:col-span-4">
           <div class="max-w-[280px]">
@@ -12,7 +12,7 @@
             >
               事業
             </h2>
-            <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+            <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
           </div>
         </div>
 
@@ -25,7 +25,7 @@
           </p>
 
           <p
-            class="mt-12 max-w-[760px] text-[17px] leading-[2] text-black/68 sm:text-[18px] md:mt-14 md:text-[19px]"
+            class="mt-12 max-w-[760px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px] md:mt-14 md:text-[19px]"
           >
             GBCは、個人が自分の力で活動していくために、学び、事業、表現のそれぞれの領域で支援を行っています。決められた順路はありません。その人自身が、今必要なものを選べることを大切にしています。
           </p>
@@ -34,10 +34,10 @@
 
       <div class="mt-24 md:mt-32">
         <article
-          class="grid grid-cols-12 gap-y-8 border-t border-black/20 py-12 md:items-start md:py-16"
+          class="grid grid-cols-12 gap-y-8 border-t border-brand-ink/20 py-12 md:items-start md:py-16"
         >
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
               学び
             </p>
             <h3
@@ -55,7 +55,7 @@
             </p>
 
             <div
-              class="mt-8 max-w-[760px] space-y-6 text-[17px] leading-[2] text-black/66 sm:text-[18px]"
+              class="mt-8 max-w-[760px] space-y-6 text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]"
             >
               <p>
                 Simple Studyは、個人が自立して活動していくために必要な知識や技術を学ぶためのサービスです。
@@ -67,7 +67,7 @@
 
             <NuxtLink
               to="/business/simple-study"
-              class="group mt-8 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[15px] font-semibold transition-colors hover:border-black sm:text-[16px]"
+              class="group mt-8 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[15px] font-semibold transition-colors hover:border-brand-ink sm:text-[16px]"
             >
               <span>Simple Studyを詳しく見る</span>
               <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -76,10 +76,10 @@
         </article>
 
         <article
-          class="grid grid-cols-12 gap-y-8 border-t border-black/20 py-12 md:items-start md:py-16"
+          class="grid grid-cols-12 gap-y-8 border-t border-brand-ink/20 py-12 md:items-start md:py-16"
         >
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
               事業支援
             </p>
             <h3
@@ -97,7 +97,7 @@
             </p>
 
             <div
-              class="mt-8 max-w-[760px] space-y-6 text-[17px] leading-[2] text-black/66 sm:text-[18px]"
+              class="mt-8 max-w-[760px] space-y-6 text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]"
             >
               <p>
                 フェンリルは、これから自分の事業を始めたい人から、すでに個人事業主、フリーランス、個人社長として活動している人までを支えるサービスです。
@@ -109,7 +109,7 @@
 
             <NuxtLink
               to="/business/fenrir"
-              class="group mt-8 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[15px] font-semibold transition-colors hover:border-black sm:text-[16px]"
+              class="group mt-8 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[15px] font-semibold transition-colors hover:border-brand-ink sm:text-[16px]"
             >
               <span>フェンリルを詳しく見る</span>
               <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -118,10 +118,10 @@
         </article>
 
         <article
-          class="grid grid-cols-12 gap-y-8 border-y border-black/20 py-12 md:items-start md:py-16"
+          class="grid grid-cols-12 gap-y-8 border-y border-brand-ink/20 py-12 md:items-start md:py-16"
         >
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
               クリエイター支援
             </p>
             <h3
@@ -139,7 +139,7 @@
             </p>
 
             <div
-              class="mt-8 max-w-[760px] space-y-6 text-[17px] leading-[2] text-black/66 sm:text-[18px]"
+              class="mt-8 max-w-[760px] space-y-6 text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]"
             >
               <p>
                 華の騎士団は、個人として創作・表現・発信活動を行うクリエイターを支えるサービスです。
@@ -151,7 +151,7 @@
 
             <NuxtLink
               to="/business/hana-no-kishidan"
-              class="group mt-8 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[15px] font-semibold transition-colors hover:border-black sm:text-[16px]"
+              class="group mt-8 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[15px] font-semibold transition-colors hover:border-brand-ink sm:text-[16px]"
             >
               <span>華の騎士団を詳しく見る</span>
               <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -161,9 +161,9 @@
       </div>
 
       <div class="mt-28 md:mt-36">
-        <div class="grid grid-cols-12 gap-y-10 border-t-[3px] border-[#111317] pt-10 md:gap-y-0 md:pt-12">
+        <div class="grid grid-cols-12 gap-y-10 border-t-[3px] border-brand-ink pt-10 md:gap-y-0 md:pt-12">
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
               技術・開発
             </p>
             <h3
@@ -182,7 +182,7 @@
             </p>
 
             <div
-              class="mt-10 max-w-[760px] space-y-6 text-[17px] leading-[2] text-black/66 sm:text-[18px]"
+              class="mt-10 max-w-[760px] space-y-6 text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]"
             >
               <p>
                 Pandoraは、GBC自身のサービスや各事業に必要な仕組みを企画し、技術で形にする開発領域です。
@@ -194,7 +194,7 @@
 
             <NuxtLink
               to="/business/pandora"
-              class="group mt-8 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[15px] font-semibold transition-colors hover:border-black sm:text-[16px]"
+              class="group mt-8 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[15px] font-semibold transition-colors hover:border-brand-ink sm:text-[16px]"
             >
               <span>Pandoraを詳しく見る</span>
               <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>

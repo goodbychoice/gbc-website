@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "engines": {
-    "node": ">=22"
+    "node": "^24.15.0"
   },
   "scripts": {
     "build": "nuxt build",
@@ -13,14 +13,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/robots": "^6.0.8",
-    "@nuxtjs/sitemap": "^8.0.15",
-    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@nuxtjs/robots": "^7.0.2",
+    "@nuxtjs/sitemap": "^9.1.0",
     "@supabase/supabase-js": "^2.117.2",
-    "nuxt": "^4.4.2",
-    "vue": "^3.5.32"
+    "nuxt": "^4.6.1",
+    "vue": "^3.5.44"
   },
   "devDependencies": {
-    "@nuxt/a11y": "^1.0.0-alpha.1"
+    "@nuxt/a11y": "^1.0.0-alpha.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3"
   }
 }

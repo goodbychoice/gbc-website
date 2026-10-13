@@ -1,9 +1,9 @@
 <template>
   <section
     id="about"
-    class="scroll-mt-24 border-t-2 border-black/20 bg-[#f4f1ea] px-5 py-28 text-[#111317] sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+    class="scroll-mt-24 border-t-2 border-brand-ink/20 bg-brand-surface px-5 py-28 text-brand-ink sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
   >
-    <div class="mx-auto w-full max-w-[1600px]">
+    <div class="mx-auto w-full max-w-brand">
       <div class="grid grid-cols-12 gap-y-12 md:gap-y-0">
         <div class="col-span-12 md:col-span-4">
           <div class="max-w-[280px]">
@@ -12,7 +12,7 @@
             >
               GBCについて
             </h2>
-            <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+            <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
           </div>
         </div>
 
@@ -25,7 +25,7 @@
           </p>
 
           <div
-            class="mt-12 max-w-[760px] space-y-7 text-[17px] leading-[2] text-black/68 sm:text-[18px] md:mt-14 md:text-[19px]"
+            class="mt-12 max-w-[760px] space-y-7 text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px] md:mt-14 md:text-[19px]"
           >
             <p>
               GBCは、会社や組織に依存せず、個人が自分の選択で自由に生きていくためのプラットフォームです。
@@ -46,7 +46,7 @@
 
           <NuxtLink
             to="/about"
-            class="group mt-10 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[15px] font-semibold transition-colors hover:border-black sm:text-[16px]"
+            class="group mt-10 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[15px] font-semibold transition-colors hover:border-brand-ink sm:text-[16px]"
           >
             <span>GBCについて詳しく見る</span>
             <span

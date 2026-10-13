@@ -14,13 +14,13 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="bg-[#f4f1ea] text-[#111317]">
+  <main class="bg-brand-surface text-brand-ink">
     <section
-      class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+      class="border-b-2 border-brand-ink/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60 sm:text-[16px]"
         >
           クリエイター支援
         </p>
@@ -39,7 +39,7 @@ useSeoMeta({
         </p>
 
         <p
-          class="mt-10 max-w-[860px] text-[18px] leading-[2] text-black/68 sm:text-[19px] md:text-[21px]"
+          class="mt-10 max-w-[860px] text-[18px] leading-[2] text-brand-ink/68 sm:text-[19px] md:text-[21px]"
         >
           華の騎士団は、個人クリエイターが創作や発信を続ける中で生まれる悩みや課題を、一緒に整理し、考え、次の一歩につなげるための相談・伴走・サポートサービスです。
         </p>
@@ -47,16 +47,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             主役は、本人
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -68,7 +68,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               華の騎士団は、タレント事務所や所属型のマネジメントサービスではありません。GBCへの所属を前提に活動してもらう仕組みではなく、本人が自分の活動を続けていくための相談・伴走・サポートを行います。
@@ -88,16 +88,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             支える対象
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -109,7 +109,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               VTuber、動画投稿者、配信者、イラストレーター、音楽活動をする人など、個人として創作・表現・発信活動を行うクリエイター全般を対象にしています。
@@ -126,16 +126,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             相談できること
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -147,7 +147,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               活動方針、発信の仕方、見せ方、制作環境、機材やツールの選び方、活動の仕組み化、収益化、今後の方向性など、個人で活動を続ける中で生まれるさまざまな相談を対象にします。
@@ -163,17 +163,64 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 相談内容を具体的な活動シーンとして示し、自分に必要な支援か判断しやすくする。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
+        <div class="col-span-12 md:col-span-4">
+          <h2
+            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
+          >
+            こんなときに相談できます
+          </h2>
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
+        </div>
+
+        <div class="col-span-12 md:col-start-5 md:col-end-12">
+          <p
+            class="max-w-[940px] text-[clamp(2.1rem,4vw,4.2rem)] font-semibold leading-[1.2] tracking-[-0.045em]"
+          >
+            活動の形を決めつけず、<br class="hidden sm:block" />
+            大切にしたいことから考える。
+          </p>
+
+          <div class="mt-12 max-w-[860px] border-t border-brand-ink/20">
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              VTuberや配信活動を始めたいけれど、何を準備すればいいか分からない。
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              配信環境や機材、ツール選びに迷っている。
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              SNSや動画で、どう発信していくか整理したい。
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              趣味として続けるのか、収益化を目指すのか迷っている。
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              自分の世界観を守りながら、無理なく活動を続ける方法を考えたい。
+            </p>
+          </div>
+
+          <p class="mt-10 max-w-[820px] text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]">
+            華の騎士団では、活動の形を決めつけるのではなく、本人が大切にしたいことを起点に、続け方や選択肢を一緒に整理します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+    >
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             相談の進め方
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -185,7 +232,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               まず、今考えていることや悩んでいることを持ってきてもらいます。まだ言葉になっていなくても構いません。話したり、書いたりしながら、一緒に整理していきます。
@@ -202,16 +249,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             相談方法
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -222,7 +269,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               話しながら考えたい人もいれば、文章にした方が落ち着いて考えられる人もいます。華の騎士団では、オンライン、対面、チャットなど、自分に合う方法で相談できる形を目指します。
@@ -239,16 +286,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             料金
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -259,11 +306,11 @@ useSeoMeta({
             利用料金も変わる。
           </p>
 
-          <div class="mt-12 border-y border-black/20 py-8 sm:py-10">
+          <div class="mt-12 border-y border-brand-ink/20 py-8 sm:py-10">
             <div
               class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"
             >
-              <p class="text-[15px] font-semibold tracking-[0.04em] text-black/60">
+              <p class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60">
                 標準利用料
               </p>
               <p
@@ -275,7 +322,7 @@ useSeoMeta({
           </div>
 
           <div
-            class="mt-10 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-10 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               固定の月額料金ではなく、華の騎士団が支援対象としている活動の月間売上に対して、一定の割合を利用料金とする形を検討しています。
@@ -291,7 +338,7 @@ useSeoMeta({
             </p>
           </div>
 
-          <p class="mt-8 text-[14px] leading-[1.8] text-black/60">
+          <p class="mt-8 text-[14px] leading-[1.8] text-brand-ink/60">
             ※料金体系・割合は現在検討中です。正式な内容はサービス開始までに公開します。
           </p>
         </div>
@@ -301,7 +348,7 @@ useSeoMeta({
     <section
       class="px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <div class="mx-auto max-w-[1180px] text-center">
           <p
             class="text-[clamp(2.4rem,5vw,5.2rem)] font-semibold leading-[1.2] tracking-[-0.05em]"
@@ -311,14 +358,14 @@ useSeoMeta({
           </p>
 
           <p
-            class="mx-auto mt-10 max-w-[800px] text-[17px] leading-[2] text-black/64 sm:text-[18px]"
+            class="mx-auto mt-10 max-w-[800px] text-[17px] leading-[2] text-brand-ink/64 sm:text-[18px]"
           >
             華の騎士団の目的は、GBCを使い続けてもらうことではありません。自分の世界観を守り、自分で選び、自分の力で活動を続けられること。そのために必要なときだけ、華の騎士団を使ってください。
           </p>
 
           <NuxtLink
             to="/contact"
-            class="group mt-12 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[16px] font-semibold transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            class="group mt-12 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[16px] font-semibold transition-colors hover:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
           >
             <span>お問い合わせ</span>
             <span

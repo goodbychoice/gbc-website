@@ -1,9 +1,9 @@
 <template>
   <section
     id="structure"
-    class="scroll-mt-24 border-t-2 border-black/20 bg-[#f4f1ea] px-5 py-28 text-[#111317] sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+    class="scroll-mt-24 border-t-2 border-brand-ink/20 bg-brand-surface px-5 py-28 text-brand-ink sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
   >
-    <div class="mx-auto w-full max-w-[1600px]">
+    <div class="mx-auto w-full max-w-brand">
       <div class="grid grid-cols-12 gap-y-12 md:gap-y-0">
         <div class="col-span-12 md:col-span-4">
           <div class="max-w-[280px]">
@@ -12,7 +12,7 @@
             >
               GBCの仕組み
             </h2>
-            <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+            <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
           </div>
         </div>
 
@@ -25,7 +25,7 @@
           </p>
 
           <p
-            class="mt-12 max-w-[780px] text-[17px] leading-[2] text-black/68 sm:text-[18px] md:mt-14 md:text-[19px]"
+            class="mt-12 max-w-[780px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px] md:mt-14 md:text-[19px]"
           >
             学びたいときは、学ぶ。事業を始めたいときは、そのための支援を使う。表現活動を続けたいときは、必要な力を借りる。何を使うかは、その人自身が決めます。
           </p>
@@ -33,11 +33,11 @@
       </div>
 
       <div class="mt-24 md:mt-32">
-        <div class="grid grid-cols-12 border-y border-black/20">
+        <div class="grid grid-cols-12 border-y border-brand-ink/20">
           <div
-            class="col-span-12 border-b border-black/20 py-10 md:col-span-4 md:border-b-0 md:border-r md:py-14 md:pr-10"
+            class="col-span-12 border-b border-brand-ink/20 py-10 md:col-span-4 md:border-b-0 md:border-r md:py-14 md:pr-10"
           >
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
               学ぶ
             </p>
             <p
@@ -48,9 +48,9 @@
           </div>
 
           <div
-            class="col-span-12 border-b border-black/20 py-10 md:col-span-4 md:border-b-0 md:border-r md:px-10 md:py-14"
+            class="col-span-12 border-b border-brand-ink/20 py-10 md:col-span-4 md:border-b-0 md:border-r md:px-10 md:py-14"
           >
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
               事業をつくる・続ける
             </p>
             <p
@@ -61,7 +61,7 @@
           </div>
 
           <div class="col-span-12 py-10 md:col-span-4 md:pl-10 md:py-14">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
               表現する・届ける
             </p>
             <p
@@ -72,9 +72,9 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-y-10 border-b border-black/20 py-12 md:py-16">
+        <div class="grid grid-cols-12 gap-y-10 border-b border-brand-ink/20 py-12 md:py-16">
           <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-black/60">
+            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
               GBCを技術面から支える
             </p>
             <p
@@ -85,7 +85,7 @@
           </div>
 
           <div class="col-span-12 md:col-start-5 md:col-end-12">
-            <p class="max-w-[760px] text-[17px] leading-[2] text-black/66 sm:text-[18px]">
+            <p class="max-w-[760px] text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]">
               Simple Study、フェンリル、華の騎士団は、それぞれ異なる形で個人の活動を支えます。Pandoraは、その活動やGBCのサービスを技術面から支え、必要な仕組みを形にします。
             </p>
           </div>

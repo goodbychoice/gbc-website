@@ -14,13 +14,13 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="bg-[#f4f1ea] text-[#111317]">
+  <main class="bg-brand-surface text-brand-ink">
     <section
-      class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+      class="border-b-2 border-brand-ink/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60 sm:text-[16px]"
         >
           事業支援
         </p>
@@ -39,7 +39,7 @@ useSeoMeta({
         </p>
 
         <p
-          class="mt-10 max-w-[860px] text-[18px] leading-[2] text-black/68 sm:text-[19px] md:text-[21px]"
+          class="mt-10 max-w-[860px] text-[18px] leading-[2] text-brand-ink/68 sm:text-[19px] md:text-[21px]"
         >
           フェンリルは、個人が事業を進める中で生まれる悩みや課題を、一緒に整理し、考え、次の一歩につなげるための相談・伴走・サポートサービスです。
         </p>
@@ -47,16 +47,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             主役は、本人
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -68,7 +68,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               GBCが事業の方向を決めたり、スケジュールを管理したり、日々の実作業を代行したりすることを前提にはしていません。
@@ -85,16 +85,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             支える対象
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -106,7 +106,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               これから自分の事業を始めたい人。すでに個人事業主やフリーランスとして活動している人。小さな法人を自分で動かしている人。
@@ -123,16 +123,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             相談できること
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -144,7 +144,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               事業アイデアやサービス設計、Web・IT活用、業務の仕組み化、ツール選定、集客、発信、運営、改善など、個人で事業を続ける中で生まれるさまざまな相談を対象にします。
@@ -160,17 +160,64 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 相談内容を具体的な利用シーンとして示し、自分ごととして判断しやすくする。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
+        <div class="col-span-12 md:col-span-4">
+          <h2
+            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
+          >
+            こんなときに相談できます
+          </h2>
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
+        </div>
+
+        <div class="col-span-12 md:col-start-5 md:col-end-12">
+          <p
+            class="max-w-[940px] text-[clamp(2.1rem,4vw,4.2rem)] font-semibold leading-[1.2] tracking-[-0.045em]"
+          >
+            答えが決まっていなくても、<br class="hidden sm:block" />
+            一緒に整理するところから。
+          </p>
+
+          <div class="mt-12 max-w-[860px] border-t border-brand-ink/20">
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              事業を始めたいけれど、何から整理すればいいか分からない。
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              サービスの方向性や見せ方に迷っている。
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              集客や発信をどう進めるか決めきれない。
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              WebやITツールを使いたいけれど、何を選べばいいか分からない。
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              一人で考え続けるのではなく、状況や選択肢を整理する相手がほしい。
+            </p>
+          </div>
+
+          <p class="mt-10 max-w-[820px] text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]">
+            フェンリルでは、答えを代わりに決めるのではなく、今の状況を一緒に整理し、本人が次の一歩を選べる状態をつくります。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+    >
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             相談の進め方
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -182,7 +229,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               まず、今悩んでいることや考えていることを持ってきてもらいます。明確な相談テーマがなくても、話しながら一緒に整理していきます。
@@ -199,16 +246,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             相談方法
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -219,7 +266,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               話しながら考えたい人もいれば、文章にした方が考えを整理しやすい人もいます。フェンリルでは、オンライン、対面、チャットなど、自分に合う方法で相談できる形を目指します。
@@ -236,16 +283,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             料金
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -256,11 +303,11 @@ useSeoMeta({
             利用料金も変わる。
           </p>
 
-          <div class="mt-12 border-y border-black/20 py-8 sm:py-10">
+          <div class="mt-12 border-y border-brand-ink/20 py-8 sm:py-10">
             <div
               class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"
             >
-              <p class="text-[15px] font-semibold tracking-[0.04em] text-black/60">
+              <p class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60">
                 標準利用料
               </p>
               <p
@@ -272,7 +319,7 @@ useSeoMeta({
           </div>
 
           <div
-            class="mt-10 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-10 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               固定の月額料金ではなく、フェンリルが支援対象としている事業の月間売上に対して、一定の割合を利用料金とする形を検討しています。
@@ -288,7 +335,7 @@ useSeoMeta({
             </p>
           </div>
 
-          <p class="mt-8 text-[14px] leading-[1.8] text-black/60">
+          <p class="mt-8 text-[14px] leading-[1.8] text-brand-ink/60">
             ※料金体系・割合は現在検討中です。正式な内容はサービス開始までに公開します。
           </p>
         </div>
@@ -298,7 +345,7 @@ useSeoMeta({
     <section
       class="px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <div class="mx-auto max-w-[1180px] text-center">
           <p
             class="text-[clamp(2.4rem,5vw,5.2rem)] font-semibold leading-[1.2] tracking-[-0.05em]"
@@ -308,14 +355,14 @@ useSeoMeta({
           </p>
 
           <p
-            class="mx-auto mt-10 max-w-[800px] text-[17px] leading-[2] text-black/64 sm:text-[18px]"
+            class="mx-auto mt-10 max-w-[800px] text-[17px] leading-[2] text-brand-ink/64 sm:text-[18px]"
           >
             フェンリルの目的は、GBCを使い続けてもらうことではありません。自分で考え、自分で決め、自分の力で事業を進められるようになること。そのために必要なときだけ、フェンリルを使ってください。
           </p>
 
           <NuxtLink
             to="/contact"
-            class="group mt-12 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[16px] font-semibold transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            class="group mt-12 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[16px] font-semibold transition-colors hover:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
           >
             <span>お問い合わせ</span>
             <span

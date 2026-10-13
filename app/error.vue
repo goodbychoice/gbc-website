@@ -23,13 +23,13 @@ function goHome() {
 
 <template>
   <NuxtLayout>
-    <main class="bg-[#f4f1ea] text-[#111317]">
+    <main class="bg-brand-surface text-brand-ink">
       <!-- エラー種別に応じた説明と復帰導線を表示する。 -->
       <section
         class="min-h-[calc(100vh-76px)] px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
       >
-        <div class="mx-auto w-full max-w-[1600px]">
-          <p class="text-[14px] font-semibold tracking-[0.08em] text-black/60">
+        <div class="mx-auto w-full max-w-brand">
+          <p class="text-[14px] font-semibold tracking-[0.08em] text-brand-ink/60">
             {{ error.statusCode }}
           </p>
 
@@ -40,7 +40,7 @@ function goHome() {
           </h1>
 
           <p
-            class="mt-10 max-w-[760px] text-[17px] leading-[2] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-10 max-w-[760px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             {{
               isNotFound
@@ -52,11 +52,11 @@ function goHome() {
           <!-- 404ではトップページとお問い合わせの2つの導線を表示する。 -->
           <div
             v-if="isNotFound"
-            class="mt-14 grid max-w-[980px] gap-0 border-y border-black/20 sm:grid-cols-2"
+            class="mt-14 grid max-w-[980px] gap-0 border-y border-brand-ink/20 sm:grid-cols-2"
           >
             <button
               type="button"
-              class="group flex items-center justify-between gap-6 border-b border-black/20 py-6 text-left text-[16px] font-semibold transition-colors hover:text-black/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:border-b-0 sm:border-r sm:pr-8"
+              class="group flex items-center justify-between gap-6 border-b border-brand-ink/20 py-6 text-left text-[16px] font-semibold transition-colors hover:text-brand-ink/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink sm:border-b-0 sm:border-r sm:pr-8"
               @click="goHome"
             >
               <span>トップページへ戻る</span>
@@ -70,7 +70,7 @@ function goHome() {
 
             <NuxtLink
               to="/contact"
-              class="group flex items-center justify-between gap-6 py-6 text-[16px] font-semibold transition-colors hover:text-black/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:pl-8"
+              class="group flex items-center justify-between gap-6 py-6 text-[16px] font-semibold transition-colors hover:text-brand-ink/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink sm:pl-8"
             >
               <span>お問い合わせ</span>
               <span
@@ -86,7 +86,7 @@ function goHome() {
           <button
             v-else
             type="button"
-            class="group mt-14 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[16px] font-semibold transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            class="group mt-14 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[16px] font-semibold transition-colors hover:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
             @click="goHome"
           >
             <span>トップページへ戻る</span>

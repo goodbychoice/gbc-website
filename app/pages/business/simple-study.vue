@@ -14,13 +14,13 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="bg-[#f4f1ea] text-[#111317]">
+  <main class="bg-brand-surface text-brand-ink">
     <section
-      class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+      class="border-b-2 border-brand-ink/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60 sm:text-[16px]"
         >
           学び
         </p>
@@ -39,7 +39,7 @@ useSeoMeta({
         </p>
 
         <p
-          class="mt-10 max-w-[860px] text-[18px] leading-[2] text-black/68 sm:text-[19px] md:text-[21px]"
+          class="mt-10 max-w-[860px] text-[18px] leading-[2] text-brand-ink/68 sm:text-[19px] md:text-[21px]"
         >
           Simple Studyは、個人が自分の力で活動していくために必要な知識や技術を学ぶためのオンライン学習サービスです。現在はIT・プログラミング領域を中心に、基礎から実践、そして実際に使える形として公開するところまでを見据えて展開します。
         </p>
@@ -47,16 +47,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             Simple Studyの考え方
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -68,7 +68,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               Simple Studyが大切にするのは、最初からすべてを正確に説明することではありません。まずは「つまり、こういうこと」とシンプルに理解できるところまで噛み砕き、必要になったときに必要な知識だけを加えていきます。
@@ -85,16 +85,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             誰のための学びか
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -106,7 +106,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               個人開発でサービスをつくりたい人。個人事業やフリーランスの仕事を効率化したい人。自分の活動にWebやAIなどの技術を取り入れたい人。
@@ -123,16 +123,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             学ぶ領域
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -144,7 +144,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               現在は、PythonとWebを中心に学習領域を構成する予定です。Webでは、Vue・Nuxtを軸に、サービスをつくるために必要な基礎から実践までを扱います。
@@ -161,16 +161,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             基礎を、飛ばさない
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -182,7 +182,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               最終的にサービスをつくるからといって、いきなり実践だけを始めるわけではありません。変数、条件分岐、関数、データ構造といった基礎も、初めて学ぶ人が理解できるところから丁寧に扱います。
@@ -199,16 +199,16 @@ useSeoMeta({
     </section>
 
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             学び方
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -220,7 +220,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               初めて学ぶ人が迷わないように、目的に合わせた推奨の学習順序を用意します。一方で、すべてを決められた順番どおりに進めることを前提にはしません。
@@ -236,17 +236,68 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- 学習内容を具体的な成果物につなげ、学んだ先の姿をイメージしやすくする。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
+        <div class="col-span-12 md:col-span-4">
+          <h2
+            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
+          >
+            学んだ先につくれるもの
+          </h2>
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
+        </div>
+
+        <div class="col-span-12 md:col-start-5 md:col-end-12">
+          <p
+            class="max-w-[940px] text-[clamp(2.1rem,4vw,4.2rem)] font-semibold leading-[1.2] tracking-[-0.045em]"
+          >
+            知識を覚えるだけでなく、<br class="hidden sm:block" />
+            自分に必要なものを形にする。
+          </p>
+
+          <p class="mt-12 max-w-[820px] text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]">
+            Simple Studyで目指すのは、学んだ技術を使って、自分の活動に必要なものを自分で形にできる状態です。
+          </p>
+
+          <div class="mt-10 max-w-[860px] border-t border-brand-ink/20">
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              日々の作業を効率化する小さなツール
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              自分のアイデアを形にしたWebサービス
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              APIを使って処理をつなぐ自動化の仕組み
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              データを整理・集計・処理するツール
+            </p>
+            <p class="border-b border-brand-ink/20 py-5 text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
+              AIを自分のサービスや業務に取り入れた機能
+            </p>
+          </div>
+
+          <p class="mt-10 max-w-[820px] text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]">
+            つくるものを起点に必要なことを学び、学んだら実際につくる。その繰り返しを通して、技術を「知っているもの」ではなく「使えるもの」にしていきます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+    >
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             ゴール
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -258,7 +309,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               Simple Studyでは、コードを書いて実行できたことだけをゴールにはしません。Webサービスやツールなど、他の人が実際に使える形までつくることを大切にします。
@@ -274,7 +325,7 @@ useSeoMeta({
     <section
       class="px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <div class="mx-auto max-w-[1180px] text-center">
           <p
             class="text-[clamp(2.4rem,5vw,5.2rem)] font-semibold leading-[1.2] tracking-[-0.05em]"
@@ -284,14 +335,14 @@ useSeoMeta({
           </p>
 
           <p
-            class="mx-auto mt-10 max-w-[760px] text-[17px] leading-[2] text-black/64 sm:text-[18px]"
+            class="mx-auto mt-10 max-w-[760px] text-[17px] leading-[2] text-brand-ink/64 sm:text-[18px]"
           >
             Simple Studyは、知識を増やすためだけの場所ではありません。自分の活動に技術を使い、自分の手で形にできる人を増やしていきます。
           </p>
 
           <NuxtLink
             to="/contact"
-            class="group mt-12 inline-flex items-center gap-4 border-b border-black/30 pb-2 text-[16px] font-semibold transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            class="group mt-12 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[16px] font-semibold transition-colors hover:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
           >
             <span>お問い合わせ</span>
             <span

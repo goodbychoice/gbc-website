@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#f4f1ea] text-[#111317] antialiased">
+  <div class="min-h-screen bg-brand-surface text-brand-ink antialiased">
     <AppHeader />
     <slot />
     <AppFooter />

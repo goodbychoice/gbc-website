@@ -14,11 +14,33 @@ https://www.goodbychoice.co.jp
 
 - Nuxt 4
 - Vue 3
-- Tailwind CSS
+- Tailwind CSS v4（`@tailwindcss/vite`）
 - Supabase
 - Vercel
 
+### Brand theme（Tailwind）
+
+公式の背景色・文字色・最大コンテンツ幅は `app/assets/css/main.css` の `@theme` で定義しています。
+
+- `bg-brand-surface` / `text-brand-surface` … 背景 `#f4f1ea`
+- `text-brand-ink` / `border-brand-ink/20` など … 文字・線 `#111317`
+- `max-w-brand` … レイアウト最大幅 `1600px`
+
+色や幅を変えるときは **hex を各 Vue ファイルに書かず、このファイルだけ** 更新してください。
+
 ## Development
+
+Node.js **24 LTS**（`24.15.0` 以上）を使用します。リポジトリ直下の `.nvmrc` / `.node-version` に合わせてください。
+
+```bash
+# nvm の例
+nvm install
+nvm use
+
+# fnm の例
+fnm install
+fnm use
+```
 
 依存関係をインストールします。
 

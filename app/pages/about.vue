@@ -14,14 +14,14 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="bg-[#f4f1ea] text-[#111317]">
+  <main class="bg-brand-surface text-brand-ink">
     <!-- ページタイトルとGBCが目指す社会を最初に伝える。 -->
     <section
-      class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+      class="border-b-2 border-brand-ink/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60 sm:text-[16px]"
         >
           GBCについて
         </p>
@@ -34,7 +34,7 @@ useSeoMeta({
         </h1>
 
         <p
-          class="mt-12 max-w-[860px] text-[18px] leading-[2] text-black/68 sm:text-[19px] md:mt-14 md:text-[21px]"
+          class="mt-12 max-w-[860px] text-[18px] leading-[2] text-brand-ink/68 sm:text-[19px] md:mt-14 md:text-[21px]"
         >
           GBCが目指すのは、会社労働に依存しなくても、個人が自分の力で学び、創り、働き、自由に生きていける社会です。
         </p>
@@ -43,16 +43,16 @@ useSeoMeta({
 
     <!-- GBCの役割と提供する価値を説明する。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             GBCとは
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -64,7 +64,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-8 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:mt-14 md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-8 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:mt-14 md:text-[19px]"
           >
             <p>
               GBCは、会社や組織に依存せず、個人が自分の選択で自由に生きていくためのプラットフォームです。
@@ -79,21 +79,21 @@ useSeoMeta({
 
     <!-- GBCをつくる背景と問題意識を説明する。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             なぜ、GBCをつくるのか
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
           <div
-            class="space-y-8 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="space-y-8 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               個人が生み出した価値が、その人自身の自由や豊かさにつながるとは限りません。働き方や活動の仕方によっては、自分で生み出した価値であっても、自分自身では十分に選択できないことがあります。
@@ -111,11 +111,11 @@ useSeoMeta({
 
     <!-- 支援する一方で本人の意思決定を尊重する考え方を示す。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <div
-          class="grid grid-cols-12 gap-y-12 border-y border-black/20 py-12 md:py-16"
+          class="grid grid-cols-12 gap-y-12 border-y border-brand-ink/20 py-12 md:py-16"
         >
           <div class="col-span-12 md:col-span-4">
             <h2
@@ -128,7 +128,7 @@ useSeoMeta({
 
           <div class="col-span-12 md:col-start-5 md:col-end-12">
             <div
-              class="space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+              class="space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
             >
               <p>
                 GBCが支援するのは、個人の活動そのものです。GBCのやり方に合わせてもらうことや、活動の方向を代わりに決めることを目的にはしていません。
@@ -149,7 +149,7 @@ useSeoMeta({
     <section
       class="px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto flex w-full max-w-[1600px] justify-center text-center">
+      <div class="mx-auto flex w-full max-w-brand justify-center text-center">
         <p
           class="max-w-[1240px] text-[clamp(2.4rem,5vw,5.2rem)] font-semibold leading-[1.22] tracking-[-0.045em]"
         >

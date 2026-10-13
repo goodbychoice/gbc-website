@@ -1,10 +1,10 @@
 <template>
   <section
-    class="relative min-h-[calc(100svh-76px)] overflow-hidden bg-[#f4f1ea] text-[#111317]"
+    class="relative min-h-[calc(100svh-76px)] overflow-hidden bg-brand-surface text-brand-ink"
   >
     <!-- ファーストビュー中央に公式キャッチコピーを表示する。 -->
     <div
-      class="mx-auto flex min-h-[calc(100svh-76px)] w-full max-w-[1600px] items-center justify-center px-5 pb-[8vh] pt-8 text-center sm:px-8 sm:pt-10 lg:px-12 lg:pt-12 xl:px-16"
+      class="mx-auto flex min-h-[calc(100svh-76px)] w-full max-w-brand items-center justify-center px-5 pb-[8vh] pt-8 text-center sm:px-8 sm:pt-10 lg:px-12 lg:pt-12 xl:px-16"
     >
       <div class="w-full">
         <h1
@@ -19,7 +19,7 @@
         </h1>
 
         <p
-          class="hero-sub mt-4 text-[clamp(1.05rem,1.55vw,1.5rem)] font-normal tracking-[-0.02em] text-black/62"
+          class="hero-sub mt-4 text-[clamp(1.05rem,1.55vw,1.5rem)] font-normal tracking-[-0.02em] text-brand-ink/62"
         >
           Your Life, Your Choice.
         </p>
