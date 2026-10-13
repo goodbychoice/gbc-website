@@ -11,14 +11,14 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="bg-[#f4f1ea] text-[#111317]">
+  <main class="bg-brand-surface text-brand-ink">
     <!-- ページタイトルと規約の概要を表示する。 -->
     <section
-      class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+      class="border-b-2 border-brand-ink/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60 sm:text-[16px]"
         >
           GBC合同会社
         </p>
@@ -30,7 +30,7 @@ useSeoMeta({
         </h1>
 
         <p
-          class="mt-10 max-w-[900px] text-[18px] leading-[2] text-black/68 sm:text-[19px] md:text-[21px]"
+          class="mt-10 max-w-[900px] text-[18px] leading-[2] text-brand-ink/68 sm:text-[19px] md:text-[21px]"
         >
           この利用規約は、GBC合同会社（以下「当社」といいます。）が運営するWebサイトの利用について、必要なルールを定めるものです。
         </p>
@@ -41,9 +41,9 @@ useSeoMeta({
     <section
       class="px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-3">
-          <p class="text-[14px] font-semibold tracking-[0.03em] text-black/60">
+          <p class="text-[14px] font-semibold tracking-[0.03em] text-brand-ink/60">
             Webサイトの利用について
           </p>
         </div>
@@ -57,7 +57,7 @@ useSeoMeta({
                 1. 適用範囲
               </h2>
               <div
-                class="mt-6 space-y-4 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 space-y-4 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 <p>本規約は、当社が運営するWebサイトの閲覧・利用に適用されます。</p>
                 <p>
@@ -73,7 +73,7 @@ useSeoMeta({
                 2. 掲載情報について
               </h2>
               <div
-                class="mt-6 space-y-4 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 space-y-4 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 <p>
                   当社は、掲載する情報について、できる限り正確で分かりやすい内容となるよう努めます。
@@ -91,7 +91,7 @@ useSeoMeta({
                 3. 禁止事項
               </h2>
               <div
-                class="mt-6 space-y-4 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 space-y-4 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 <p>本サイトの利用にあたり、以下の行為を禁止します。</p>
                 <ul class="list-disc space-y-2 pl-6">
@@ -114,7 +114,7 @@ useSeoMeta({
                 4. 著作権・知的財産権
               </h2>
               <p
-                class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 本サイトに掲載する文章、画像、ロゴ、デザインその他のコンテンツに関する権利は、当社または正当な権利を有する第三者に帰属します。法令で認められる範囲を超えて、無断で複製、転載、改変、配布等を行うことはできません。
               </p>
@@ -127,7 +127,7 @@ useSeoMeta({
                 5. 外部サイト・外部サービス
               </h2>
               <p
-                class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 本サイトから外部のWebサイトやサービスへ移動する場合があります。外部サイトやサービスの内容、安全性、利用条件等については、それぞれの運営者が定める内容をご確認ください。
               </p>
@@ -140,7 +140,7 @@ useSeoMeta({
                 6. 本サイトの変更・停止
               </h2>
               <p
-                class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 当社は、保守、システム障害、災害その他必要な事情がある場合、本サイトの全部または一部を変更・停止することがあります。
               </p>
@@ -153,7 +153,7 @@ useSeoMeta({
                 7. 当社の責任
               </h2>
               <div
-                class="mt-6 space-y-4 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 space-y-4 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 <p>
                   当社は、本サイトの利用に関連して損害が生じた場合、法令に従って責任を負います。
@@ -171,12 +171,12 @@ useSeoMeta({
                 8. 個人情報の取り扱い
               </h2>
               <p
-                class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 個人情報の取り扱いについては、
                 <NuxtLink
                   to="/privacy"
-                  class="border-b border-black/30 text-black/78 transition-colors hover:border-black hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  class="border-b border-brand-ink/30 text-brand-ink/78 transition-colors hover:border-brand-ink hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
                 >
                   プライバシーポリシー
                 </NuxtLink>
@@ -191,7 +191,7 @@ useSeoMeta({
                 9. 本規約の変更
               </h2>
               <p
-                class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 当社は、法令の改正、本サイトやサービス内容の変更その他必要に応じて、本規約を変更することがあります。変更する場合は、変更内容と効力発生日を本サイト上でお知らせするなど、適切な方法で周知します。
               </p>
@@ -204,7 +204,7 @@ useSeoMeta({
                 10. 準拠法・裁判管轄
               </h2>
               <p
-                class="mt-6 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
                 本規約は日本法に準拠します。本サイトの利用に関して紛争が生じ、当事者間で解決できない場合は、法令により認められる範囲で、当社の本店所在地を管轄する裁判所を第一審の管轄裁判所とします。
               </p>
@@ -217,14 +217,14 @@ useSeoMeta({
                 11. お問い合わせ
               </h2>
               <div
-                class="mt-6 border-y border-black/20 py-7 text-[16px] leading-[2] text-black/68 sm:text-[17px]"
+                class="mt-6 border-y border-brand-ink/20 py-7 text-[16px] leading-[2] text-brand-ink/68 sm:text-[17px]"
               >
-                <p class="font-semibold text-[#111317]">GBC合同会社</p>
+                <p class="font-semibold text-brand-ink">GBC合同会社</p>
                 <p class="mt-2">
                   メール：
                   <a
                     href="mailto:info@goodbychoice.co.jp"
-                    class="border-b border-black/30 transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    class="border-b border-brand-ink/30 transition-colors hover:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
                   >
                     info@goodbychoice.co.jp
                   </a>
@@ -233,7 +233,7 @@ useSeoMeta({
             </section>
 
             <div
-              class="border-t border-black/20 pt-8 text-[14px] leading-[1.9] text-black/60"
+              class="border-t border-brand-ink/20 pt-8 text-[14px] leading-[1.9] text-brand-ink/60"
             >
               <p>制定日：2026年9月22日</p>
             </div>

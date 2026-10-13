@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   // Nuxtの互換性基準日を固定し、将来の挙動変更による影響を抑える。
   compatibilityDate: '2025-07-15',
@@ -6,8 +8,14 @@ export default defineNuxtConfig({
   // 開発時の確認にNuxt DevToolsを利用する。
   devtools: { enabled: true },
 
-  // Tailwind、SEO補助、アクセシビリティ監査の公式モジュールを有効にする。
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/a11y'],
+  css: ['~/assets/css/main.css'],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  // SEO補助・アクセシビリティ監査の公式モジュールを有効にする。
+  modules: ['@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/a11y'],
 
   // アクセシビリティ監査は開発時に利用し、本番ビルド時のレポート生成は行わない。
   a11y: {

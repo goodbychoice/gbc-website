@@ -1,9 +1,9 @@
 <template>
   <section
     id="contact"
-    class="scroll-mt-24 border-t-2 border-black/20 bg-[#f4f1ea] px-5 py-28 text-[#111317] sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+    class="scroll-mt-24 border-t-2 border-brand-ink/20 bg-brand-surface px-5 py-28 text-brand-ink sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
   >
-    <div class="mx-auto w-full max-w-[1600px]">
+    <div class="mx-auto w-full max-w-brand">
       <div class="grid grid-cols-12 gap-y-12 md:gap-y-0">
         <!-- セクション見出しを左カラムに表示する。 -->
         <div class="col-span-12 md:col-span-4">
@@ -13,7 +13,7 @@
             >
               お問い合わせ
             </h2>
-            <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+            <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
           </div>
         </div>
 
@@ -27,15 +27,15 @@
           </p>
 
           <p
-            class="mt-12 max-w-[760px] text-[17px] leading-[2] text-black/68 sm:text-[18px] md:mt-14 md:text-[19px]"
+            class="mt-12 max-w-[760px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px] md:mt-14 md:text-[19px]"
           >
             ご相談やご依頼については、お問い合わせフォームまたはメールからご連絡ください。
           </p>
 
-          <div class="mt-12 border-t border-black/20 md:mt-14">
+          <div class="mt-12 border-t border-brand-ink/20 md:mt-14">
             <NuxtLink
               to="/contact"
-              class="group flex items-center justify-between gap-6 border-b border-black/20 py-7 transition-colors hover:text-black/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:py-8"
+              class="group flex items-center justify-between gap-6 border-b border-brand-ink/20 py-7 transition-colors hover:text-brand-ink/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink sm:py-8"
             >
               <span
                 class="text-[clamp(1.35rem,2.3vw,2.2rem)] font-semibold tracking-[-0.025em]"
@@ -53,7 +53,7 @@
           </div>
 
           <p
-            class="mt-5 text-[13px] leading-[1.8] text-black/60 sm:text-[14px]"
+            class="mt-5 text-[13px] leading-[1.8] text-brand-ink/60 sm:text-[14px]"
           >
             メール：info@goodbychoice.co.jp
           </p>

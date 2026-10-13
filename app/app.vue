@@ -1,8 +1,13 @@
 <script setup lang="ts">
+// nuxt.config の site と同じ公開サイト情報を参照する。
+const site = useSiteConfig();
+
 // 現在のルートから各ページ固有のcanonical URLを組み立てる。
 const route = useRoute();
-const siteUrl = "https://www.goodbychoice.co.jp";
-const canonicalUrl = computed(() => new URL(route.path, siteUrl).toString());
+const canonicalUrl = computed(() => new URL(route.path, site.url).toString());
+const snsCardImage = computed(() =>
+  new URL("/images/gbc-sns-card.png", site.url).toString(),
+);
 
 // 全ページ共通のtitleテンプレートとcanonical URLを設定する。
 useHead({
@@ -21,13 +26,13 @@ useSeoMeta({
   ogUrl: canonicalUrl,
   ogType: "website",
   ogLocale: "ja_JP",
-  ogSiteName: "GBC（Good By Choice）",
-  ogImage: "https://www.goodbychoice.co.jp/images/gbc-sns-card.png",
+  ogSiteName: site.name,
+  ogImage: snsCardImage,
   ogImageAlt: "GBC（Good By Choice）｜選んで生きる、個の時代へ。",
   ogImageWidth: 1200,
   ogImageHeight: 630,
   twitterCard: "summary_large_image",
-  twitterImage: "https://www.goodbychoice.co.jp/images/gbc-sns-card.png",
+  twitterImage: snsCardImage,
   twitterImageAlt: "GBC（Good By Choice）｜選んで生きる、個の時代へ。",
 });
 </script>

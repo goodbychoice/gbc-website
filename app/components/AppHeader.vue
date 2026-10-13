@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 // モバイルメニューの開閉状態を管理する。
 const isMenuOpen = ref(false);
 
@@ -21,15 +19,15 @@ function closeMenu() {
 
 <template>
   <header
-    class="sticky top-0 z-50 border-b border-black/10 bg-[#f4f1ea]/95 text-[#111317] backdrop-blur-sm"
+    class="sticky top-0 z-50 border-b border-brand-ink/10 bg-brand-surface/95 text-brand-ink backdrop-blur-sm"
   >
     <div
-      class="mx-auto flex h-[76px] w-full max-w-[1600px] items-center justify-between px-5 sm:px-8 lg:px-12 xl:px-16"
+      class="mx-auto flex h-[76px] w-full max-w-brand items-center justify-between px-5 sm:px-8 lg:px-12 xl:px-16"
     >
       <!-- ロゴからトップページへ戻る。 -->
       <NuxtLink
         to="/"
-        class="flex items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        class="flex items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
         aria-label="GBC トップページ"
       >
         <img
@@ -42,13 +40,13 @@ function closeMenu() {
       <!-- PCではページ内リンクを横並びで表示する。 -->
       <nav
         aria-label="メインナビゲーション"
-        class="hidden items-center gap-8 text-[13px] font-medium tracking-[0.04em] text-black/65 lg:flex"
+        class="hidden items-center gap-8 text-[13px] font-medium tracking-[0.04em] text-brand-ink/65 lg:flex"
       >
         <NuxtLink
           v-for="link in navLinks"
           :key="link.href"
           :to="link.href"
-          class="transition-colors duration-200 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          class="transition-colors duration-200 hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
         >
           {{ link.label }}
         </NuxtLink>
@@ -56,7 +54,7 @@ function closeMenu() {
 
       <!-- モバイルではボタンでメニューを開閉する。 -->
       <button
-        class="flex h-10 w-10 items-center justify-center text-black/70 transition-colors hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black lg:hidden"
+        class="flex h-10 w-10 items-center justify-center text-brand-ink/70 transition-colors hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink lg:hidden"
         :aria-expanded="isMenuOpen"
         aria-controls="mobile-menu"
         :aria-label="isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'"
@@ -80,7 +78,7 @@ function closeMenu() {
       id="mobile-menu"
       :inert="!isMenuOpen"
       :aria-hidden="!isMenuOpen"
-      class="overflow-hidden border-t border-black/10 bg-[#f4f1ea] transition-[max-height,opacity] duration-200 lg:hidden"
+      class="overflow-hidden border-t border-brand-ink/10 bg-brand-surface transition-[max-height,opacity] duration-200 lg:hidden"
       :class="isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'"
     >
       <nav aria-label="モバイルナビゲーション" class="px-5 py-3 sm:px-8">
@@ -88,7 +86,7 @@ function closeMenu() {
           v-for="link in navLinks"
           :key="link.href"
           :to="link.href"
-          class="block border-b border-black/10 py-4 text-[15px] font-medium text-black/70 transition-colors hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black last:border-b-0"
+          class="block border-b border-brand-ink/10 py-4 text-[15px] font-medium text-brand-ink/70 transition-colors hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink last:border-b-0"
           @click="closeMenu"
         >
           {{ link.label }}

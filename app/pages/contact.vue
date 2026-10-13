@@ -66,14 +66,14 @@ async function submitContact() {
 </script>
 
 <template>
-  <main class="bg-[#f4f1ea] text-[#111317]">
+  <main class="bg-brand-surface text-brand-ink">
     <!-- ページタイトルとお問い合わせの概要を表示する。 -->
     <section
-      class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+      class="border-b-2 border-brand-ink/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60 sm:text-[16px]"
         >
           GBCへのご相談・ご依頼
         </p>
@@ -92,7 +92,7 @@ async function submitContact() {
         </p>
 
         <p
-          class="mt-10 max-w-[820px] text-[18px] leading-[2] text-black/68 sm:text-[19px] md:text-[21px]"
+          class="mt-10 max-w-[820px] text-[18px] leading-[2] text-brand-ink/68 sm:text-[19px] md:text-[21px]"
         >
           サービスについてのご相談、ご依頼、取材・協業などについて、こちらからお問い合わせいただけます。
         </p>
@@ -101,25 +101,25 @@ async function submitContact() {
 
     <!-- フォームの状態に応じて入力欄・利用不可案内・完了表示を切り替える。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             お問い合わせフォーム
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
           <!-- フォームが未公開の場合のみメール利用の案内を表示する。 -->
-          <div v-if="!formEnabled" class="border-y border-black/20 py-6">
-            <p class="text-[15px] font-semibold text-black/72 sm:text-[16px]">
+          <div v-if="!formEnabled" class="border-y border-brand-ink/20 py-6">
+            <p class="text-[15px] font-semibold text-brand-ink/72 sm:text-[16px]">
               フォーム送信機能は現在ご利用いただけません。
             </p>
-            <p class="mt-2 text-[14px] leading-[1.8] text-black/60 sm:text-[15px]">
+            <p class="mt-2 text-[14px] leading-[1.8] text-brand-ink/60 sm:text-[15px]">
               お問い合わせは、下記メールアドレスをご利用ください。
             </p>
           </div>
@@ -135,12 +135,12 @@ async function submitContact() {
             <div class="flex items-center gap-4">
               <div
                 aria-hidden="true"
-                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#111317] text-[22px] font-semibold text-[#f4f1ea]"
+                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-ink text-[22px] font-semibold text-brand-surface"
               >
                 ✓
               </div>
               <p
-                class="text-[13px] font-semibold tracking-[0.16em] text-black/60 sm:text-[14px]"
+                class="text-[13px] font-semibold tracking-[0.16em] text-brand-ink/60 sm:text-[14px]"
               >
                 MESSAGE SENT
               </p>
@@ -154,13 +154,13 @@ async function submitContact() {
             </p>
 
             <p
-              class="mt-7 max-w-[560px] text-[17px] leading-[2] text-black/68 sm:text-[18px]"
+              class="mt-7 max-w-[560px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px]"
             >
               送信ありがとうございます。<br class="hidden sm:block" />
               内容を確認のうえ、順次ご返信いたします。
             </p>
 
-            <div class="mt-10 h-px w-full max-w-[560px] bg-black/20" />
+            <div class="mt-10 h-px w-full max-w-[560px] bg-brand-ink/20" />
           </div>
 
           <!-- 送信完了前だけ入力フォームを表示する。 -->
@@ -185,7 +185,7 @@ async function submitContact() {
                 autocomplete="name"
                 :disabled="!formEnabled || sending"
                 placeholder="山田 太郎"
-                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full border-0 border-b border-brand-ink/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-brand-ink/35 focus:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
 
@@ -204,7 +204,7 @@ async function submitContact() {
                 autocomplete="email"
                 :disabled="!formEnabled || sending"
                 placeholder="example@example.com"
-                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-black/35 focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full border-0 border-b border-brand-ink/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-brand-ink/35 focus:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
 
@@ -219,7 +219,7 @@ async function submitContact() {
                 name="category"
                 required
                 :disabled="!formEnabled || sending"
-                class="mt-3 w-full border-0 border-b border-black/25 bg-transparent px-0 py-4 text-[17px] outline-none focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full border-0 border-b border-brand-ink/25 bg-transparent px-0 py-4 text-[17px] outline-none focus:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:opacity-55"
               >
                 <option disabled value="">選択してください</option>
                 <option
@@ -247,26 +247,26 @@ async function submitContact() {
                 maxlength="5000"
                 :disabled="!formEnabled || sending"
                 placeholder="ご相談・ご依頼内容をご記入ください。（10文字以上）"
-                class="mt-3 w-full resize-y border border-black/20 bg-transparent p-4 text-[17px] leading-[1.9] outline-none placeholder:text-black/35 focus:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-55"
+                class="mt-3 w-full resize-y border border-brand-ink/20 bg-transparent p-4 text-[17px] leading-[1.9] outline-none placeholder:text-brand-ink/35 focus:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:opacity-55"
               />
             </div>
 
             <!-- 個人情報の送信前にプライバシーポリシーへの同意を求める。 -->
-            <label class="flex items-start gap-3 text-[14px] leading-[1.8] text-black/70">
+            <label class="flex items-start gap-3 text-[14px] leading-[1.8] text-brand-ink/70">
               <input
                 v-model="form.consent"
                 name="consent"
                 type="checkbox"
                 required
                 :disabled="!formEnabled || sending"
-                class="mt-1 h-4 w-4 shrink-0 accent-[#111317] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed"
+                class="mt-1 h-4 w-4 shrink-0 accent-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed"
               />
               <span>
                 <NuxtLink
                   to="/privacy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="border-b border-black/30 text-[#111317] transition-colors hover:border-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  class="border-b border-brand-ink/30 text-brand-ink transition-colors hover:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
                 >
                   プライバシーポリシー
                 </NuxtLink>
@@ -287,7 +287,7 @@ async function submitContact() {
             <button
               type="submit"
               :disabled="!formEnabled || sending"
-              class="inline-flex min-w-[180px] items-center justify-center border border-[#111317] px-7 py-4 text-[15px] font-semibold transition-colors enabled:hover:bg-[#111317] enabled:hover:text-[#f4f1ea] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:border-black/20 disabled:text-black/35"
+              class="inline-flex min-w-[180px] items-center justify-center border border-brand-ink px-7 py-4 text-[15px] font-semibold transition-colors enabled:hover:bg-brand-ink enabled:hover:text-brand-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:border-brand-ink/20 disabled:text-brand-ink/35"
             >
               {{ !formEnabled ? "送信機能は利用不可" : sending ? "送信中…" : "送信する" }}
             </button>
@@ -300,26 +300,26 @@ async function submitContact() {
     <section
       class="px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             メールでのお問い合わせ
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
           <p
-            class="max-w-[760px] text-[17px] leading-[2] text-black/68 sm:text-[18px]"
+            class="max-w-[760px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px]"
           >
             メールでのお問い合わせも受け付けています。内容を確認のうえ、順次ご返信いたします。
           </p>
 
           <a
             href="mailto:info@goodbychoice.co.jp"
-            class="group mt-10 flex items-center justify-between gap-6 border-y border-black/20 py-7 transition-colors hover:text-black/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:py-8"
+            class="group mt-10 flex items-center justify-between gap-6 border-y border-brand-ink/20 py-7 transition-colors hover:text-brand-ink/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink sm:py-8"
           >
             <span
               class="text-[clamp(1.35rem,2.3vw,2.2rem)] font-semibold tracking-[-0.025em]"
@@ -335,7 +335,7 @@ async function submitContact() {
           </a>
 
           <p
-            class="mt-5 text-[13px] leading-[1.8] text-black/60 sm:text-[14px]"
+            class="mt-5 text-[13px] leading-[1.8] text-brand-ink/60 sm:text-[14px]"
           >
             お問い合わせ内容によっては、返信までお時間をいただく場合があります。
           </p>

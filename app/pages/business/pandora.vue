@@ -14,14 +14,14 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="bg-[#f4f1ea] text-[#111317]">
+  <main class="bg-brand-surface text-brand-ink">
     <!-- サービス名とPandoraの役割を最初に伝える。 -->
     <section
-      class="border-b-2 border-black/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
+      class="border-b-2 border-brand-ink/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-black/60 sm:text-[16px]"
+          class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60 sm:text-[16px]"
         >
           技術・開発
         </p>
@@ -40,7 +40,7 @@ useSeoMeta({
         </p>
 
         <p
-          class="mt-10 max-w-[860px] text-[18px] leading-[2] text-black/68 sm:text-[19px] md:text-[21px]"
+          class="mt-10 max-w-[860px] text-[18px] leading-[2] text-brand-ink/68 sm:text-[19px] md:text-[21px]"
         >
           Pandoraは、GBC自身のサービスや各事業に必要な仕組みを企画し、技術で形にするための開発領域です。
         </p>
@@ -49,16 +49,16 @@ useSeoMeta({
 
     <!-- Pandoraが担う役割を説明する。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             Pandoraとは
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -70,7 +70,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               Simple Study、フェンリル、華の騎士団が個人に向けて価値を届ける事業であるのに対し、PandoraはGBC自身が必要とするサービスや仕組みをつくる側を担います。
@@ -85,16 +85,16 @@ useSeoMeta({
 
     <!-- Pandoraで開発する対象を整理して示す。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             つくるもの
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -105,39 +105,39 @@ useSeoMeta({
             新しいものを生み出す。
           </p>
 
-          <div class="mt-12 border-t border-black/20">
+          <div class="mt-12 border-t border-brand-ink/20">
             <div
-              class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
+              class="grid gap-4 border-b border-brand-ink/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
             >
-              <p class="text-[15px] font-semibold text-black/60">自社サービス</p>
-              <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              <p class="text-[15px] font-semibold text-brand-ink/60">自社サービス</p>
+              <p class="text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
                 GBC自身が提供するサービスを企画し、開発します。
               </p>
             </div>
 
             <div
-              class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
+              class="grid gap-4 border-b border-brand-ink/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
             >
-              <p class="text-[15px] font-semibold text-black/60">各事業の仕組み</p>
-              <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              <p class="text-[15px] font-semibold text-brand-ink/60">各事業の仕組み</p>
+              <p class="text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
                 Simple Study、フェンリル、華の騎士団を支えるシステムやツールをつくります。
               </p>
             </div>
 
             <div
-              class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
+              class="grid gap-4 border-b border-brand-ink/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
             >
-              <p class="text-[15px] font-semibold text-black/60">新しいプロダクト</p>
-              <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              <p class="text-[15px] font-semibold text-brand-ink/60">新しいプロダクト</p>
+              <p class="text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
                 既存の事業に限らず、新しいサービスやプロダクトそのものを企画し、形にします。
               </p>
             </div>
 
             <div
-              class="grid gap-4 border-b border-black/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
+              class="grid gap-4 border-b border-brand-ink/20 py-7 sm:grid-cols-[11rem_1fr] sm:gap-8"
             >
-              <p class="text-[15px] font-semibold text-black/60">外部向け開発</p>
-              <p class="text-[17px] leading-[1.9] text-black/70 sm:text-[18px]">
+              <p class="text-[15px] font-semibold text-brand-ink/60">外部向け開発</p>
+              <p class="text-[17px] leading-[1.9] text-brand-ink/70 sm:text-[18px]">
                 必要に応じて、GBC外部の開発や技術支援にも取り組みます。
               </p>
             </div>
@@ -148,16 +148,16 @@ useSeoMeta({
 
     <!-- 企画から実装まで一貫して考える開発方針を説明する。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             企画から開発まで
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -169,7 +169,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               Pandoraは、決められた仕様を実装するだけの開発領域ではありません。何が必要なのか、どんな形なら使いやすいのか、そもそもつくるべきなのか。企画や設計の段階から考えます。
@@ -184,16 +184,16 @@ useSeoMeta({
 
     <!-- 外部向け開発の位置づけを説明する。 -->
     <section
-      class="border-b border-black/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
+      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
     >
-      <div class="mx-auto grid w-full max-w-[1600px] grid-cols-12 gap-y-12">
+      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
         <div class="col-span-12 md:col-span-4">
           <h2
             class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
           >
             外部向けの開発
           </h2>
-          <div class="mt-5 h-[3px] w-24 bg-[#111317]" />
+          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
         </div>
 
         <div class="col-span-12 md:col-start-5 md:col-end-12">
@@ -205,7 +205,7 @@ useSeoMeta({
           </p>
 
           <div
-            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-black/68 sm:text-[18px] md:text-[19px]"
+            class="mt-12 max-w-[820px] space-y-7 text-[17px] leading-[2.05] text-brand-ink/68 sm:text-[18px] md:text-[19px]"
           >
             <p>
               Pandoraの中心は、GBC自身のサービスやプロダクトを生み出すことです。外部から依頼された開発を受け続けることを、事業の前提にはしていません。
@@ -222,7 +222,7 @@ useSeoMeta({
     <section
       class="px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
     >
-      <div class="mx-auto w-full max-w-[1600px]">
+      <div class="mx-auto w-full max-w-brand">
         <div class="mx-auto max-w-[1180px] text-center">
           <p
             class="text-[clamp(2.4rem,5vw,5.2rem)] font-semibold leading-[1.2] tracking-[-0.05em]"
@@ -232,7 +232,7 @@ useSeoMeta({
           </p>
 
           <p
-            class="mx-auto mt-10 max-w-[800px] text-[17px] leading-[2] text-black/64 sm:text-[18px]"
+            class="mx-auto mt-10 max-w-[800px] text-[17px] leading-[2] text-brand-ink/64 sm:text-[18px]"
           >
             GBCが必要とするものを、自分で考え、自分でつくる。その積み重ねから、新しいサービスや仕組みを生み出していきます。
           </p>
