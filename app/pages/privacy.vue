@@ -36,7 +36,7 @@ const operatorItems = [
 
         <div class="mt-16 grid grid-cols-12 gap-x-6 md:mt-24">
           <p
-            class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:400ms] md:col-start-7 md:col-end-13"
+            class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:400ms] md:col-start-7 md:col-end-13"
           >
             GBC合同会社（以下「当社」といいます。）は、当社が運営するWebサイトおよび各サービスにおいて取り扱う個人情報について、以下のとおりプライバシーポリシーを定めます。
           </p>

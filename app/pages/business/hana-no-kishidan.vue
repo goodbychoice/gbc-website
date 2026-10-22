@@ -49,7 +49,7 @@ const cases = [
           </p>
 
           <p
-            class="col-span-12 row-start-2 mt-14 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:850ms] md:col-span-6 md:mt-12"
+            class="col-span-12 row-start-2 mt-14 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:850ms] md:col-span-6 md:mt-12"
           >
             華の騎士団は、個人クリエイターが創作や発信を続ける中で生まれる悩みや課題を、一緒に整理し、考え、次の一歩につなげるための相談・伴走・サポートサービスです。
           </p>
@@ -64,7 +64,7 @@ const cases = [
         代わりに進めない。<br /><span class="-ml-[0.14em]">自分で</span><br class="md:hidden" />続けられるように<br class="md:hidden" />支える。
       </p>
 
-      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-surface/85 md:mt-24 xl:gap-y-0">
+      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-body lg:text-body-desktop text-pretty text-brand-surface/85 md:mt-24 xl:gap-y-0">
         <div v-reveal class="col-span-12 max-w-lg space-y-7 xl:col-span-5">
           <p>
             華の騎士団は、タレント事務所や所属型のマネジメントサービスではありません。GBCへの所属を前提に活動してもらう仕組みではなく、本人が自分の活動を続けていくための相談・伴走・サポートを行います。
@@ -93,7 +93,7 @@ const cases = [
 
         <div
           v-reveal
-          class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
+          class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
         >
           <p>
             VTuber、動画投稿者、配信者、イラストレーター、音楽活動をする人など、個人として創作・表現・発信活動を行うクリエイター全般を対象にしています。
@@ -117,7 +117,7 @@ const cases = [
 
         <div
           v-reveal
-          class="col-span-12 mt-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           <p>
             活動方針、発信の仕方、見せ方、制作環境、機材やツールの選び方、活動の仕組み化、収益化、今後の方向性など、個人で活動を続ける中で生まれるさまざまな相談を対象にします。
@@ -152,7 +152,7 @@ const cases = [
 
         <p
           v-reveal
-          class="col-span-12 mt-16 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13 md:mt-20"
+          class="col-span-12 mt-16 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13 md:mt-20"
         >
           華の騎士団では、活動の形を決めつけるのではなく、本人が大切にしたいことを起点に、続け方や選択肢を一緒に整理します。
         </p>
@@ -168,7 +168,7 @@ const cases = [
 
         <div
           v-reveal
-          class="col-span-12 mt-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           <p>
             まず、今考えていることや悩んでいることを持ってきてもらいます。まだ言葉になっていなくても構いません。話したり、書いたりしながら、一緒に整理していきます。
@@ -192,7 +192,7 @@ const cases = [
 
         <div
           v-reveal
-          class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
+          class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
         >
           <p>
             話しながら考えたい人もいれば、文章にした方が落ち着いて考えられる人もいます。華の騎士団では、オンライン、対面、チャットなど、自分に合う方法で相談できる形を目指します。
@@ -226,7 +226,7 @@ const cases = [
       </div>
 
       <div class="mt-16 grid grid-cols-12 gap-x-6 md:mt-20">
-        <div v-reveal class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13">
+        <div v-reveal class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13">
           <p>
             固定の月額料金ではなく、華の騎士団が支援対象としている活動の月間売上に対して、一定の割合を利用料金とする形を検討しています。
           </p>
@@ -256,7 +256,7 @@ const cases = [
       <div class="mt-12 grid grid-cols-12 gap-x-6 md:mt-16">
         <p
           v-reveal
-          class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13"
+          class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13"
         >
           華の騎士団の目的は、GBCを使い続けてもらうことではありません。自分の世界観を守り、自分で選び、自分の力で活動を続けられること。そのために必要なときだけ、華の騎士団を使ってください。
         </p>

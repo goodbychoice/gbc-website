@@ -12,7 +12,7 @@
 
         <p
           v-reveal
-          class="col-span-12 mt-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           ご相談やご依頼については、お問い合わせフォームまたはメールからご連絡ください。
         </p>

@@ -63,7 +63,7 @@ const steps = [
             自分の事業を、<br />自分の力でつくり、<br />続けていく。
           </p>
           <p
-            class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:550ms] md:col-start-7 md:col-end-13"
+            class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:550ms] md:col-start-7 md:col-end-13"
           >
             フェンリルは、個人が事業を進める中で生まれる悩みや課題を、一緒に整理し、考え、次の一歩につなげるための相談・伴走・サポートサービスです。
           </p>
@@ -78,7 +78,7 @@ const steps = [
         代わりに進めない。<br /><span class="-ml-[0.14em]">自分で</span><br class="md:hidden" />進められるように<br class="md:hidden" />支える。
       </p>
 
-      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-surface/85 md:mt-24 xl:gap-y-0">
+      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-body lg:text-body-desktop text-pretty text-brand-surface/85 md:mt-24 xl:gap-y-0">
         <p v-reveal class="col-span-12 max-w-lg xl:col-span-5">
           GBCが事業の方向を決めたり、スケジュールを管理したり、日々の実作業を代行したりすることを前提にはしていません。
         </p>
@@ -102,7 +102,7 @@ const steps = [
 
         <div
           v-reveal
-          class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
+          class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
         >
           <p>
             これから自分の事業を始めたい人。すでに個人事業主、個人社長、フリーランスなど、自分の商品・サービスを持って活動している人。
@@ -126,7 +126,7 @@ const steps = [
 
         <div
           v-reveal
-          class="col-span-12 mt-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           <p>
             事業アイデアやサービス設計、Web・IT活用、業務の仕組み化、ツール選定、集客、発信、運営、改善など、個人で事業を続ける中で生まれるさまざまな相談を対象にします。
@@ -161,7 +161,7 @@ const steps = [
 
         <p
           v-reveal
-          class="col-span-12 mt-16 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13 md:mt-20"
+          class="col-span-12 mt-16 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13 md:mt-20"
         >
           フェンリルでは、答えを代わりに決めるのではなく、今の状況を一緒に整理し、本人が次の一歩を選べる状態をつくります。
         </p>
@@ -173,7 +173,7 @@ const steps = [
       <ol class="mt-14 grid grid-cols-12 gap-x-6 gap-y-12 md:mt-20">
         <li v-for="step in steps" :key="step.label" v-reveal class="col-span-12 lg:col-span-4">
           <h3 class="font-serif text-catch">{{ step.label }}</h3>
-          <p class="mt-6 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85">{{ step.text }}</p>
+          <p class="mt-6 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85">{{ step.text }}</p>
         </li>
 
         <li class="col-span-12 mt-12 grid grid-cols-12 gap-x-6 md:mt-24">
@@ -185,7 +185,7 @@ const steps = [
           </h3>
           <p
             v-reveal
-            class="col-span-12 mt-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+            class="col-span-12 mt-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
           >
             その後の実行も本人が中心です。進める中でまた迷ったり、状況が変わったりしたら、そのときにもう一度相談できます。
           </p>
@@ -202,7 +202,7 @@ const steps = [
 
         <div
           v-reveal
-          class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
+          class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
         >
           <p>
             話しながら考えたい人もいれば、文章にした方が考えを整理しやすい人もいます。フェンリルでは、オンライン、対面、チャットなど、自分に合う方法で相談できる形を目指します。
@@ -236,7 +236,7 @@ const steps = [
       </div>
 
       <div class="mt-16 grid grid-cols-12 gap-x-6 md:mt-20">
-        <div v-reveal class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13">
+        <div v-reveal class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13">
           <p>
             固定の月額料金ではなく、フェンリルが支援対象としている事業の月間売上に対して、一定の割合を利用料金とする形を検討しています。
           </p>
@@ -265,7 +265,7 @@ const steps = [
       <div class="mt-12 grid grid-cols-12 gap-x-6 md:mt-16">
         <p
           v-reveal
-          class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13"
+          class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13"
         >
           フェンリルの目的は、GBCを使い続けてもらうことではありません。自分で考え、自分で決め、自分の力で事業を進められるようになること。そのために必要なときだけ、フェンリルを使ってください。
         </p>

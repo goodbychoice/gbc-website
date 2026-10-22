@@ -53,7 +53,7 @@ const products = [
             必要なものを、<br />自分でつくる。
           </p>
           <p
-            class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-surface/85 animate-rise motion-reduce:animate-none [animation-delay:300ms] md:col-start-7 md:col-end-13"
+            class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-surface/85 animate-rise motion-reduce:animate-none [animation-delay:300ms] md:col-start-7 md:col-end-13"
           >
             Pandoraは、GBC自身のサービスや各事業に必要な仕組みを企画し、技術で形にするための開発領域です。
           </p>
@@ -70,7 +70,7 @@ const products = [
 
         <div
           v-reveal
-          class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
+          class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
         >
           <p>
             Simple Study、フェンリル、華の騎士団が個人に向けて価値を届ける事業であるのに対し、PandoraはGBC自身が必要とするサービスや仕組みをつくる側を担います。
@@ -95,7 +95,7 @@ const products = [
           class="grid grid-cols-12 items-baseline gap-x-6 gap-y-3 border-b border-brand-ink/15 py-8 md:py-10"
         >
           <dt class="col-span-12 font-serif text-catch lg:col-span-4">{{ product.label }}</dt>
-          <dd class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 lg:col-start-5 lg:col-end-13">
+          <dd class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 lg:col-start-5 lg:col-end-13">
             {{ product.text }}
           </dd>
         </div>
@@ -111,7 +111,7 @@ const products = [
 
         <div
           v-reveal
-          class="col-span-12 mt-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           <p>
             Pandoraは、決められた仕様を実装するだけの開発領域ではありません。何が必要なのか、どんな形なら使いやすいのか、そもそもつくるべきなのか。企画や設計の段階から考えます。
@@ -130,7 +130,7 @@ const products = [
         受託を中心には<br class="md:hidden" /><span class="max-md:-ml-[0.18em]">しない。</span><br />でも、必要なら<br class="md:hidden" />技術を届ける。
       </p>
 
-      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:mt-24 xl:gap-y-0">
+      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:mt-24 xl:gap-y-0">
         <p v-reveal class="col-span-12 max-w-lg xl:col-span-5">
           Pandoraの中心は、GBC自身のサービスやプロダクトを生み出すことです。外部から依頼された開発を受け続けることを、事業の前提にはしていません。
         </p>
@@ -149,7 +149,7 @@ const products = [
       <div class="mt-12 grid grid-cols-12 gap-x-6 md:mt-16">
         <p
           v-reveal
-          class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13"
+          class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13"
         >
           GBCが必要とするものを、自分で考え、自分でつくる。その積み重ねから、新しいサービスや仕組みを生み出していきます。
         </p>

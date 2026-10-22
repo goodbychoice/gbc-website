@@ -11,7 +11,7 @@
         </p>
 
         <div v-reveal class="col-span-12 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7">
-          <div class="max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85">
+          <div class="max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85">
             <p>
               GBCは、会社や組織に依存せず、個人が自分の選択で自由に生きていくためのプラットフォームです。
             </p>

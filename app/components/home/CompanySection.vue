@@ -60,7 +60,7 @@ const companyItems = [
           <dt class="col-span-12 text-base font-medium tracking-[0.12em] text-brand-ink/75 md:col-span-4">
             {{ item.label }}
           </dt>
-          <dd class="col-span-12 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 [word-break:auto-phrase] md:col-start-5 md:col-end-13">
+          <dd class="col-span-12 text-body lg:text-body-desktop text-pretty text-brand-ink/85 [word-break:auto-phrase] md:col-start-5 md:col-end-13">
             {{ item.value }}
           </dd>
         </div>

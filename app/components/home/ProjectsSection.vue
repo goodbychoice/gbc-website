@@ -11,7 +11,7 @@
 
         <p
           v-reveal
-          class="col-span-12 mt-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           GBCは、個人が自分の力で活動していくために、学び、事業、表現のそれぞれの領域で支援を行っています。決められた順路はありません。その人自身が、今必要なものを選べることを大切にしています。
         </p>
@@ -33,7 +33,7 @@
             </p>
 
             <div v-reveal class="mt-10 delay-150 md:mt-12">
-              <div class="max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85">
+              <div class="max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85">
                 <p>
                   Simple Studyは、個人が自立して活動していくために必要な知識や技術を学ぶためのサービスです。
                 </p>
@@ -70,7 +70,7 @@
           </p>
 
           <div v-reveal class="col-span-12 delay-150 md:col-start-7 md:col-end-13">
-            <div class="max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85">
+            <div class="max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85">
               <p>
                 フェンリルは、これから自分の事業を始めたい人から、すでに個人事業主、個人社長、フリーランスなど、自分の商品・サービスを持って活動している人までを支えるサービスです。
               </p>
@@ -108,7 +108,7 @@
           </p>
 
           <div v-reveal class="col-span-12 row-start-2 mt-14 delay-150 md:col-span-6 md:mt-12">
-            <div class="max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85">
+            <div class="max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85">
               <p>
                 華の騎士団は、個人として創作・表現・発信活動を行うクリエイターを支えるサービスです。
               </p>
@@ -145,7 +145,7 @@
           </p>
 
           <div v-reveal class="col-span-12 mt-12 delay-150 md:col-start-7 md:col-end-13 md:mt-16">
-            <div class="max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-surface/85">
+            <div class="max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-surface/85">
               <p>
                 Pandoraは、GBC自身のサービスや各事業に必要な仕組みを企画し、技術で形にする開発領域です。
               </p>

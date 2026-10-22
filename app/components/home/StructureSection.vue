@@ -17,7 +17,7 @@ const services = [
         GBCには、<br />決められた道は<br class="md:hidden" />ありません。
       </p>
 
-      <p v-reveal class="mt-10 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:mt-12">
+      <p v-reveal class="mt-10 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:mt-12">
         学びたいときは、学ぶ。事業を始めたいときは、そのための支援を使う。表現活動を続けたいときは、必要な力を借りる。何を使うかは、その人自身が決めます。
       </p>
 
@@ -35,7 +35,7 @@ const services = [
           <span class="block text-base font-medium tracking-[0.12em] text-brand-ink/75">GBCを技術面から支える</span>
           <span class="mt-3 block font-serif text-catch">Pandora</span>
         </div>
-        <p class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:col-start-5 md:col-end-13">
+        <p class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:col-start-5 md:col-end-13">
           Simple Study、フェンリル、華の騎士団は、それぞれ異なる形で個人の活動を支えます。Pandoraは、その活動やGBCのサービスを技術面から支え、必要な仕組みを形にします。
         </p>
       </div>

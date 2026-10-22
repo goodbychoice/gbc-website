@@ -87,7 +87,7 @@ async function submitContact() {
             自分の力で始めたい。<br />そのために<br class="md:hidden" />GBCが必要なら。
           </p>
           <p
-            class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:550ms] md:col-start-7 md:col-end-13"
+            class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:550ms] md:col-start-7 md:col-end-13"
           >
             サービスについてのご相談、ご依頼、取材・協業などについて、こちらからお問い合わせいただけます。
           </p>
@@ -109,7 +109,7 @@ async function submitContact() {
           <span class="-ml-[0.05em]">お問い合わせを</span><br />受け付けました。
         </p>
         <p
-          class="col-span-12 mt-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13 md:mt-16"
         >
           送信ありがとうございます。内容を確認のうえ、順次ご返信いたします。
         </p>
@@ -125,7 +125,7 @@ async function submitContact() {
         <!-- フォームが無効のときは、入力欄の前でメールの利用を案内する。文節で折り返し、語尾だけが次の行に落ちないようにする。 -->
         <div v-if="!formEnabled" class="grid grid-cols-12 gap-x-6 border-b border-brand-ink/15 py-5 md:py-6">
           <div class="col-span-12 [word-break:auto-phrase] md:col-start-5 md:col-end-13">
-            <p class="text-lg/9 lg:text-xl/10 text-brand-ink">フォーム送信機能は現在ご利用いただけません。</p>
+            <p class="text-body lg:text-body-desktop text-brand-ink">フォーム送信機能は現在ご利用いただけません。</p>
             <p class="text-base leading-7 text-brand-ink/75">お問い合わせは、下記メールアドレスをご利用ください。</p>
           </div>
         </div>
@@ -141,7 +141,7 @@ async function submitContact() {
             autocomplete="name"
             :disabled="!formEnabled || sending"
             placeholder="山田 太郎"
-            class="w-full border-0 bg-transparent p-0 text-lg/9 lg:text-xl/10 outline-hidden placeholder:text-brand-ink/55 disabled:cursor-not-allowed disabled:opacity-55"
+            class="w-full border-0 bg-transparent p-0 text-body lg:text-body-desktop outline-hidden placeholder:text-brand-ink/55 disabled:cursor-not-allowed disabled:opacity-55"
           />
         </FormField>
 
@@ -156,7 +156,7 @@ async function submitContact() {
             autocomplete="email"
             :disabled="!formEnabled || sending"
             placeholder="example@example.com"
-            class="w-full border-0 bg-transparent p-0 text-lg/9 lg:text-xl/10 outline-hidden placeholder:text-brand-ink/55 disabled:cursor-not-allowed disabled:opacity-55"
+            class="w-full border-0 bg-transparent p-0 text-body lg:text-body-desktop outline-hidden placeholder:text-brand-ink/55 disabled:cursor-not-allowed disabled:opacity-55"
           />
         </FormField>
 
@@ -170,7 +170,7 @@ async function submitContact() {
               name="category"
               required
               :disabled="!formEnabled || sending"
-              class="w-full appearance-none border-0 bg-transparent p-0 pr-8 text-lg/9 lg:text-xl/10 outline-hidden invalid:text-brand-ink/75 disabled:cursor-not-allowed disabled:opacity-55 [&>option]:text-brand-ink"
+              class="w-full appearance-none border-0 bg-transparent p-0 pr-8 text-body lg:text-body-desktop outline-hidden invalid:text-brand-ink/75 disabled:cursor-not-allowed disabled:opacity-55 [&>option]:text-brand-ink"
             >
               <option disabled value="">選択してください</option>
               <option v-for="type in contactCategories" :key="type" :value="type">
@@ -198,7 +198,7 @@ async function submitContact() {
             maxlength="5000"
             :disabled="!formEnabled || sending"
             placeholder="ご相談・ご依頼内容をご記入ください。（10文字以上）"
-            class="block w-full resize-y border-0 bg-transparent p-0 text-lg/9 lg:text-xl/10 outline-hidden placeholder:text-brand-ink/55 disabled:cursor-not-allowed disabled:opacity-55"
+            class="block w-full resize-y border-0 bg-transparent p-0 text-body lg:text-body-desktop outline-hidden placeholder:text-brand-ink/55 disabled:cursor-not-allowed disabled:opacity-55"
           />
         </FormField>
 
@@ -255,7 +255,7 @@ async function submitContact() {
       <div class="mt-14 grid grid-cols-12 gap-x-6 md:mt-20">
         <p
           v-reveal
-          class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13"
+          class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13"
         >
           メールでのお問い合わせも受け付けています。内容を確認のうえ、順次ご返信いたします。
         </p>

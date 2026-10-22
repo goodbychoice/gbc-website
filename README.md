@@ -28,7 +28,8 @@ https://www.goodbychoice.co.jp
 - `max-w-brand` … レイアウト最大幅 `1600px`
 - `font-serif` … 見出し・キャッチコピー（Shippori Mincho）
 - `font-sans`（既定）… 本文・ラベル（Zen Kaku Gothic New）
-- `text-display` / `text-lead` / `text-catch` / `text-body` … 文字の役割ごとの大きさ（締めや強調の一文 36〜112px、リード 30〜72px、キャッチコピー 22〜32px、本文 17〜19px）。行送りと字間も含み、変えるときは `leading-*` / `tracking-*` で上書きする（`text-display/none` のように `/` で行送りを付けると字間が外れる）
+- `text-display` / `text-lead` / `text-catch` … 強調文（36〜112px）、リード（30〜72px）、キャッチコピー（22〜32px）の文字サイズ・行間・字間を共通管理します。必要に応じて `leading-*` / `tracking-*` で上書きします（`text-display/none` のように `/` で行間を指定すると字間設定が外れます）。
+- `text-body lg:text-body-desktop` … 本文の文字サイズと行間を共通管理します。モバイルは18px/36px、`lg` 以上は20px/40pxで、字間は指定せず既定値を維持します。
 - `ease-brand` … すべての演出で使う減速カーブ `cubic-bezier(0.16, 1, 0.3, 1)`
 - `animate-ink` / `animate-rise` … ヒーローの表示演出。`motion-reduce:animate-none` と一緒に使い、時間差は `[animation-delay:150ms]` のように付ける
 
@@ -46,7 +47,7 @@ https://www.goodbychoice.co.jp
 - `<FormField label="お名前" for="name">` … お問い合わせフォームの1行。会社情報の台帳と同じく、左に項目名、5列目から入力欄を置いて細い罫線で区切ります。入力中は下の罫線を左から濃く引きます。
 - `<LegalArticle title="1. 取得する情報">` … プライバシーポリシーと利用規約の1条。左に条の見出し、7列目から本文を置き、条ごとに細い罫線で区切ります。
 
-黒い帯のセクションは `bg-brand-ink text-brand-surface` で組み、見出しは `<SectionHeading dark>`、ラベルは `<SectionLabel dark>`、本文は `text-brand-surface/72` にします。黒は強調したい帯と、ページを締めるフッターだけに使います。帯はトップでは「私たちが目指すもの」と Pandora、下層ページでは1ページに1つまでにし、フッターと続いて見えないよう最後のセクションには使いません。
+黒い帯のセクションは `bg-brand-ink text-brand-surface` で組み、見出しは `<SectionHeading dark>`、ラベルは `<SectionLabel dark>`、本文は `text-brand-surface/85` にします。黒は強調したい帯と、ページを締めるフッターだけに使います。帯はトップでは「私たちが目指すもの」と Pandora、下層ページでは1ページに1つまでにし、フッターと続いて見えないよう最後のセクションには使いません。
 
 ### レイアウトと組版
 

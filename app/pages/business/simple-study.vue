@@ -53,7 +53,7 @@ const outcomes = [
         <div class="mt-12 grid grid-cols-12 gap-x-6 md:mt-16">
           <div class="col-span-12 animate-rise motion-reduce:animate-none [animation-delay:500ms] md:col-start-7 md:col-end-13">
             <p class="font-serif text-catch font-features-['palt']">シンプルに学ぶ。<br />シンプルに理解する。</p>
-            <p class="mt-10 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:mt-12">
+            <p class="mt-10 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:mt-12">
               Simple Studyは、個人が自分の力で活動していくために必要な知識や技術を学ぶためのオンライン学習サービスです。現在はIT・プログラミング領域を中心に、基礎から実践、そして実際に使える形として公開するところまでを見据えて展開します。
             </p>
           </div>
@@ -70,7 +70,7 @@ const outcomes = [
 
         <div
           v-reveal
-          class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
+          class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
         >
           <p>
             Simple Studyが大切にするのは、最初からすべてを正確に説明することではありません。まずは「つまり、こういうこと」とシンプルに理解できるところまで噛み砕き、必要になったときに必要な知識だけを加えていきます。
@@ -94,7 +94,7 @@ const outcomes = [
 
         <div
           v-reveal
-          class="col-span-12 mt-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           <p>
             個人開発でサービスをつくりたい人。個人事業やフリーランスの仕事を効率化したい人。自分の活動にWebやAIなどの技術を取り入れたい人。
@@ -118,7 +118,7 @@ const outcomes = [
 
         <div
           v-reveal
-          class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
+          class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
         >
           <p>現在は、PythonとWebを中心に学習領域を構成する予定です。</p>
           <p>
@@ -131,7 +131,7 @@ const outcomes = [
       <ul v-reveal class="mt-24 grid grid-cols-12 gap-x-6 gap-y-12 md:mt-36">
         <li v-for="area in areas" :key="area.name" class="col-span-12 border-t border-brand-ink/15 pt-6 md:col-span-6">
           <h3 class="font-serif text-catch">{{ area.name }}</h3>
-          <p class="mt-6 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85">{{ area.text }}</p>
+          <p class="mt-6 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85">{{ area.text }}</p>
         </li>
       </ul>
     </PageSection>
@@ -145,7 +145,7 @@ const outcomes = [
 
         <div
           v-reveal
-          class="col-span-12 mt-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           <p>
             最終的にサービスをつくるからといって、いきなり実践だけを始めるわけではありません。変数、条件分岐、関数、データ構造といった基礎も、初めて学ぶ人が理解できるところから丁寧に扱います。
@@ -169,7 +169,7 @@ const outcomes = [
 
         <div
           v-reveal
-          class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
+          class="col-span-12 max-w-lg space-y-7 text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-6 md:col-end-13 lg:col-start-7"
         >
           <p>
             初めて学ぶ人が迷わないように、目的に合わせた推奨の学習順序を用意します。一方で、すべてを決められた順番どおりに進めることを前提にはしません。
@@ -194,7 +194,7 @@ const outcomes = [
 
         <p
           v-reveal
-          class="col-span-12 mt-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           Simple Studyで目指すのは、学んだ技術を使って、自分の活動に必要なものを自分で形にできる状態です。
         </p>
@@ -211,7 +211,7 @@ const outcomes = [
 
         <p
           v-reveal
-          class="col-span-12 mt-16 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13 md:mt-20"
+          class="col-span-12 mt-16 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13 md:mt-20"
         >
           つくるものを起点に必要なことを学び、学んだら実際につくる。その繰り返しを通して、技術を「知っているもの」ではなく「使えるもの」にしていきます。
         </p>
@@ -224,7 +224,7 @@ const outcomes = [
         動くコード<br class="md:hidden" />ではなく、<br />使える<br class="md:hidden" />サービスをつくる。
       </p>
 
-      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-surface/85 md:mt-24 xl:gap-y-0">
+      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-body lg:text-body-desktop text-pretty text-brand-surface/85 md:mt-24 xl:gap-y-0">
         <p v-reveal class="col-span-12 max-w-lg xl:col-span-5">
           Simple Studyでは、コードを書いて実行できたことだけをゴールにはしません。Webサービスやツールなど、他の人が実際に使える形までつくることを大切にします。
         </p>
@@ -243,7 +243,7 @@ const outcomes = [
       <div class="mt-12 grid grid-cols-12 gap-x-6 md:mt-16">
         <p
           v-reveal
-          class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13"
+          class="col-span-12 max-w-lg text-body lg:text-body-desktop text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13"
         >
           Simple Studyは、知識を増やすためだけの場所ではありません。自分の活動に技術を使い、自分の手で形にできる人を増やしていきます。
         </p>
