@@ -1,97 +1,24 @@
 <template>
-  <section
-    class="relative min-h-[calc(100svh-76px)] overflow-hidden bg-brand-surface text-brand-ink"
-  >
-    <!-- ファーストビュー中央に公式キャッチコピーを表示する。 -->
+  <section class="bg-brand-surface text-brand-ink">
     <div
-      class="mx-auto flex min-h-[calc(100svh-76px)] w-full max-w-brand items-center justify-center px-5 pb-[8vh] pt-8 text-center sm:px-8 sm:pt-10 lg:px-12 lg:pt-12 xl:px-16"
+      class="mx-auto grid min-h-[calc(100svh-76px)] w-full max-w-brand grid-cols-12 grid-rows-[1fr_auto] px-5 pt-[10svh] pb-10 sm:px-8 lg:px-12 lg:pb-14 xl:px-16"
     >
-      <div class="w-full">
-        <h1
-          class="flex flex-wrap justify-center text-[clamp(2.6rem,5.7vw,5.9rem)] font-semibold leading-[1.04] tracking-[-0.055em] lg:whitespace-nowrap"
-        >
-          <span class="hero-mask block overflow-hidden">
-            <span class="hero-word hero-word-first block">選んで生きる、</span>
-          </span>
-          <span class="hero-mask block overflow-hidden">
-            <span class="hero-word hero-word-second block">個の時代へ。</span>
-          </span>
-        </h1>
+      <!-- 公式キャッチコピーを明朝体の縦組みで右に置き、左側に大きな余白を残す。 -->
+      <h1
+        class="col-span-full row-span-full mr-[6vw] justify-self-end font-serif text-[clamp(3.25rem,min(8.8svh,15vw),8.5rem)]/[1.8] tracking-[0.16em] whitespace-nowrap [writing-mode:vertical-rl] lg:col-start-7 lg:col-end-12 lg:mr-0"
+      >
+        <span class="block animate-ink motion-reduce:animate-none [animation-delay:200ms]">選んで生きる、</span>
+        <!-- 2行目を1字下げて、行末の「、」と「。」を同じ高さにそろえる。縦組みでは pt が字下げになる。 -->
+        <span class="block pt-[1.16em] animate-ink motion-reduce:animate-none [animation-delay:550ms]">個の時代へ<span class="text-brand-accent">。</span></span>
+      </h1>
 
-        <p
-          class="hero-sub mt-4 text-[clamp(1.05rem,1.55vw,1.5rem)] font-normal tracking-[-0.02em] text-brand-ink/62"
-        >
-          Your Life, Your Choice.
-        </p>
-      </div>
+      <!-- 英文コピーを左下に置き、縦組みのコピーと対角で釣り合わせる。 -->
+      <p
+        class="col-span-full row-start-2 flex items-center gap-5 self-end justify-self-start font-serif text-[clamp(1.125rem,1.5vw,1.5rem)] tracking-[0.06em] text-brand-ink/80 animate-rise motion-reduce:animate-none [animation-delay:1.5s]"
+      >
+        <span class="h-px w-12 bg-brand-ink/30" />
+        Your Life, Your Choice.
+      </p>
     </div>
   </section>
 </template>
-
-<style scoped>
-/* キャッチコピーを下から順番に表示する。 */
-.hero-word {
-  transform: translateY(72%);
-  opacity: 0;
-  will-change: transform, opacity;
-  animation: heroWordReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* 1行目を先に表示する。 */
-.hero-word-first {
-  animation-delay: 0.28s;
-}
-
-/* 2行目を少し遅らせて表示する。 */
-.hero-word-second {
-  animation-delay: 0.95s;
-}
-
-/* 英語キャッチコピーをメインコピーの後に表示する。 */
-.hero-sub {
-  opacity: 0;
-  transform: translateY(4px);
-  will-change: transform, opacity;
-  animation: heroSubReveal 1.35s ease-out 2.15s forwards;
-}
-
-/* メインコピーを下から定位置へ移動しながら表示する。 */
-@keyframes heroWordReveal {
-  0% {
-    transform: translateY(72%);
-    opacity: 0;
-  }
-
-  35% {
-    opacity: 0.2;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* 英語キャッチコピーを短い移動とフェードで表示する。 */
-@keyframes heroSubReveal {
-  0% {
-    transform: translateY(4px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* 動きを減らす設定ではアニメーションを無効にして即時表示する。 */
-@media (prefers-reduced-motion: reduce) {
-  .hero-word,
-  .hero-sub {
-    transform: none;
-    opacity: 1;
-    animation: none;
-  }
-}
-</style>

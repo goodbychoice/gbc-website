@@ -1,105 +1,56 @@
+<script setup lang="ts">
+// 3つのサービス。順序はないので、同じ幅で横に並べる。
+const services = [
+  { role: "学ぶ", name: "Simple Study" },
+  { role: "事業をつくる・続ける", name: "フェンリル" },
+  { role: "表現する・届ける", name: "華の騎士団" },
+];
+</script>
+
 <template>
-  <section
-    id="structure"
-    class="scroll-mt-24 border-t-2 border-brand-ink/20 bg-brand-surface px-5 py-28 text-brand-ink sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
-  >
-    <div class="mx-auto w-full max-w-brand">
-      <div class="grid grid-cols-12 gap-y-12 md:gap-y-0">
+  <section id="structure" class="scroll-mt-24 bg-brand-surface text-brand-ink">
+    <div class="mx-auto w-full max-w-brand px-5 py-28 sm:px-8 md:py-40 lg:px-12 lg:py-52 xl:px-16">
+      <SectionHeading>GBCの仕組み</SectionHeading>
+
+      <!-- 導入：リードと本文を左に積み、右側は空けておく。スマートフォンでは2行目が収まらないため、文節で折り返す。 -->
+      <p v-reveal class="mt-14 font-serif text-lead font-features-['palt'] md:mt-20">
+        GBCには、<br />決められた道は<br class="md:hidden" />ありません。
+      </p>
+
+      <p v-reveal class="mt-10 max-w-lg text-body text-pretty text-brand-ink/72 delay-150 md:mt-12">
+        学びたいときは、学ぶ。事業を始めたいときは、そのための支援を使う。表現活動を続けたいときは、必要な力を借りる。何を使うかは、その人自身が決めます。
+      </p>
+
+      <!-- 3つのサービス：罫線を列ごとに切り、それぞれが独立して並んでいることを示す。 -->
+      <ul v-reveal class="mt-24 grid grid-cols-12 gap-x-6 gap-y-10 md:mt-36">
+        <li v-for="service in services" :key="service.name" class="col-span-12 border-t border-brand-ink/15 pt-6 md:col-span-4">
+          <span class="block text-sm font-medium tracking-[0.12em] text-brand-ink/60">{{ service.role }}</span>
+          <span class="mt-3 block font-serif text-catch">{{ service.name }}</span>
+        </li>
+      </ul>
+
+      <!-- Pandora：3列をつないだ1本の罫線の下に置き、3つのサービスを支える土台に見立てる。説明は2列目の左端にそろえる。 -->
+      <div v-reveal class="mt-16 grid grid-cols-12 gap-x-6 gap-y-8 border-t border-brand-ink/15 pt-6 md:mt-20 md:items-baseline">
         <div class="col-span-12 md:col-span-4">
-          <div class="max-w-[280px]">
-            <h2
-              class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
-            >
-              GBCの仕組み
-            </h2>
-            <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
-          </div>
+          <span class="block text-sm font-medium tracking-[0.12em] text-brand-ink/60">GBCを技術面から支える</span>
+          <span class="mt-3 block font-serif text-catch">Pandora</span>
         </div>
-
-        <div class="col-span-12 md:col-start-5 md:col-end-13">
-          <p
-            class="max-w-[980px] text-[clamp(2.5rem,5vw,5rem)] font-semibold leading-[1.15] tracking-[-0.045em]"
-          >
-            GBCには、<br class="hidden sm:block" />
-            決められた道はありません。
-          </p>
-
-          <p
-            class="mt-12 max-w-[780px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px] md:mt-14 md:text-[19px]"
-          >
-            学びたいときは、学ぶ。事業を始めたいときは、そのための支援を使う。表現活動を続けたいときは、必要な力を借りる。何を使うかは、その人自身が決めます。
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-24 md:mt-32">
-        <div class="grid grid-cols-12 border-y border-brand-ink/20">
-          <div
-            class="col-span-12 border-b border-brand-ink/20 py-10 md:col-span-4 md:border-b-0 md:border-r md:py-14 md:pr-10"
-          >
-            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
-              学ぶ
-            </p>
-            <p
-              class="mt-3 text-[clamp(1.9rem,2.8vw,3rem)] font-semibold tracking-[-0.04em]"
-            >
-              Simple Study
-            </p>
-          </div>
-
-          <div
-            class="col-span-12 border-b border-brand-ink/20 py-10 md:col-span-4 md:border-b-0 md:border-r md:px-10 md:py-14"
-          >
-            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
-              事業をつくる・続ける
-            </p>
-            <p
-              class="mt-3 text-[clamp(1.9rem,2.8vw,3rem)] font-semibold tracking-[-0.04em]"
-            >
-              フェンリル
-            </p>
-          </div>
-
-          <div class="col-span-12 py-10 md:col-span-4 md:pl-10 md:py-14">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
-              表現する・届ける
-            </p>
-            <p
-              class="mt-3 text-[clamp(1.9rem,2.8vw,3rem)] font-semibold tracking-[-0.04em]"
-            >
-              華の騎士団
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-12 gap-y-10 border-b border-brand-ink/20 py-12 md:py-16">
-          <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
-              GBCを技術面から支える
-            </p>
-            <p
-              class="mt-3 text-[clamp(1.9rem,2.8vw,3rem)] font-semibold tracking-[-0.04em]"
-            >
-              Pandora
-            </p>
-          </div>
-
-          <div class="col-span-12 md:col-start-5 md:col-end-12">
-            <p class="max-w-[760px] text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]">
-              Simple Study、フェンリル、華の騎士団は、それぞれ異なる形で個人の活動を支えます。Pandoraは、その活動やGBCのサービスを技術面から支え、必要な仕組みを形にします。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex justify-center pt-14 text-center md:pt-20">
-        <p
-          class="max-w-[1320px] text-[clamp(2rem,3.8vw,4rem)] font-semibold leading-[1.3] tracking-[-0.04em]"
-        >
-          何を使うか。いつ使うか。どこまで使うか。<br class="hidden lg:block" />
-          それを決めるのは、GBCではなく本人です。
+        <p class="col-span-12 max-w-lg text-body text-pretty text-brand-ink/72 md:col-start-5 md:col-end-13">
+          Simple Study、フェンリル、華の騎士団は、それぞれ異なる形で個人の活動を支えます。Pandoraは、その活動やGBCのサービスを技術面から支え、必要な仕組みを形にします。
         </p>
       </div>
+
+      <!-- 締めの一文：3行の問いに1行の答えを返して対比をつくる。大きさは問いを答えの2倍にする。 -->
+      <!-- 答えは1行（22.28字分）が768px以上の幅に収まる 3.7vw にし、スマートフォンでは文節で2行に折り返す。 -->
+      <!-- 仮名は字形の左の余白が大きく、行頭で引っ込んで見えるため、その行だけ負のマージンで見た目の左端をそろえる。 -->
+      <p class="mt-28 font-serif font-features-['palt'] md:mt-40 lg:mt-52">
+        <span v-reveal class="-ml-[0.04em] block text-display">
+          何を使うか。<br /><span class="-ml-[0.1em]">いつ使うか。</span><br /><span class="-ml-[0.25em]">どこまで使うか。</span>
+        </span>
+        <span v-reveal class="mt-12 block text-[clamp(1.375rem,3.7vw,3.5rem)]/[1.6] tracking-[0.1em] delay-150 md:mt-16">
+          <span class="-ml-[0.15em]">それを決めるのは、</span><br class="md:hidden" />GBCではなく本人です。
+        </span>
+      </p>
     </div>
   </section>
 </template>

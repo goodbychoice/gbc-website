@@ -18,9 +18,7 @@ function closeMenu() {
 </script>
 
 <template>
-  <header
-    class="sticky top-0 z-50 border-b border-brand-ink/10 bg-brand-surface/95 text-brand-ink backdrop-blur-sm"
-  >
+  <header class="sticky top-0 z-50 border-b border-brand-ink/10 bg-brand-surface/95 text-brand-ink backdrop-blur-sm">
     <div
       class="mx-auto flex h-[76px] w-full max-w-brand items-center justify-between px-5 sm:px-8 lg:px-12 xl:px-16"
     >
@@ -40,13 +38,13 @@ function closeMenu() {
       <!-- PCではページ内リンクを横並びで表示する。 -->
       <nav
         aria-label="メインナビゲーション"
-        class="hidden items-center gap-8 text-[13px] font-medium tracking-[0.04em] text-brand-ink/65 lg:flex"
+        class="hidden items-center gap-10 text-sm tracking-[0.12em] text-brand-ink/72 lg:flex"
       >
         <NuxtLink
           v-for="link in navLinks"
           :key="link.href"
           :to="link.href"
-          class="transition-colors duration-200 hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
+          class="transition-colors duration-700 ease-brand hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-ink"
         >
           {{ link.label }}
         </NuxtLink>
@@ -54,20 +52,21 @@ function closeMenu() {
 
       <!-- モバイルではボタンでメニューを開閉する。 -->
       <button
-        class="flex h-10 w-10 items-center justify-center text-brand-ink/70 transition-colors hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink lg:hidden"
+        class="flex h-10 w-10 items-center justify-center text-brand-ink/72 transition-colors duration-700 ease-brand hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink lg:hidden"
         :aria-expanded="isMenuOpen"
         aria-controls="mobile-menu"
         :aria-label="isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'"
         @click="isMenuOpen = !isMenuOpen"
       >
+        <!-- 2本の線を、開いたときに中央で交差させて×印にする。 -->
         <span class="relative block h-4 w-6">
           <span
-            class="absolute left-0 top-0 block h-px w-full bg-current transition-all duration-200"
-            :class="isMenuOpen ? 'top-1/2 -translate-y-1/2 rotate-45' : ''"
+            class="absolute left-0 block h-px w-full bg-current transition-[top,translate,rotate] duration-700 ease-brand motion-reduce:transition-none"
+            :class="isMenuOpen ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-0'"
           />
           <span
-            class="absolute bottom-0 left-0 block h-px w-full bg-current transition-all duration-200"
-            :class="isMenuOpen ? 'bottom-1/2 translate-y-1/2 -rotate-45' : ''"
+            class="absolute left-0 block h-px w-full bg-current transition-[bottom,translate,rotate] duration-700 ease-brand motion-reduce:transition-none"
+            :class="isMenuOpen ? 'bottom-1/2 translate-y-1/2 -rotate-45' : 'bottom-0'"
           />
         </span>
       </button>
@@ -78,7 +77,7 @@ function closeMenu() {
       id="mobile-menu"
       :inert="!isMenuOpen"
       :aria-hidden="!isMenuOpen"
-      class="overflow-hidden border-t border-brand-ink/10 bg-brand-surface transition-[max-height,opacity] duration-200 lg:hidden"
+      class="overflow-hidden border-t border-brand-ink/10 bg-brand-surface transition-[max-height,opacity] duration-700 ease-brand motion-reduce:transition-none lg:hidden"
       :class="isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'"
     >
       <nav aria-label="モバイルナビゲーション" class="px-5 py-3 sm:px-8">
@@ -86,7 +85,7 @@ function closeMenu() {
           v-for="link in navLinks"
           :key="link.href"
           :to="link.href"
-          class="block border-b border-brand-ink/10 py-4 text-[15px] font-medium text-brand-ink/70 transition-colors hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink last:border-b-0"
+          class="block border-b border-brand-ink/10 py-4 text-base tracking-[0.12em] text-brand-ink/72 transition-colors duration-700 ease-brand last:border-b-0 hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
           @click="closeMenu"
         >
           {{ link.label }}

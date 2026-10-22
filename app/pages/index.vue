@@ -85,7 +85,8 @@ useHead({
     <HomeStructureSection />
 
     <!-- 会社・代表情報とお問い合わせ導線を表示する。 -->
-    <HomeProfileCompanySection />
+    <HomeCompanySection />
+    <HomeProfileSection />
     <HomeContactSection />
   </main>
 </template>

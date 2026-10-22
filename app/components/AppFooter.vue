@@ -14,15 +14,14 @@ const footerLinks = [
 </script>
 
 <template>
-  <footer class="bg-[#07111f] px-5 py-9 text-white sm:px-8 lg:px-12 xl:px-16">
-    <div class="mx-auto w-full max-w-brand">
-      <div
-        class="flex flex-col gap-8 border-b border-white/14 pb-8 lg:flex-row lg:items-center lg:justify-between"
-      >
+  <!-- ページの最後を黒で締め、フッターであることがひと目で分かるようにする。 -->
+  <footer class="bg-brand-ink text-brand-surface">
+    <div class="mx-auto w-full max-w-brand px-5 pt-16 pb-10 sm:px-8 md:pt-20 lg:px-12 xl:px-16">
+      <div class="grid grid-cols-12 gap-x-6 gap-y-12">
         <!-- ロゴからトップページへ戻る。 -->
         <NuxtLink
           to="/"
-          class="inline-flex w-fit focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          class="col-span-12 w-fit focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-surface md:col-span-6"
           aria-label="GBC トップページ"
         >
           <img
@@ -32,15 +31,14 @@ const footerLinks = [
           />
         </NuxtLink>
 
-        <!-- サイト内の主要導線をまとめて表示する。 -->
-        <nav aria-label="フッターナビゲーション">
-          <ul
-            class="flex flex-wrap gap-x-6 gap-y-3 text-[13px] font-medium text-white/60"
-          >
+        <!-- サイト内の主要導線を、本文と同じ7列目から2列で並べる。上から順に読めるよう、左の列から埋める。 -->
+        <!-- スマートフォンでは「プライバシーポリシー」が半分の幅に収まらないため、左の列を文字の幅に合わせて右の列を広げる。 -->
+        <nav aria-label="フッターナビゲーション" class="col-span-12 md:col-start-7 md:col-end-13">
+          <ul class="grid grid-flow-col grid-cols-[auto_1fr] grid-rows-5 gap-x-6 gap-y-4 text-sm tracking-[0.06em] text-brand-surface/60 md:grid-cols-2">
             <li v-for="link in footerLinks" :key="link.href">
               <NuxtLink
                 :to="link.href"
-                class="transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                class="transition-colors duration-700 ease-brand hover:text-brand-surface focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-surface"
               >
                 {{ link.label }}
               </NuxtLink>
@@ -50,14 +48,12 @@ const footerLinks = [
       </div>
 
       <!-- ブランドメッセージと会社表記をフッター下部に表示する。 -->
-      <div
-        class="flex flex-col gap-6 pt-7 sm:flex-row sm:items-end sm:justify-between"
-      >
-        <p class="text-[13px] leading-6 text-white/60">
+      <div class="mt-16 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between md:mt-24">
+        <p class="font-serif text-base tracking-[0.1em] text-brand-surface/80">
           選んで生きる、個の時代へ。
         </p>
 
-        <div class="text-left text-[12px] leading-6 text-white/60 sm:text-right">
+        <div class="text-sm leading-7 text-brand-surface/60 sm:text-right">
           <p>GBC合同会社 / GBC LLC</p>
           <p>© 2026 GBC LLC. All Rights Reserved.</p>
         </div>

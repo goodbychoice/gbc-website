@@ -66,281 +66,210 @@ async function submitContact() {
 </script>
 
 <template>
-  <main class="bg-brand-surface text-brand-ink">
-    <!-- ページタイトルとお問い合わせの概要を表示する。 -->
-    <section
-      class="border-b-2 border-brand-ink/20 px-5 py-28 sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
-    >
-      <div class="mx-auto w-full max-w-brand">
-        <p
-          class="text-[15px] font-semibold tracking-[0.04em] text-brand-ink/60 sm:text-[16px]"
-        >
-          GBCへのご相談・ご依頼
-        </p>
+  <main>
+    <!-- 最初の画面：「GBCについて」と同じく題を左に組む。読むためのページなので、題は特大にせずリードの大きさに抑える。 -->
+    <!-- 題の下には、トップのお問い合わせと同じ一文を左に、説明を右に並べる。一文が半分の幅に収まらない画面では、説明を右下へずらす。 -->
+    <section>
+      <div class="mx-auto w-full max-w-brand px-5 pt-16 pb-28 sm:px-8 md:pt-20 md:pb-40 lg:px-12 lg:pt-24 lg:pb-52 xl:px-16">
+        <SectionLabel class="animate-rise motion-reduce:animate-none">GBCへのご相談・ご依頼</SectionLabel>
 
+        <!-- 「お」は字形の左の余白が大きく、行頭で引っ込んで見えるため、負のマージンで見た目の左端をそろえる。 -->
         <h1
-          class="mt-8 text-[clamp(3.2rem,8vw,8rem)] font-semibold leading-[1.02] tracking-[-0.06em]"
+          class="mt-10 font-serif text-lead font-features-['palt'] animate-rise motion-reduce:animate-none [animation-delay:150ms] md:mt-14"
         >
-          お問い合わせ
+          <span class="-ml-[0.05em]">お問い合わせ</span>
         </h1>
 
-        <p
-          class="mt-10 max-w-[1050px] text-[clamp(2rem,4vw,4.2rem)] font-semibold leading-[1.22] tracking-[-0.045em]"
-        >
-          自分の力で始めたい。<br class="hidden sm:block" />
-          そのためにGBCが必要なら。
-        </p>
-
-        <p
-          class="mt-10 max-w-[820px] text-[18px] leading-[2] text-brand-ink/68 sm:text-[19px] md:text-[21px]"
-        >
-          サービスについてのご相談、ご依頼、取材・協業などについて、こちらからお問い合わせいただけます。
-        </p>
+        <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-12 md:mt-24">
+          <p
+            class="col-span-12 font-serif text-catch font-features-['palt'] animate-rise motion-reduce:animate-none [animation-delay:400ms] xl:col-span-6"
+          >
+            自分の力で始めたい。<br />そのために<br class="md:hidden" />GBCが必要なら。
+          </p>
+          <p
+            class="col-span-12 max-w-lg text-body text-pretty text-brand-ink/72 animate-rise motion-reduce:animate-none [animation-delay:550ms] md:col-start-7 md:col-end-13"
+          >
+            サービスについてのご相談、ご依頼、取材・協業などについて、こちらからお問い合わせいただけます。
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- フォームの状態に応じて入力欄・利用不可案内・完了表示を切り替える。 -->
-    <section
-      class="border-b border-brand-ink/20 px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
-    >
-      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
-        <div class="col-span-12 md:col-span-4">
-          <h2
-            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
-          >
-            お問い合わせフォーム
-          </h2>
-          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
+    <!-- フォーム：会社情報の台帳と同じく、左に項目名、右に入力欄を置く。項目名の列を空けたまま、同意と送信も入力欄の列にそろえる。 -->
+    <PageSection heading="お問い合わせフォーム">
+      <!-- 送信が終わったら、フォームの代わりに受付の一文を置く。題と同じく、行頭の「お」だけ左へ寄せる。 -->
+      <div
+        v-if="sent"
+        ref="successMessage"
+        role="status"
+        aria-live="polite"
+        class="mt-14 grid grid-cols-12 gap-x-6 md:mt-20"
+      >
+        <p class="col-span-12 font-serif text-lead font-features-['palt']">
+          <span class="-ml-[0.05em]">お問い合わせを</span><br />受け付けました。
+        </p>
+        <p
+          class="col-span-12 mt-12 max-w-lg text-body text-pretty text-brand-ink/72 md:col-start-7 md:col-end-13 md:mt-16"
+        >
+          送信ありがとうございます。内容を確認のうえ、順次ご返信いたします。
+        </p>
+      </div>
+
+      <form
+        v-else
+        v-reveal
+        class="mt-8 md:mt-12"
+        :aria-label="formEnabled ? 'お問い合わせフォーム' : 'お問い合わせフォーム（利用不可）'"
+        @submit.prevent="submitContact"
+      >
+        <!-- フォームが無効のときは、入力欄の前でメールの利用を案内する。文節で折り返し、語尾だけが次の行に落ちないようにする。 -->
+        <div v-if="!formEnabled" class="grid grid-cols-12 gap-x-6 border-b border-brand-ink/15 py-5 md:py-6">
+          <div class="col-span-12 [word-break:auto-phrase] md:col-start-5 md:col-end-13">
+            <p class="text-body text-brand-ink">フォーム送信機能は現在ご利用いただけません。</p>
+            <p class="text-sm leading-7 text-brand-ink/60">お問い合わせは、下記メールアドレスをご利用ください。</p>
+          </div>
         </div>
 
-        <div class="col-span-12 md:col-start-5 md:col-end-12">
-          <!-- フォームが未公開の場合のみメール利用の案内を表示する。 -->
-          <div v-if="!formEnabled" class="border-y border-brand-ink/20 py-6">
-            <p class="text-[15px] font-semibold text-brand-ink/72 sm:text-[16px]">
-              フォーム送信機能は現在ご利用いただけません。
-            </p>
-            <p class="mt-2 text-[14px] leading-[1.8] text-brand-ink/60 sm:text-[15px]">
-              お問い合わせは、下記メールアドレスをご利用ください。
-            </p>
-          </div>
+        <FormField label="お名前" for="name">
+          <input
+            id="name"
+            v-model="form.name"
+            name="name"
+            type="text"
+            required
+            maxlength="100"
+            autocomplete="name"
+            :disabled="!formEnabled || sending"
+            placeholder="山田 太郎"
+            class="w-full border-0 bg-transparent p-0 text-body outline-hidden placeholder:text-brand-ink/35 disabled:cursor-not-allowed disabled:opacity-55"
+          />
+        </FormField>
 
-          <!-- 送信成功時は、余白とタイポグラフィで完了状態を明確に見せる。 -->
-          <div
-            v-if="sent"
-            ref="successMessage"
-            role="status"
-            aria-live="polite"
-            class="max-w-[760px] py-3 sm:py-6"
-          >
-            <div class="flex items-center gap-4">
-              <div
-                aria-hidden="true"
-                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-ink text-[22px] font-semibold text-brand-surface"
-              >
-                ✓
-              </div>
-              <p
-                class="text-[13px] font-semibold tracking-[0.16em] text-brand-ink/60 sm:text-[14px]"
-              >
-                MESSAGE SENT
-              </p>
-            </div>
+        <FormField label="メールアドレス" for="email">
+          <input
+            id="email"
+            v-model="form.email"
+            name="email"
+            type="email"
+            required
+            maxlength="254"
+            autocomplete="email"
+            :disabled="!formEnabled || sending"
+            placeholder="example@example.com"
+            class="w-full border-0 bg-transparent p-0 text-body outline-hidden placeholder:text-brand-ink/35 disabled:cursor-not-allowed disabled:opacity-55"
+          />
+        </FormField>
 
-            <p
-              class="mt-8 max-w-[700px] text-[clamp(2.3rem,4vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.055em]"
+        <!-- 種別はAPIと共通の一覧から選ぶ。端末ごとに形の違う標準の矢印は消し、細い線の矢印に置き換える。 -->
+        <!-- 未選択のあいだは項目名と同じ薄さにし、入力済みの欄と見分けられるようにする。入力例ほど薄くすると読みにくいため、この濃さにとどめる。選択肢の一覧は濃い文字のまま見せる。 -->
+        <FormField label="お問い合わせ種別" for="type">
+          <div class="relative">
+            <select
+              id="type"
+              v-model="form.category"
+              name="category"
+              required
+              :disabled="!formEnabled || sending"
+              class="w-full appearance-none border-0 bg-transparent p-0 pr-8 text-body outline-hidden invalid:text-brand-ink/60 disabled:cursor-not-allowed disabled:opacity-55 [&>option]:text-brand-ink"
             >
-              お問い合わせを<br class="hidden sm:block" />
-              受け付けました。
-            </p>
-
-            <p
-              class="mt-7 max-w-[560px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px]"
+              <option disabled value="">選択してください</option>
+              <option v-for="type in contactCategories" :key="type" :value="type">
+                {{ type }}
+              </option>
+            </select>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 12 7"
+              class="pointer-events-none absolute top-1/2 right-0 w-3 -translate-y-1/2"
             >
-              送信ありがとうございます。<br class="hidden sm:block" />
-              内容を確認のうえ、順次ご返信いたします。
-            </p>
-
-            <div class="mt-10 h-px w-full max-w-[560px] bg-brand-ink/20" />
+              <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" />
+            </svg>
           </div>
+        </FormField>
 
-          <!-- 送信完了前だけ入力フォームを表示する。 -->
-          <form
-            v-if="!sent"
-            class="mt-12 space-y-10"
-            :aria-label="formEnabled ? 'お問い合わせフォーム' : 'お問い合わせフォーム（利用不可）'"
-            @submit.prevent="submitContact"
-          >
-            <!-- お名前を入力する。 -->
-            <div>
-              <label for="name" class="block text-[15px] font-semibold">
-                お名前
-              </label>
-              <input
-                id="name"
-                v-model="form.name"
-                name="name"
-                type="text"
-                required
-                maxlength="100"
-                autocomplete="name"
-                :disabled="!formEnabled || sending"
-                placeholder="山田 太郎"
-                class="mt-3 w-full border-0 border-b border-brand-ink/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-brand-ink/35 focus:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:opacity-55"
-              />
-            </div>
+        <FormField label="お問い合わせ内容" for="message">
+          <textarea
+            id="message"
+            v-model="form.message"
+            name="message"
+            rows="7"
+            required
+            minlength="10"
+            maxlength="5000"
+            :disabled="!formEnabled || sending"
+            placeholder="ご相談・ご依頼内容をご記入ください。（10文字以上）"
+            class="block w-full resize-y border-0 bg-transparent p-0 text-body outline-hidden placeholder:text-brand-ink/35 disabled:cursor-not-allowed disabled:opacity-55"
+          />
+        </FormField>
 
-            <!-- 返信先メールアドレスを入力する。 -->
-            <div>
-              <label for="email" class="block text-[15px] font-semibold">
-                メールアドレス
-              </label>
-              <input
-                id="email"
-                v-model="form.email"
-                name="email"
-                type="email"
-                required
-                maxlength="254"
-                autocomplete="email"
-                :disabled="!formEnabled || sending"
-                placeholder="example@example.com"
-                class="mt-3 w-full border-0 border-b border-brand-ink/25 bg-transparent px-0 py-4 text-[17px] outline-none placeholder:text-brand-ink/35 focus:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:opacity-55"
-              />
-            </div>
-
-            <!-- お問い合わせ種別を共通定義から選択する。 -->
-            <div>
-              <label for="type" class="block text-[15px] font-semibold">
-                お問い合わせ種別
-              </label>
-              <select
-                id="type"
-                v-model="form.category"
-                name="category"
-                required
-                :disabled="!formEnabled || sending"
-                class="mt-3 w-full border-0 border-b border-brand-ink/25 bg-transparent px-0 py-4 text-[17px] outline-none focus:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:opacity-55"
-              >
-                <option disabled value="">選択してください</option>
-                <option
-                  v-for="type in contactCategories"
-                  :key="type"
-                  :value="type"
-                >
-                  {{ type }}
-                </option>
-              </select>
-            </div>
-
-            <!-- ご相談・ご依頼の内容を入力する。 -->
-            <div>
-              <label for="message" class="block text-[15px] font-semibold">
-                お問い合わせ内容
-              </label>
-              <textarea
-                id="message"
-                v-model="form.message"
-                name="message"
-                rows="7"
-                required
-                minlength="10"
-                maxlength="5000"
-                :disabled="!formEnabled || sending"
-                placeholder="ご相談・ご依頼内容をご記入ください。（10文字以上）"
-                class="mt-3 w-full resize-y border border-brand-ink/20 bg-transparent p-4 text-[17px] leading-[1.9] outline-none placeholder:text-brand-ink/35 focus:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:opacity-55"
-              />
-            </div>
-
-            <!-- 個人情報の送信前にプライバシーポリシーへの同意を求める。 -->
-            <label class="flex items-start gap-3 text-[14px] leading-[1.8] text-brand-ink/70">
+        <div class="grid grid-cols-12 gap-x-6">
+          <div class="col-span-12 md:col-start-5 md:col-end-13">
+            <!-- 個人情報の送信前に、プライバシーポリシーへの同意を求める。 -->
+            <label class="mt-10 flex items-start gap-3 text-sm leading-7 text-brand-ink/72 md:mt-12">
               <input
                 v-model="form.consent"
                 name="consent"
                 type="checkbox"
                 required
                 :disabled="!formEnabled || sending"
-                class="mt-1 h-4 w-4 shrink-0 accent-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed"
+                class="mt-1.5 size-4 shrink-0 accent-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed"
               />
-              <span>
-                <NuxtLink
-                  to="/privacy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="border-b border-brand-ink/30 text-brand-ink transition-colors hover:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
-                >
-                  プライバシーポリシー
-                </NuxtLink>
-                に同意する
-              </span>
+              <span><NuxtLink
+                to="/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-brand-ink underline decoration-brand-ink/25 underline-offset-[6px] transition-colors duration-700 ease-brand hover:decoration-brand-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-ink"
+              >プライバシーポリシー</NuxtLink>に同意する</span>
             </label>
 
-            <!-- 送信失敗時だけ再試行方法を案内する。 -->
-            <p
-              v-if="sendError"
-              role="alert"
-              class="text-[14px] leading-[1.8] text-red-800"
-            >
+            <!-- 送信に失敗したときだけ、再試行とメールでの連絡を案内する。語尾だけが次の行に落ちないよう、文節で折り返す。 -->
+            <p v-if="sendError" role="alert" class="mt-8 text-sm leading-7 font-medium text-brand-ink [word-break:auto-phrase]">
               {{ sendError }}
             </p>
 
-            <!-- フォーム無効時・送信中は送信ボタンを操作できないようにする。 -->
+            <!-- 送信ボタンは、お問い合わせへの導線と同じ横幅いっぱいの行にする。無効のときと送信中は押せない。 -->
             <button
               type="submit"
               :disabled="!formEnabled || sending"
-              class="inline-flex min-w-[180px] items-center justify-center border border-brand-ink px-7 py-4 text-[15px] font-semibold transition-colors enabled:hover:bg-brand-ink enabled:hover:text-brand-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:border-brand-ink/20 disabled:text-brand-ink/35"
+              class="group mt-14 flex w-full items-center justify-between gap-6 border-y border-brand-ink/25 py-8 text-left transition-colors duration-700 ease-brand enabled:hover:border-brand-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-ink disabled:cursor-not-allowed disabled:text-brand-ink/35 md:mt-16 md:gap-8 md:py-10"
             >
-              {{ !formEnabled ? "送信機能は利用不可" : sending ? "送信中…" : "送信する" }}
+              <span class="font-serif text-catch font-features-['palt']">
+                {{ !formEnabled ? "送信機能は利用不可" : sending ? "送信中…" : "送信する" }}
+              </span>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 96 9"
+                preserveAspectRatio="xMaxYMid slice"
+                class="h-2.25 w-12 shrink-0 transition-transform duration-700 ease-brand group-enabled:group-hover:translate-x-2 motion-reduce:transition-none md:w-24"
+              >
+                <path d="M0 4.5h95M91 1l4 3.5-4 3.5" fill="none" stroke="currentColor" />
+              </svg>
             </button>
-          </form>
+          </div>
         </div>
+      </form>
+    </PageSection>
+
+    <!-- メール：フォームのほかの連絡手段として、メールアドレスを送信ボタンと同じ横幅いっぱいの行で示す。 -->
+    <PageSection heading="メールでのお問い合わせ">
+      <div class="mt-14 grid grid-cols-12 gap-x-6 md:mt-20">
+        <p
+          v-reveal
+          class="col-span-12 max-w-lg text-body text-pretty text-brand-ink/72 md:col-start-7 md:col-end-13"
+        >
+          メールでのお問い合わせも受け付けています。内容を確認のうえ、順次ご返信いたします。
+        </p>
       </div>
-    </section>
 
-    <!-- フォーム以外の連絡手段としてメールアドレスを案内する。 -->
-    <section
-      class="px-5 py-24 sm:px-8 md:py-32 lg:px-12 lg:py-40 xl:px-16"
-    >
-      <div class="mx-auto grid w-full max-w-brand grid-cols-12 gap-y-12">
-        <div class="col-span-12 md:col-span-4">
-          <h2
-            class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
-          >
-            メールでのお問い合わせ
-          </h2>
-          <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
-        </div>
-
-        <div class="col-span-12 md:col-start-5 md:col-end-12">
-          <p
-            class="max-w-[760px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px]"
-          >
-            メールでのお問い合わせも受け付けています。内容を確認のうえ、順次ご返信いたします。
-          </p>
-
-          <a
-            href="mailto:info@goodbychoice.co.jp"
-            class="group mt-10 flex items-center justify-between gap-6 border-y border-brand-ink/20 py-7 transition-colors hover:text-brand-ink/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink sm:py-8"
-          >
-            <span
-              class="text-[clamp(1.35rem,2.3vw,2.2rem)] font-semibold tracking-[-0.025em]"
-            >
-              info@goodbychoice.co.jp
-            </span>
-            <span
-              aria-hidden="true"
-              class="text-[1.8rem] leading-none transition-transform duration-300 group-hover:translate-x-1"
-            >
-              →
-            </span>
-          </a>
-
-          <p
-            class="mt-5 text-[13px] leading-[1.8] text-brand-ink/60 sm:text-[14px]"
-          >
-            お問い合わせ内容によっては、返信までお時間をいただく場合があります。
-          </p>
-        </div>
+      <!-- メールアドレスは途中で折り返せないため、狭い画面では文字を小さくして矢印と1行に収める。 -->
+      <div v-reveal class="mt-16 delay-150 md:mt-20">
+        <ContactLink to="mailto:info@goodbychoice.co.jp">
+          <span class="text-lg tracking-[0.06em] sm:text-catch">info@goodbychoice.co.jp</span>
+        </ContactLink>
+        <p class="mt-8 text-sm leading-7 text-brand-ink/60 [word-break:auto-phrase]">
+          お問い合わせ内容によっては、返信までお時間をいただく場合があります。
+        </p>
       </div>
-    </section>
+    </PageSection>
   </main>
 </template>

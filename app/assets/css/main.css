@@ -3,5 +3,56 @@
 @theme {
   --color-brand-surface: #f4f1ea; /* 背景（ベージュ） */
   --color-brand-ink: #111317; /* 文字・線 */
+  --color-brand-accent: #1f3a68; /* アクセント（ミッドナイトブルー） */
   --container-brand: 1600px; /* コンテンツ最大幅 */
+
+  --font-sans: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif; /* 本文・ラベル */
+  --font-serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif; /* 見出し・キャッチコピー */
+
+  /* 文字の役割ごとの大きさ・行送り・字間。text-lead のように使う。 */
+  --text-display: clamp(2.25rem, 7.4vw, 7rem); /* 締めや強調の一文：36〜112px */
+  --text-display--line-height: 1.25;
+  --text-display--letter-spacing: 0.04em;
+  --text-lead: clamp(1.875rem, 5.2vw, 4.5rem); /* リード：30〜72px */
+  --text-lead--line-height: 1.6;
+  --text-lead--letter-spacing: 0.1em;
+  --text-catch: clamp(1.375rem, 3.4vw, 2rem); /* キャッチコピー：22〜32px */
+  --text-catch--line-height: 1.8;
+  --text-catch--letter-spacing: 0.1em;
+  --text-body: clamp(1.0625rem, 0.95rem + 0.5vw, 1.1875rem); /* 本文：17〜19px */
+  --text-body--line-height: 2;
+  --text-body--letter-spacing: 0.05em;
+
+  --ease-brand: cubic-bezier(0.16, 1, 0.3, 1); /* すべての演出で使う減速カーブ */
+  --animate-ink: ink 2.6s var(--ease-brand) both; /* 縦組みを上から墨がにじむように現す */
+  --animate-rise: rise 1.6s var(--ease-brand) both; /* 下から静かに浮かび上がる */
+
+  @keyframes ink {
+    from {
+      mask: linear-gradient(#000 40%, #0000 60%) 0 100% / 100% 250% no-repeat;
+    }
+
+    to {
+      mask: linear-gradient(#000 40%, #0000 60%) 0 0 / 100% 250% no-repeat;
+    }
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      translate: 0 0.75rem;
+    }
+  }
+}
+
+/* v-reveal：画面外の要素を待機させ、画面に入ったら浮かび上がらせる。時間差は delay-* で付ける。 */
+[data-reveal="pending"] {
+  opacity: 0;
+  translate: 0 1.75rem;
+}
+
+[data-reveal="shown"] {
+  transition-property: opacity, translate;
+  transition-duration: 1.4s;
+  transition-timing-function: var(--ease-brand);
 }

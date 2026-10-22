@@ -1,104 +1,76 @@
 <template>
-  <section
-    id="projects"
-    class="scroll-mt-24 border-t-2 border-brand-ink/20 bg-brand-surface px-5 py-28 text-brand-ink sm:px-8 md:py-36 lg:px-12 lg:py-44 xl:px-16"
-  >
-    <div class="mx-auto w-full max-w-brand">
-      <div class="grid grid-cols-12 gap-y-12 md:gap-y-0">
-        <div class="col-span-12 md:col-span-4">
-          <div class="max-w-[280px]">
-            <h2
-              class="text-[clamp(2rem,3vw,3.1rem)] font-semibold leading-tight tracking-[-0.04em]"
-            >
-              事業
-            </h2>
-            <div class="mt-5 h-[3px] w-24 bg-brand-ink" />
-          </div>
-        </div>
+  <section id="projects" class="scroll-mt-24 bg-brand-surface text-brand-ink">
+    <div class="mx-auto w-full max-w-brand px-5 py-28 sm:px-8 md:py-40 lg:px-12 lg:py-52 xl:px-16">
+      <!-- 導入：大きなリードを左に寄せ、本文を右下へずらして対角の流れをつくる。 -->
+      <div class="grid grid-cols-12 gap-x-6">
+        <SectionHeading class="col-span-12">事業</SectionHeading>
 
-        <div class="col-span-12 md:col-start-5 md:col-end-13">
-          <p
-            class="max-w-[980px] text-[clamp(2.5rem,5vw,5rem)] font-semibold leading-[1.15] tracking-[-0.045em]"
-          >
-            必要なものを、<br class="hidden sm:block" />
-            必要なときに選ぶ。
-          </p>
+        <p v-reveal class="col-span-12 mt-14 font-serif text-lead font-features-['palt'] md:col-span-10 md:mt-20">
+          必要なものを、<br />必要なときに選ぶ。
+        </p>
 
-          <p
-            class="mt-12 max-w-[760px] text-[17px] leading-[2] text-brand-ink/68 sm:text-[18px] md:mt-14 md:text-[19px]"
-          >
-            GBCは、個人が自分の力で活動していくために、学び、事業、表現のそれぞれの領域で支援を行っています。決められた順路はありません。その人自身が、今必要なものを選べることを大切にしています。
-          </p>
-        </div>
+        <p
+          v-reveal
+          class="col-span-12 mt-12 max-w-lg text-body text-pretty text-brand-ink/72 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+        >
+          GBCは、個人が自分の力で活動していくために、学び、事業、表現のそれぞれの領域で支援を行っています。決められた順路はありません。その人自身が、今必要なものを選べることを大切にしています。
+        </p>
       </div>
 
-      <div class="mt-24 md:mt-32">
-        <article
-          class="grid grid-cols-12 gap-y-8 border-t border-brand-ink/20 py-12 md:items-start md:py-16"
-        >
-          <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
-              学び
-            </p>
-            <h3
-              class="mt-3 text-[clamp(2rem,3vw,3.2rem)] font-semibold tracking-[-0.04em]"
-            >
-              Simple Study
-            </h3>
-          </div>
+      <!-- Simple Study：2語を階段状にずらし、左上から右下へ一段ずつ進む流れをつくる。 -->
+      <article class="mt-28 border-t border-brand-ink/15 pt-10 md:mt-40 md:pt-12 lg:mt-52">
+        <SectionLabel>学び</SectionLabel>
 
-          <div class="col-span-12 md:col-start-5 md:col-end-12">
-            <p
-              class="text-[clamp(1.8rem,3.2vw,3.5rem)] font-semibold leading-[1.25] tracking-[-0.04em]"
-            >
-              自分の力で進むための、学びを。
+        <!-- 2語目は、12列の4列目にそろう幅だけ右へずらす。2語の間の空白は、読み上げと検索で1語につながらないように残す。 -->
+        <h3 class="mt-10 -ml-[0.04em] font-serif text-[clamp(3.25rem,11vw,11rem)]/none tracking-[0.04em] md:mt-14">
+          <span v-reveal class="block">Simple</span> <span v-reveal class="block pl-[2.1em] delay-150">Study</span>
+        </h3>
+
+        <div class="mt-12 grid grid-cols-12 gap-x-6 md:mt-16">
+          <div class="col-span-12 md:col-start-7 md:col-end-13">
+            <p v-reveal class="font-serif text-catch font-features-['palt']">
+              自分の力で進むための、<br />学びを。
             </p>
 
-            <div
-              class="mt-8 max-w-[760px] space-y-6 text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]"
-            >
-              <p>
-                Simple Studyは、個人が自立して活動していくために必要な知識や技術を学ぶためのサービスです。
-              </p>
-              <p>
-                まずはIT・プログラミング領域を中心に、未経験からでも実践につながる学習機会を提供します。学ぶことそのものを目的にするのではなく、自分の力で何かをつくり、仕事や活動につなげていくところまでを見据えます。
-              </p>
+            <div v-reveal class="mt-10 delay-150 md:mt-12">
+              <div class="max-w-lg space-y-7 text-body text-pretty text-brand-ink/72">
+                <p>
+                  Simple Studyは、個人が自立して活動していくために必要な知識や技術を学ぶためのサービスです。
+                </p>
+                <p>
+                  まずはIT・プログラミング領域を中心に、未経験からでも実践につながる学習機会を提供します。学ぶことそのものを目的にするのではなく、自分の力で何かをつくり、仕事や活動につなげていくところまでを見据えます。
+                </p>
+              </div>
+
+              <ArrowLink to="/business/simple-study" class="mt-12">
+                Simple Studyを詳しく見る
+              </ArrowLink>
             </div>
-
-            <NuxtLink
-              to="/business/simple-study"
-              class="group mt-8 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[15px] font-semibold transition-colors hover:border-brand-ink sm:text-[16px]"
-            >
-              <span>Simple Studyを詳しく見る</span>
-              <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </NuxtLink>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article
-          class="grid grid-cols-12 gap-y-8 border-t border-brand-ink/20 py-12 md:items-start md:py-16"
-        >
-          <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
-              事業支援
-            </p>
-            <h3
-              class="mt-3 text-[clamp(2rem,3vw,3.2rem)] font-semibold tracking-[-0.04em]"
-            >
-              フェンリル
-            </h3>
-          </div>
+      <!-- フェンリル：名前を画面幅いっぱいに大きく組み、下に引いた罫線を地面に見立てる。 -->
+      <article class="mt-28 md:mt-40 lg:mt-52">
+        <SectionLabel>事業支援</SectionLabel>
 
-          <div class="col-span-12 md:col-start-5 md:col-end-12">
-            <p
-              class="text-[clamp(1.8rem,3.2vw,3.5rem)] font-semibold leading-[1.25] tracking-[-0.04em]"
-            >
-              自分の事業を、自分の力でつくり、続けていく。
-            </p>
+        <div class="mt-10 border-b border-brand-ink/15 pb-8 md:mt-14 md:pb-12">
+          <!-- 大きな文字は字形の余白で左端が引っ込んで見えるため、負のマージンで見た目の左端をそろえる。 -->
+          <h3
+            v-reveal
+            class="-ml-[0.15em] font-serif text-[clamp(3.25rem,11vw,11rem)]/none tracking-[0.12em] font-features-['palt']"
+          >
+            フェンリル
+          </h3>
+        </div>
 
-            <div
-              class="mt-8 max-w-[760px] space-y-6 text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]"
-            >
+        <div class="mt-12 grid grid-cols-12 gap-x-6 gap-y-12 md:mt-16">
+          <p v-reveal class="col-span-12 font-serif text-catch font-features-['palt'] md:col-span-5">
+            自分の事業を、<br />自分の力でつくり、<br />続けていく。
+          </p>
+
+          <div v-reveal class="col-span-12 delay-150 md:col-start-7 md:col-end-13">
+            <div class="max-w-lg space-y-7 text-body text-pretty text-brand-ink/72">
               <p>
                 フェンリルは、これから自分の事業を始めたい人から、すでに個人事業主、個人社長、フリーランスなど、自分の商品・サービスを持って活動している人までを支えるサービスです。
               </p>
@@ -107,40 +79,36 @@
               </p>
             </div>
 
-            <NuxtLink
-              to="/business/fenrir"
-              class="group mt-8 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[15px] font-semibold transition-colors hover:border-brand-ink sm:text-[16px]"
-            >
-              <span>フェンリルを詳しく見る</span>
-              <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </NuxtLink>
+            <ArrowLink to="/business/fenrir" class="mt-12">
+              フェンリルを詳しく見る
+            </ArrowLink>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article
-          class="grid grid-cols-12 gap-y-8 border-y border-brand-ink/20 py-12 md:items-start md:py-16"
-        >
-          <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
-              クリエイター支援
-            </p>
-            <h3
-              class="mt-3 text-[clamp(2rem,3vw,3.2rem)] font-semibold tracking-[-0.04em]"
-            >
-              華の騎士団
-            </h3>
-          </div>
+      <!-- 華の騎士団：名前をヒーローと同じ縦組みにして右端に立て、文章を左に置く。 -->
+      <article class="mt-28 md:mt-40 lg:mt-52">
+        <SectionLabel>クリエイター支援</SectionLabel>
 
-          <div class="col-span-12 md:col-start-5 md:col-end-12">
-            <p
-              class="text-[clamp(1.8rem,3.2vw,3.5rem)] font-semibold leading-[1.25] tracking-[-0.04em]"
-            >
-              自分らしい表現を、自分らしく続けていく。
-            </p>
+        <div class="mt-14 grid grid-cols-12 gap-x-6 md:mt-20">
+          <h3
+            v-reveal
+            class="col-start-11 col-end-13 row-start-1 justify-self-end font-serif text-[clamp(3rem,7vw,7.5rem)]/none tracking-[0.24em] whitespace-nowrap [writing-mode:vertical-rl] md:row-end-3"
+          >
+            華の騎士団
+          </h3>
 
-            <div
-              class="mt-8 max-w-[760px] space-y-6 text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]"
-            >
+          <!-- スマートフォンではコピーの下端を名前の下端にそろえ、PCでは少し下げて名前と段差をつける。 -->
+          <!-- スマートフォンでは名前の横に収まるよう、2行目も文節で折り返す。 -->
+          <p
+            v-reveal
+            class="col-span-10 row-start-1 self-end font-serif text-catch font-features-['palt'] md:col-span-6 md:self-start md:pt-32"
+          >
+            自分らしい表現を、<br />自分らしく<br class="md:hidden" />続けていく。
+          </p>
+
+          <div v-reveal class="col-span-12 row-start-2 mt-14 delay-150 md:col-span-6 md:mt-12">
+            <div class="max-w-lg space-y-7 text-body text-pretty text-brand-ink/72">
               <p>
                 華の騎士団は、個人として創作・表現・発信活動を行うクリエイターを支えるサービスです。
               </p>
@@ -149,41 +117,35 @@
               </p>
             </div>
 
-            <NuxtLink
-              to="/business/hana-no-kishidan"
-              class="group mt-8 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[15px] font-semibold transition-colors hover:border-brand-ink sm:text-[16px]"
-            >
-              <span>華の騎士団を詳しく見る</span>
-              <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </NuxtLink>
+            <ArrowLink to="/business/hana-no-kishidan" class="mt-12">
+              華の騎士団を詳しく見る
+            </ArrowLink>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
+    </div>
 
-      <div class="mt-28 md:mt-36">
-        <div class="grid grid-cols-12 gap-y-10 border-t-[3px] border-brand-ink pt-10 md:gap-y-0 md:pt-12">
-          <div class="col-span-12 md:col-span-4">
-            <p class="text-[13px] font-medium tracking-[0.08em] text-brand-ink/60">
-              技術・開発
-            </p>
-            <h3
-              class="mt-3 text-[clamp(2.2rem,3.4vw,3.6rem)] font-semibold tracking-[-0.04em]"
-            >
-              Pandora
-            </h3>
-          </div>
+    <!-- Pandora：画面幅いっぱいの黒い帯にし、特大の名前を下端に置いて各事業を支える土台に見立てる。 -->
+    <article class="bg-brand-ink text-brand-surface">
+      <div class="mx-auto w-full max-w-brand px-5 pt-28 pb-8 sm:px-8 md:pt-40 md:pb-10 lg:px-12 lg:pt-52 xl:px-16">
+        <SectionLabel dark>技術・開発</SectionLabel>
 
-          <div class="col-span-12 md:col-start-5 md:col-end-13">
-            <p
-              class="max-w-[900px] text-[clamp(2rem,4vw,4.2rem)] font-semibold leading-[1.2] tracking-[-0.045em]"
-            >
-              必要なものを、<br class="hidden sm:block" />
-              自分でつくる。
-            </p>
+        <div class="mt-14 grid grid-cols-12 gap-x-6 md:mt-20">
+          <!-- 読み上げでは見出しが先に届くようHTMLでは先に書き、表示は order-last で下端へ移す。 -->
+          <h3
+            v-reveal
+            class="order-last col-span-12 mt-24 -ml-[0.04em] font-serif text-[clamp(3.5rem,19vw,17rem)]/none tracking-[0.04em] md:mt-36"
+          >
+            Pandora
+          </h3>
 
-            <div
-              class="mt-10 max-w-[760px] space-y-6 text-[17px] leading-[2] text-brand-ink/66 sm:text-[18px]"
-            >
+          <!-- 「自」は字形の左の余白が大きく、行頭で引っ込んで見えるため、その行だけ負のマージンで見た目の左端をそろえる。 -->
+          <p v-reveal class="col-span-12 font-serif text-lead font-features-['palt'] md:col-span-10">
+            必要なものを、<br /><span class="-ml-[0.14em]">自分でつくる。</span>
+          </p>
+
+          <div v-reveal class="col-span-12 mt-12 delay-150 md:col-start-7 md:col-end-13 md:mt-16">
+            <div class="max-w-lg space-y-7 text-body text-pretty text-brand-surface/72">
               <p>
                 Pandoraは、GBC自身のサービスや各事業に必要な仕組みを企画し、技術で形にする開発領域です。
               </p>
@@ -192,16 +154,12 @@
               </p>
             </div>
 
-            <NuxtLink
-              to="/business/pandora"
-              class="group mt-8 inline-flex items-center gap-4 border-b border-brand-ink/30 pb-2 text-[15px] font-semibold transition-colors hover:border-brand-ink sm:text-[16px]"
-            >
-              <span>Pandoraを詳しく見る</span>
-              <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </NuxtLink>
+            <ArrowLink to="/business/pandora" class="mt-12">
+              Pandoraを詳しく見る
+            </ArrowLink>
           </div>
         </div>
       </div>
-    </div>
+    </article>
   </section>
 </template>

@@ -14,8 +14,17 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
-  // SEO補助・アクセシビリティ監査の公式モジュールを有効にする。
-  modules: ['@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/a11y'],
+  // Webフォント配信・SEO補助・アクセシビリティ監査の公式モジュールを有効にする。
+  modules: ['@nuxt/fonts', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxt/a11y'],
+
+  // 明朝体は見出し用に1ウェイト、ゴシック体は本文・ラベル・既存の見出し用に3ウェイトを自前で配信する。
+  // subsets は既定値（latin を含む）のままにする。japanese だけに絞ると、2つ目以降のウェイトの和文が欠ける。
+  fonts: {
+    families: [
+      { name: 'Shippori Mincho', provider: 'google', weights: [400] },
+      { name: 'Zen Kaku Gothic New', provider: 'google', weights: [400, 500, 700] },
+    ],
+  },
 
   // アクセシビリティ監査は開発時に利用し、本番ビルド時のレポート生成は行わない。
   a11y: {
