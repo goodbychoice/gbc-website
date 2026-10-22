@@ -8,6 +8,13 @@ export default defineNuxtConfig({
   // 開発時の確認にNuxt DevToolsを利用する。
   devtools: { enabled: true },
 
+  // ヘッダー・フッターのハッシュリンクは、Nuxt標準のスクロール処理で滑らかに移動する。
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth',
+    },
+  },
+
   css: ['~/assets/css/main.css'],
 
   vite: {
