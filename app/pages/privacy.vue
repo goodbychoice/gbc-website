@@ -36,7 +36,7 @@ const operatorItems = [
 
         <div class="mt-16 grid grid-cols-12 gap-x-6 md:mt-24">
           <p
-            class="col-span-12 max-w-lg text-body text-pretty text-brand-ink/72 animate-rise motion-reduce:animate-none [animation-delay:400ms] md:col-start-7 md:col-end-13"
+            class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:400ms] md:col-start-7 md:col-end-13"
           >
             GBC合同会社（以下「当社」といいます。）は、当社が運営するWebサイトおよび各サービスにおいて取り扱う個人情報について、以下のとおりプライバシーポリシーを定めます。
           </p>
@@ -127,7 +127,7 @@ const operatorItems = [
               :key="item.label"
               class="grid items-baseline gap-x-6 gap-y-1 border-b border-brand-ink/15 py-4 sm:grid-cols-[6rem_1fr]"
             >
-              <dt class="text-sm font-medium tracking-[0.12em] text-brand-ink/60">{{ item.label }}</dt>
+              <dt class="text-base font-medium tracking-[0.12em] text-brand-ink/75">{{ item.label }}</dt>
               <dd class="[word-break:auto-phrase]">{{ item.value }}</dd>
             </div>
           </dl>
@@ -135,7 +135,7 @@ const operatorItems = [
       </div>
 
       <div class="grid grid-cols-12 gap-x-6">
-        <p class="col-span-12 mt-12 text-sm tracking-[0.06em] text-brand-ink/60 md:col-start-7 md:col-end-13 md:mt-16">
+        <p class="col-span-12 mt-12 text-base tracking-[0.06em] text-brand-ink/75 md:col-start-7 md:col-end-13 md:mt-16">
           制定日：2026年9月22日
         </p>
       </div>

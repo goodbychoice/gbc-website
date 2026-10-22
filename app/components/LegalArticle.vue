@@ -9,7 +9,7 @@ defineProps<{ title: string }>();
     <h3 class="col-span-12 font-serif text-catch text-balance font-features-['palt'] [word-break:auto-phrase] md:col-span-5">
       {{ title }}
     </h3>
-    <div class="col-span-12 max-w-lg space-y-7 text-body text-pretty text-brand-ink/72 md:col-start-7 md:col-end-13">
+    <div class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:col-start-7 md:col-end-13">
       <slot />
     </div>
   </section>

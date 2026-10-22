@@ -34,7 +34,7 @@ const footerLinks = [
         <!-- サイト内の主要導線を、本文と同じ7列目から2列で並べる。上から順に読めるよう、左の列から埋める。 -->
         <!-- スマートフォンでは「プライバシーポリシー」が半分の幅に収まらないため、左の列を文字の幅に合わせて右の列を広げる。 -->
         <nav aria-label="フッターナビゲーション" class="col-span-12 md:col-start-7 md:col-end-13">
-          <ul class="grid grid-flow-col grid-cols-[auto_1fr] grid-rows-5 gap-x-6 gap-y-4 text-sm tracking-[0.06em] text-brand-surface/60 md:grid-cols-2">
+          <ul class="grid grid-flow-col grid-cols-[auto_1fr] grid-rows-5 gap-x-6 gap-y-4 text-base tracking-[0.06em] text-brand-surface/75 md:grid-cols-2">
             <li v-for="link in footerLinks" :key="link.href">
               <NuxtLink
                 :to="link.href"
@@ -53,7 +53,7 @@ const footerLinks = [
           選んで生きる、個の時代へ。
         </p>
 
-        <div class="text-sm leading-7 text-brand-surface/60 sm:text-right">
+        <div class="text-base leading-7 text-brand-surface/75 sm:text-right">
           <p>GBC合同会社 / GBC LLC</p>
           <p>© 2026 GBC LLC. All Rights Reserved.</p>
         </div>

@@ -57,10 +57,10 @@ const companyItems = [
           :key="item.label"
           class="grid grid-cols-12 items-baseline gap-x-6 gap-y-1 border-b border-brand-ink/15 py-5 md:py-6"
         >
-          <dt class="col-span-12 text-sm font-medium tracking-[0.12em] text-brand-ink/60 md:col-span-4">
+          <dt class="col-span-12 text-base font-medium tracking-[0.12em] text-brand-ink/75 md:col-span-4">
             {{ item.label }}
           </dt>
-          <dd class="col-span-12 text-body text-pretty text-brand-ink/72 [word-break:auto-phrase] md:col-start-5 md:col-end-13">
+          <dd class="col-span-12 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 [word-break:auto-phrase] md:col-start-5 md:col-end-13">
             {{ item.value }}
           </dd>
         </div>

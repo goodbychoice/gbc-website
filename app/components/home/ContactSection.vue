@@ -12,7 +12,7 @@
 
         <p
           v-reveal
-          class="col-span-12 mt-12 max-w-lg text-body text-pretty text-brand-ink/72 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           ご相談やご依頼については、お問い合わせフォームまたはメールからご連絡ください。
         </p>
@@ -22,7 +22,7 @@
       <div v-reveal class="mt-20 md:mt-28">
         <ContactLink />
 
-        <p class="mt-8 text-base tracking-[0.06em] text-brand-ink/60">
+        <p class="mt-8 text-base tracking-[0.06em] text-brand-ink/75">
           メール：<a
             href="mailto:info@goodbychoice.co.jp"
             class="text-brand-ink underline decoration-brand-ink/25 underline-offset-[6px] transition-colors duration-700 ease-brand hover:decoration-brand-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-ink"

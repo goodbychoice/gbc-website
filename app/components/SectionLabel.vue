@@ -6,8 +6,8 @@ const { dark = false } = defineProps<{ dark?: boolean }>();
 
 <template>
   <p
-    class="flex items-center gap-4 text-sm font-medium tracking-[0.28em]"
-    :class="dark ? 'text-brand-surface/60' : 'text-brand-ink/60'"
+    class="flex items-center gap-4 text-base font-medium tracking-[0.28em]"
+    :class="dark ? 'text-brand-surface/75' : 'text-brand-ink/75'"
   >
     <span class="h-px w-6" :class="dark ? 'bg-brand-surface/40' : 'bg-brand-accent'" />
     <slot />

@@ -10,7 +10,7 @@
       </p>
 
       <!-- 本文は内容の切れ目で2段に分け、左に現状と課題、右に目指す姿を置く。1行の字数が足りない幅では1段で続けて読む。 -->
-      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-body text-pretty text-brand-surface/72 md:mt-24 xl:gap-y-0">
+      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-surface/85 md:mt-24 xl:gap-y-0">
         <div v-reveal class="col-span-12 max-w-lg space-y-7 xl:col-span-5">
           <p>
             今の社会では、個人が生み出した価値が、必ずしもその人自身の自由や豊かさにつながるとは限りません。

@@ -30,7 +30,7 @@ useSeoMeta({
 
         <div class="mt-16 grid grid-cols-12 gap-x-6 md:mt-24">
           <p
-            class="col-span-12 max-w-lg text-body text-pretty text-brand-ink/72 animate-rise motion-reduce:animate-none [animation-delay:400ms] md:col-start-7 md:col-end-13"
+            class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:400ms] md:col-start-7 md:col-end-13"
           >
             GBCが目指すのは、会社労働に依存しなくても、個人が自分の力で学び、創り、働き、自由に生きていける社会です。
           </p>
@@ -47,7 +47,7 @@ useSeoMeta({
 
         <div
           v-reveal
-          class="col-span-12 mt-12 max-w-lg space-y-7 text-body text-pretty text-brand-ink/72 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
+          class="col-span-12 mt-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 delay-150 md:col-start-7 md:col-end-13 md:mt-16"
         >
           <p>
             GBCは、会社や組織に依存せず、個人が自分の選択で自由に生きていくためのプラットフォームです。
@@ -66,7 +66,7 @@ useSeoMeta({
         個人が生み出した<br class="md:hidden" />価値が、<br /><span class="-ml-[0.15em]">その人自身の自由や</span><br class="md:hidden" />豊かさに<br />つながるとは<br class="md:hidden" />限りません。
       </p>
 
-      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-body text-pretty text-brand-ink/72 md:mt-24 xl:gap-y-0">
+      <div class="mt-16 grid grid-cols-12 gap-x-6 gap-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 md:mt-24 xl:gap-y-0">
         <p v-reveal class="col-span-12 max-w-lg xl:col-span-5">
           働き方や活動の仕方によっては、自分で生み出した価値であっても、自分自身では十分に選択できないことがあります。
         </p>
@@ -94,7 +94,7 @@ useSeoMeta({
       <div class="mt-16 grid grid-cols-12 gap-x-6 md:mt-24">
         <div
           v-reveal
-          class="col-span-12 max-w-lg space-y-7 text-body text-pretty text-brand-surface/72 delay-150 md:col-start-7 md:col-end-13"
+          class="col-span-12 max-w-lg space-y-7 text-lg/9 lg:text-xl/10 text-pretty text-brand-surface/85 delay-150 md:col-start-7 md:col-end-13"
         >
           <p>
             GBCが支援するのは、個人の活動そのものです。GBCのやり方に合わせてもらうことや、活動の方向を代わりに決めることを目的にはしていません。

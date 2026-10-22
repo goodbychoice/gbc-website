@@ -25,7 +25,7 @@ useSeoMeta({
 
         <div class="mt-16 grid grid-cols-12 gap-x-6 md:mt-24">
           <p
-            class="col-span-12 max-w-lg text-body text-pretty text-brand-ink/72 animate-rise motion-reduce:animate-none [animation-delay:400ms] md:col-start-7 md:col-end-13"
+            class="col-span-12 max-w-lg text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85 animate-rise motion-reduce:animate-none [animation-delay:400ms] md:col-start-7 md:col-end-13"
           >
             この利用規約は、GBC合同会社（以下「当社」といいます。）が運営するWebサイトの利用について、必要なルールを定めるものです。
           </p>
@@ -123,7 +123,7 @@ useSeoMeta({
       </div>
 
       <div class="grid grid-cols-12 gap-x-6">
-        <p class="col-span-12 mt-12 text-sm tracking-[0.06em] text-brand-ink/60 md:col-start-7 md:col-end-13 md:mt-16">
+        <p class="col-span-12 mt-12 text-base tracking-[0.06em] text-brand-ink/75 md:col-start-7 md:col-end-13 md:mt-16">
           制定日：2026年9月22日
         </p>
       </div>

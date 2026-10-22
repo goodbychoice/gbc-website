@@ -38,7 +38,7 @@ function closeMenu() {
       <!-- PCではページ内リンクを横並びで表示する。 -->
       <nav
         aria-label="メインナビゲーション"
-        class="hidden items-center gap-10 text-sm tracking-[0.12em] text-brand-ink/72 lg:flex"
+        class="hidden items-center gap-10 text-base tracking-[0.12em] text-brand-ink/85 lg:flex"
       >
         <NuxtLink
           v-for="link in navLinks"
@@ -52,7 +52,7 @@ function closeMenu() {
 
       <!-- モバイルではボタンでメニューを開閉する。 -->
       <button
-        class="flex h-10 w-10 items-center justify-center text-brand-ink/72 transition-colors duration-700 ease-brand hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink lg:hidden"
+        class="flex h-10 w-10 items-center justify-center text-brand-ink/85 transition-colors duration-700 ease-brand hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink lg:hidden"
         :aria-expanded="isMenuOpen"
         aria-controls="mobile-menu"
         :aria-label="isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'"
@@ -85,7 +85,7 @@ function closeMenu() {
           v-for="link in navLinks"
           :key="link.href"
           :to="link.href"
-          class="block border-b border-brand-ink/10 py-4 text-base tracking-[0.12em] text-brand-ink/72 transition-colors duration-700 ease-brand last:border-b-0 hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
+          class="block border-b border-brand-ink/10 py-4 text-base tracking-[0.12em] text-brand-ink/85 transition-colors duration-700 ease-brand last:border-b-0 hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-ink"
           @click="closeMenu"
         >
           {{ link.label }}

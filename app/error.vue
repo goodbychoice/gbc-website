@@ -40,7 +40,7 @@ function goHome() {
           <div
             class="col-span-12 max-w-lg animate-rise motion-reduce:animate-none [animation-delay:400ms] md:col-start-7 md:col-end-13"
           >
-            <p class="text-body text-pretty text-brand-ink/72">
+            <p class="text-lg/9 lg:text-xl/10 text-pretty text-brand-ink/85">
               {{
                 isNotFound
                   ? "URLが変更されたか、ページが削除された可能性があります。トップページや各事業ページから、必要な情報をお探しください。"
